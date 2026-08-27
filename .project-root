@@ -1,0 +1,4 @@
+# Marker file — do not delete.
+# Scripts in this repo walk up the directory tree looking for this file to find the
+# repo root, so that data paths work no matter where the repo is cloned/downloaded to
+# or what directory a script is run from. See repo_paths.py and README.md.
