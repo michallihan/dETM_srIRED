@@ -1,28 +1,14 @@
 """
 Figure 2A/2C - build the mutational trajectory network.
 
-Reads the collapsed unique-variant table produced in 02_long_read_processing and builds
-the trajectory graph that panels 2A and 2C are drawn from.
-
-Edge definition: two variants are connected when one carries exactly one more amino-acid
-mutation than the other AND the smaller variant's mutation set is entirely contained in
-the larger one. This is a "one mutation added" parent-child relation, not a Hamming
-distance - it is what makes the graph a trajectory map rather than a similarity network.
+Reads the collapsed unique-variant table and writes the network that panels 2A and 2C are
+drawn from. Two variants are connected when one carries exactly one more amino-acid
+mutation than the other and the smaller variant's mutation set is contained in the larger.
 
 Outputs, written next to this script:
-    all_unique_variants_CHXCPA_distance_matrix.csv   1342 x 1342 adjacency matrix
-    all_unique_variants_CHXCPA_nodes.csv             node names, one per row
-    all_unique_variants_CHXCPA_graph.gml             graph for import into Cytoscape
-
-Replaces distance_matrix_network.py and network_graphs.py
-(Friederike Nintzel, fehn2@cam.ac.uk, 14/11/2023).
-
-Edge and node semantics are unchanged. Two steps that those scripts left as manual
-instructions in their comments are now done in code:
-  - wild-type has an empty mutation list, so the name-building join produced an empty
-    string and "WT" had to be typed into the last cell by hand; it is now labelled here.
-  - the matrix was written with a pandas index, whose column then had to be deleted by
-    hand or every edge would be shifted by one position; it is now written without one.
+    all_unique_variants_CHXCPA_distance_matrix.csv   adjacency matrix
+    all_unique_variants_CHXCPA_nodes.csv             node names
+    all_unique_variants_CHXCPA_graph.gml             the graph, for import into Cytoscape
 """
 
 import ast

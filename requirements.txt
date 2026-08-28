@@ -1,6 +1,6 @@
 numpy
 pandas
-matplotlib  # the published Figure 2B panel was rendered with 3.5.2; newer versions differ cosmetically (see 2B README)
+matplotlib
 seaborn
 scipy
 matplotlib-venn

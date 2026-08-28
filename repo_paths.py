@@ -1,18 +1,12 @@
 """
-Central place for locating this repository's root and its key data folders.
+Locates the repository root and its key data files.
 
-Every script in this repo is meant to be runnable from anywhere — double-clicked,
-run from an IDE, run from a terminal in any working directory — and to work no
-matter where the repo itself was cloned or downloaded to on someone's machine.
-That means paths must never be hardcoded absolute paths, and must never rely on
-the current working directory (os.getcwd()).
+Scripts anywhere in the repo find the root by walking up from their own file location until
+they reach the ".project-root" marker, then import the constants below. Paths therefore
+resolve correctly regardless of where the repo is cloned and which directory a script is
+run from.
 
-The pattern: every script starts by walking up from its own file location until
-it finds the ".project-root" marker file at the top of the repo. That gives an
-absolute REPO_ROOT that is correct on any machine, which every other path is
-then built from.
-
-Usage, at the top of any script anywhere in the repo:
+Usage, at the top of a script:
 
     from pathlib import Path
     import sys
@@ -23,10 +17,10 @@ Usage, at the top of any script anywhere in the repo:
         REPO_ROOT = REPO_ROOT.parent
     sys.path.insert(0, str(REPO_ROOT))
 
-    from repo_paths import FITNESS_HIGH_CONF_CSV, FITNESS_LOW_CONF_CSV
+    from repo_paths import FITNESS_HIGH_CONF_CSV
 
-Use THIS_DIR for anything local to the script (its own inputs/outputs); use the
-constants below for the shared backbone datasets produced in 01_/02_.
+Use THIS_DIR for files local to the script; use the constants below for the shared
+datasets in 01_ and 02_.
 """
 
 from pathlib import Path

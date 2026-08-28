@@ -4,32 +4,16 @@ Figure 2B - fitness landscape.
 Builds the mutational network from the high-confidence fitness table and renders it three
 ways, with modelled apparent kcat (kcat_app) as the value axis throughout.
 
-Method: variants become nodes, and an edge joins two variants one amino-acid mutation
-apart where the second carries one more mutation than the first. Nodes with no edges, and
-nodes unreachable from wild-type, are dropped - leaving 459 nodes and 600 edges. A spring
-layout gives each variant an (x, y) position and kcat_app gives the value. For the two
-landscape views the surface is interpolated onto a 200 x 200 grid, with a square collar of
-zero-valued points added around the data so it falls to zero at the edges rather than
-ending ragged.
-
-Input: 01_fitness_score_processing/02a_high_confidence_fitness_scores/
-       final_fitness_scores_ETM_with_kcat_app.csv
+Variants are nodes, and an edge joins two variants one amino-acid mutation apart, from the
+lower to the higher mutation count. Nodes with no edges, and nodes unreachable from
+wild-type, are dropped. A spring layout gives each variant an (x, y) position and kcat_app
+gives the value; for the two landscape views the surface is interpolated onto a grid, with
+a square collar of zero-valued points so it falls to zero at the edges.
 
 Outputs, written to figures_fitness_landscape/ next to this script:
-    network_graph_for_fitness_landscape.svg   the network itself, nodes coloured by kcat_app
+    network_graph_for_fitness_landscape.svg   the network, nodes coloured by kcat_app
     2D_contour_fitness_landscape.svg / .png   the landscape seen from above
-    3D_final_fitness_landscape.svg / .png     the published 3D surface
-
-Derived from 1_process_fitness_scores_lrDMS_V4.py (Mink Sieders, 11/05/2024; edited by
-Friederike Nintzel, 28/08/2024). Removed from that original: the interactive plotly viewer,
-the node-degree CSV, the stats text file, and a dead annotation-expansion block that would
-have raised a NameError had its input list not been empty. Surface computation, layout
-seed, view angle and styling are unchanged.
-
-NOTE ON EXACT REPRODUCTION. The published panels were rendered with matplotlib 3.5.2.
-kcat_app reaches 100.189, and newer matplotlib autoscales the 3D z-axis differently
-(3.5.2 ticks to 80, 3.10 extends to 100), which rescales the projection slightly. The
-surface, peaks, colour mapping and labels are unaffected. See README.md.
+    3D_final_fitness_landscape.svg / .png     the 3D surface
 """
 
 import pickle

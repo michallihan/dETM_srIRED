@@ -1,23 +1,12 @@
 """
 Figure 2A/2C - per-round variant selections.
 
-Splits the collapsed unique-variant table into one group per evolution round, used to
-colour the trajectory network by the round in which each variant appeared.
-
-Assignment rule: a variant belongs to the round in which it is FIRST observed, not to
-every round it occurs in. A variant seen in rounds 1 and 3 counts only towards round 1.
-Within a round, variants are ordered by that round's occurrence count, descending.
-
-This rule was not recorded anywhere - the original per-round files were produced by hand
-and no script for them survives. It was recovered by matching against those files, and
-reproduces all five of them exactly (219 / 147 / 346 / 183 / 447 variants).
+Splits the collapsed unique-variant table by the round in which each variant is first
+observed, ordered within each round by that round's occurrence count.
 
 Outputs, written next to this script:
-    variants_round{1..5}.csv   the variants first seen in that round, full columns
-    round{1..5}.txt            their node names only, for selection in Cytoscape
-
-Replaces convert_lists_into_mutations.py (Friederike Nintzel), which converted one
-hard-coded round at a time and required the wild-type label to be typed in by hand.
+    variants_round{1..5}.csv   the variants first seen in that round
+    round{1..5}.txt            their node names, for selection in Cytoscape
 """
 
 import ast

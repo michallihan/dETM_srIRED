@@ -181,25 +181,16 @@ def combine_fitness_mappings(lenient_gate_df, stringent_gate_df, reps_num):
     """
     Combine the lenient- and stringent-gate fitness tables for each unique variant.
 
-    fitness_final / sigma_final combine the two GATES directly: the variant's pooled
-    lenient-gate and stringent-gate values are averaged with log_average. Where only one
-    gate survived QC, log_average returns that gate's value unchanged.
+    fitness_final and sigma_final combine the two gates with log_average. Where only one
+    gate survived QC, that gate's value is used unchanged.
 
-    The per-replicate fitness{n}_uncorr_combined / sigma{n}_uncorr_combined columns are
-    still produced - they combine the two gates within each replicate n, and feed the
-    replicate-correlation diagnostic - but they are NOT the route to fitness_final.
-
-    NOTE. An earlier revision of this script derived fitness_final by averaging those
-    per-replicate combined values instead (combining replicates last rather than gates
-    last). That gives materially different scores: 576 of 594 variants shifted, by up to
-    1.06 in fitness_final, and sigma_final correlated only 0.67 between the two. The
-    gate-level combination implemented here is the one the published fitness scores and
-    all downstream analyses were built on, so it is what this script must reproduce.
+    The per-replicate fitness{n}_uncorr_combined / sigma{n}_uncorr_combined columns combine
+    the two gates within each replicate and feed the replicate-correlation diagnostic.
     """
     merged_df = pd.merge(lenient_gate_df, stringent_gate_df, on="aa_seq", how="outer",
                          suffixes=("_lenient", "_stringent"))
 
-    # STEP 1: per-replicate gate combination (diagnostic columns only)
+    # per-replicate gate combination (diagnostic columns)
     for n in range(1, reps_num + 1):
         fit_col = f"fitness{n}_uncorr"
         sig_col = f"sigma{n}_uncorr"
@@ -208,7 +199,7 @@ def combine_fitness_mappings(lenient_gate_df, stringent_gate_df, reps_num):
         merged_df[f"{sig_col}_combined"] = merged_df.apply(
             lambda row, sc=sig_col: log_average([row[f"{sc}_lenient"], row[f"{sc}_stringent"]]), axis=1)
 
-    # STEP 2: the final value combines the two gates directly
+    # final values, combining the two gates
     merged_df["fitness_final"] = merged_df.apply(
         lambda row: log_average([row["fitness_lenient"], row["fitness_stringent"]]), axis=1)
     merged_df["sigma_final"] = merged_df.apply(
