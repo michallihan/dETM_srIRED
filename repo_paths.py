@@ -45,14 +45,20 @@ REPO_ROOT = find_repo_root()
 
 # --- 01_fitness_score_processing: backbone fitness score datasets ---
 FITNESS_SCORE_DIR = REPO_ROOT / "01_fitness_score_processing"
-FITNESS_HIGH_CONF_DIR = FITNESS_SCORE_DIR / "high_confidence_fitness_scores"
-FITNESS_LOW_CONF_DIR = FITNESS_SCORE_DIR / "low_confidence_fitness_scores"
+FITNESS_HIGH_CONF_DIR = FITNESS_SCORE_DIR / "02a_high_confidence_fitness_scores"
+FITNESS_LOW_CONF_DIR = FITNESS_SCORE_DIR / "02b_low_confidence_fitness_scores"
 FITNESS_HIGH_CONF_CSV = FITNESS_HIGH_CONF_DIR / "final_fitness_scores_ETM.csv"
 FITNESS_LOW_CONF_CSV = FITNESS_LOW_CONF_DIR / "final_fitness_scores_ETM.csv"
 
 # --- 02_long_read_processing: backbone nanopore long-read dataset(s) ---
-# Populate with named constants as this section is filled in.
 LONG_READ_DIR = REPO_ROOT / "02_long_read_processing"
+
+# Collapsed table of unique amino-acid variants across the five CHX/CPA rounds
+# (1341 mutants + wild-type). Columns: name, aa_mutations, aa_mutation_number,
+# aa_sequence, total_occurrences, round_1 ... round_5.
+COLLAPSED_UNIQUE_VARIANTS_CSV = (
+    LONG_READ_DIR / "Rike_IRED_evolution_CHX_CPA_dictionary_collapsed_unique_variants.csv"
+)
 
 # --- 03_analysis: per-figure analysis folders ---
 ANALYSIS_DIR = REPO_ROOT / "03_analysis"
