@@ -87,16 +87,13 @@ The ten alternative-colourmap PNGs in the original folder
 (`3D_final_fitness_landscape_viridis.png` and similar) were produced by an earlier version
 of the script - the version preserved there has no colourmap loop and cannot generate them.
 
-## A caveat on the source table
+## On the source table
 
 The `kcat_app` values come from `Rike_IRED_evolution_CHX_CPA_fitness_with_kcat_app.csv`.
-That file also carries its own `fitness_final` and `sigma_final` columns, and **those
-disagree with the current high-confidence pipeline output**: 576 of 594 rows differ, by up
-to 1.06 in `fitness_final`, and `sigma_final` correlates only 0.67. It was evidently built
-against an earlier version of the fitness calculation.
+Only `kcat_app` and `kcat_app_error` are taken from it; every other column in the merged
+file is the current high-confidence pipeline output.
 
-This does not affect these figures, which use only `kcat_app`, `Nham_aa`, `WT` and
-`aa_seq` - and `Nham_aa` agrees exactly between the two tables. Only `kcat_app` and
-`kcat_app_error` were taken across into the merged file; every other column is the current
-high-confidence one, unchanged. Anything else drawing fitness values from that kcat table
-should be checked.
+That table's own `fitness_final` and `sigma_final` originally disagreed with the pipeline
+output for 576 of 594 variants, by up to 1.06. The cause was traced to the gate-combination
+step in `01_fitness_score_processing` and fixed there - the two now agree to 5e-10, which is
+the precision at which the original file stores its own columns. See that folder's README.
