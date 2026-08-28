@@ -1,29 +1,35 @@
 """
-Figure 2B - 3D fitness landscape.
+Figure 2B - fitness landscape.
 
-Builds the mutational network from the high-confidence fitness table and renders it as a
-3D surface, with apparent kcat (kcat_app) as the height and colour axis.
+Builds the mutational network from the high-confidence fitness table and renders it three
+ways, with modelled apparent kcat (kcat_app) as the value axis throughout.
 
-Method: variants become nodes, and an edge is drawn between two variants one amino-acid
-mutation apart where the second carries one more mutation than the first. Nodes not
-connected to anything, and nodes unreachable from wild-type, are dropped - leaving 459
-nodes and 600 edges. A spring layout gives each variant an (x, y) position, kcat_app
-gives z, and the surface is interpolated onto a 200 x 200 grid. A square collar of
-zero-valued points is added around the data so the surface falls to zero at the edges
-rather than ending ragged.
+Method: variants become nodes, and an edge joins two variants one amino-acid mutation
+apart where the second carries one more mutation than the first. Nodes with no edges, and
+nodes unreachable from wild-type, are dropped - leaving 459 nodes and 600 edges. A spring
+layout gives each variant an (x, y) position and kcat_app gives the value. For the two
+landscape views the surface is interpolated onto a 200 x 200 grid, with a square collar of
+zero-valued points added around the data so it falls to zero at the edges rather than
+ending ragged.
 
 Input: 01_fitness_score_processing/02a_high_confidence_fitness_scores/
        final_fitness_scores_ETM_with_kcat_app.csv
 
 Outputs, written to figures_fitness_landscape/ next to this script:
-    3D_final_fitness_landscape.svg
-    3D_final_fitness_landscape.png   (600 dpi)
+    network_graph_for_fitness_landscape.svg   the network itself, nodes coloured by kcat_app
+    2D_contour_fitness_landscape.svg / .png   the landscape seen from above
+    3D_final_fitness_landscape.svg / .png     the published 3D surface
 
 Derived from 1_process_fitness_scores_lrDMS_V4.py (Mink Sieders, 11/05/2024; edited by
-Friederike Nintzel, 28/08/2024), reduced to the path that produces the published panel.
-Removed: the 2D contour landscape, the network-graph SVG, the interactive plotly viewer,
-the node-degree CSV and stats text file, and a dead annotation-expansion block. The
-surface computation, layout seed, view angle and styling are unchanged.
+Friederike Nintzel, 28/08/2024). Removed from that original: the interactive plotly viewer,
+the node-degree CSV, the stats text file, and a dead annotation-expansion block that would
+have raised a NameError had its input list not been empty. Surface computation, layout
+seed, view angle and styling are unchanged.
+
+NOTE ON EXACT REPRODUCTION. The published panels were rendered with matplotlib 3.5.2.
+kcat_app reaches 100.189, and newer matplotlib autoscales the 3D z-axis differently
+(3.5.2 ticks to 80, 3.10 extends to 100), which rescales the projection slightly. The
+surface, peaks, colour mapping and labels are unaffected. See README.md.
 """
 
 import pickle
@@ -57,6 +63,8 @@ COLORMAP = "Spectral_r"
 LABEL_NODES = ["WT", "T241A", "S68P-T241A", "S68P-P203Q-T241A-H244Y"]
 LABEL_DOT_OFFSET_FRACTION = 0.025
 LABEL_TEXT_OFFSET_FRACTION = 0.1
+CONTOUR_LABEL_DOT_SIZE = 55
+CONTOUR_LABEL_FONT_SIZE = 13
 STATIC_POLYGON_EDGE_COLOR = (0.45, 0.45, 0.45, 0.65)
 STATIC_POLYGON_EDGE_WIDTH = 0.1125
 SEED_SPRING_LAYOUT = 5000
@@ -122,6 +130,36 @@ def build_graph(dataframe, rebuild=False):
     return graph, [values[node] for node in graph.nodes()]
 
 
+def draw_network_graph(graph, values, pos):
+    """The network itself: spring layout, nodes coloured by kcat_app."""
+    value_min, value_max = min(values), max(values)
+    span = value_max - value_min
+    cmap = plt.get_cmap(COLORMAP)
+    colors = [cmap(0.5 if span == 0 else (v - value_min) / span) for v in values]
+
+    plt.figure(figsize=(10, 8))
+    nx.draw_networkx_edges(graph, pos, edge_color=(0, 0, 0, 1), alpha=0.5, width=0.5,
+                           style="-", connectionstyle="arc3")
+    nx.draw_networkx_nodes(graph, pos, node_size=10, node_color=colors)
+
+    for node in LABEL_NODES:
+        if node in pos:
+            x, y = pos[node]
+            plt.text(x, y - 0.045, node, fontsize=8, ha="center", va="center", color="white",
+                     bbox=dict(facecolor="black", alpha=0.5, edgecolor="none"))
+
+    scalar_map = plt.cm.ScalarMappable(cmap=cmap)
+    scalar_map.set_array([value_min, value_max])
+    plt.colorbar(scalar_map, ax=plt.gca(), label=VALUE_LABEL, shrink=1, pad=0.01,
+                 orientation="vertical")
+
+    plt.axis("on")
+    OUTPUT_DIR.mkdir(exist_ok=True)
+    plt.savefig(OUTPUT_DIR / "network_graph_for_fitness_landscape.svg")
+    plt.close()
+    print("  wrote network_graph_for_fitness_landscape.svg")
+
+
 def square_collar(x_coords, y_coords):
     """Points around a square enclosing the data, so the surface falls to zero at the edge."""
     min_x, max_x = np.min(x_coords), np.max(x_coords)
@@ -157,8 +195,61 @@ def add_projected_label_overlays(fig, ax, label_positions_3d):
                  bbox=dict(facecolor="black", alpha=0.55, edgecolor="none"))
 
 
-def fitness_landscape(graph, values):
-    pos = nx.spring_layout(graph, seed=SEED_SPRING_LAYOUT)
+def draw_2d_contour(grid_x, grid_y, grid_z, pos):
+    """The landscape seen from above."""
+    fig, ax = plt.subplots(figsize=(10, 8))
+    contour = ax.contourf(grid_x, grid_y, grid_z, levels=20, cmap=COLORMAP)
+    cbar = fig.colorbar(contour)
+    cbar.set_label(VALUE_LABEL)
+    ax.set_xticklabels([])
+    ax.set_yticklabels([])
+    plt.tick_params(axis="both", which="both", bottom=False, top=False,
+                    right=False, left=False, labelbottom=False)
+
+    for node in LABEL_NODES:
+        if node in pos:
+            x, y = pos[node]
+            ax.scatter(x, y, c="black", s=CONTOUR_LABEL_DOT_SIZE, edgecolors="black", zorder=5)
+    for node in LABEL_NODES:
+        if node in pos:
+            x, y = pos[node]
+            ax.text(x, y - 0.04, node, fontsize=CONTOUR_LABEL_FONT_SIZE, ha="center",
+                    va="center", color="white",
+                    bbox=dict(facecolor="black", alpha=0.72, edgecolor="none"))
+
+    plt.savefig(OUTPUT_DIR / "2D_contour_fitness_landscape.svg")
+    plt.savefig(OUTPUT_DIR / "2D_contour_fitness_landscape.png", dpi=600)
+    plt.close()
+    print("  wrote 2D_contour_fitness_landscape.svg and .png")
+
+
+def draw_3d_surface(grid_x, grid_y, grid_z, x_coords, y_coords, label_positions_3d):
+    """The published 3D surface."""
+    fig = plt.figure(figsize=(10, 8))
+    ax = fig.add_subplot(111, projection="3d")
+    surface = ax.plot_surface(grid_x, grid_y, grid_z, cmap=COLORMAP, rstride=1, cstride=1,
+                              edgecolor=STATIC_POLYGON_EDGE_COLOR,
+                              linewidth=STATIC_POLYGON_EDGE_WIDTH, antialiased=True)
+    surface.set_rasterized(True)
+
+    ax.set_xticklabels([])
+    ax.set_yticklabels([])
+    ax.axes.set_xlim3d(left=min(x_coords), right=max(x_coords))
+    ax.axes.set_ylim3d(bottom=min(y_coords), top=max(y_coords))
+    plt.tick_params(axis="both", which="both", bottom=False, top=False,
+                    right=False, left=False, labelbottom=False)
+    ax.set_zlabel(VALUE_LABEL)
+    ax.view_init(elev=VIEW_ELEV, azim=VIEW_AZIM)
+    fig.canvas.draw()
+    add_projected_label_overlays(fig, ax, label_positions_3d)
+
+    plt.savefig(OUTPUT_DIR / "3D_final_fitness_landscape.svg")
+    plt.savefig(OUTPUT_DIR / "3D_final_fitness_landscape.png", dpi=600)
+    plt.close()
+    print("  wrote 3D_final_fitness_landscape.svg and .png")
+
+
+def fitness_landscape(graph, values, pos):
     positions = np.array(list(pos.values()))
     x_coords, y_coords = positions[:, 0], positions[:, 1]
 
@@ -182,29 +273,9 @@ def fitness_landscape(graph, values):
             z = values[list(graph.nodes).index(node)]
             label_positions_3d.append((node, x, y, z + dot_offset, z + text_offset))
 
-    fig = plt.figure(figsize=(10, 8))
-    ax = fig.add_subplot(111, projection="3d")
-    surface = ax.plot_surface(grid_x, grid_y, grid_z, cmap=COLORMAP, rstride=1, cstride=1,
-                              edgecolor=STATIC_POLYGON_EDGE_COLOR,
-                              linewidth=STATIC_POLYGON_EDGE_WIDTH, antialiased=True)
-    surface.set_rasterized(True)
-
-    ax.set_xticklabels([])
-    ax.set_yticklabels([])
-    ax.axes.set_xlim3d(left=min(x_coords), right=max(x_coords))
-    ax.axes.set_ylim3d(bottom=min(y_coords), top=max(y_coords))
-    plt.tick_params(axis="both", which="both", bottom=False, top=False,
-                    right=False, left=False, labelbottom=False)
-    ax.set_zlabel(VALUE_LABEL)
-    ax.view_init(elev=VIEW_ELEV, azim=VIEW_AZIM)
-    fig.canvas.draw()
-    add_projected_label_overlays(fig, ax, label_positions_3d)
-
     OUTPUT_DIR.mkdir(exist_ok=True)
-    plt.savefig(OUTPUT_DIR / "3D_final_fitness_landscape.svg")
-    plt.savefig(OUTPUT_DIR / "3D_final_fitness_landscape.png", dpi=600)
-    plt.close()
-    print(f"  wrote 3D_final_fitness_landscape.svg and .png to {OUTPUT_DIR.name}/")
+    draw_2d_contour(grid_x, grid_y, grid_z, pos)
+    draw_3d_surface(grid_x, grid_y, grid_z, x_coords, y_coords, label_positions_3d)
 
 
 def main():
@@ -212,7 +283,9 @@ def main():
     data = open_data(FITNESS_HIGH_CONF_KCAT_CSV)
     print(f"loaded {len(data)} variants from {FITNESS_HIGH_CONF_KCAT_CSV.name}")
     graph, values = build_graph(data, rebuild=rebuild)
-    fitness_landscape(graph, values)
+    pos = nx.spring_layout(graph, seed=SEED_SPRING_LAYOUT)
+    draw_network_graph(graph, values, pos)
+    fitness_landscape(graph, values, pos)
 
 
 if __name__ == "__main__":
