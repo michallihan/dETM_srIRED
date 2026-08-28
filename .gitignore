@@ -20,3 +20,6 @@ env/
 # Local-only scratch (not part of the tracked analysis)
 scratch/
 *.tmp
+
+# Regenerated deterministically by the fitness-landscape script
+fitness_graph.pickle

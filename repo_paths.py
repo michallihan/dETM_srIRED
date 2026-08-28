@@ -50,6 +50,12 @@ FITNESS_LOW_CONF_DIR = FITNESS_SCORE_DIR / "02b_low_confidence_fitness_scores"
 FITNESS_HIGH_CONF_CSV = FITNESS_HIGH_CONF_DIR / "final_fitness_scores_ETM.csv"
 FITNESS_LOW_CONF_CSV = FITNESS_LOW_CONF_DIR / "final_fitness_scores_ETM.csv"
 
+# High-confidence table with modelled apparent kcat joined on (kcat_app, kcat_app_error).
+# Source of the Figure 2B fitness landscape.
+FITNESS_HIGH_CONF_KCAT_CSV = (
+    FITNESS_HIGH_CONF_DIR / "final_fitness_scores_ETM_with_kcat_app.csv"
+)
+
 # --- 02_long_read_processing: backbone nanopore long-read dataset(s) ---
 LONG_READ_DIR = REPO_ROOT / "02_long_read_processing"
 
