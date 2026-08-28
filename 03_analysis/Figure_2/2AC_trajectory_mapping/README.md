@@ -22,7 +22,6 @@ Run in order; each writes its outputs into this folder.
 ```
 python3 1_build_trajectory_network.py
 python3 2_make_round_selections.py
-python3 3_make_mutation_selection.py T241A
 ```
 
 `1_build_trajectory_network.py` builds the graph. Two variants are connected when one
@@ -35,9 +34,6 @@ than a similarity network. Produces 1,342 nodes and 1,362 edges.
 observed - a variant seen in rounds 1 and 3 counts only towards round 1 - ordered within
 each round by that round's occurrence count, descending.
 
-`3_make_mutation_selection.py` lists the variants carrying a given mutation, by exact
-substitution (`T241A`) or by position (`241`).
-
 ## Outputs
 
 | File | Contents |
@@ -47,7 +43,6 @@ substitution (`T241A`) or by position (`241`).
 | `all_unique_variants_CHXCPA_graph.gml` | the graph, for import into Cytoscape |
 | `variants_round{1..5}.csv` | variants first seen in each round, full columns |
 | `round{1..5}.txt` | their node names, for selection in Cytoscape |
-| `colour_T241A.txt` | variants carrying T241A (779 of 1342) |
 
 ## Where reproducibility stops
 
@@ -89,8 +84,8 @@ The round-assignment rule was not recorded anywhere. No script for the per-round
 survives, and they appear to have been made by hand. The rule stated above was recovered
 by matching against those files and reproduces all five exactly.
 
-`3_make_mutation_selection.py` is the one script preserved in function rather than form.
-The original `convert_list_mutation_format.py` did not select anything - it reformatted an
-already-selected list, reading a hard-coded `colour_T241_red.csv` that is absent from the
-source data and was evidently exported by hand from Cytoscape. Neither its input nor its
-output survives, so this replacement could not be checked against it.
+`convert_list_mutation_format.py` was deliberately not carried over. It did not select
+anything - it reformatted an already-selected list, reading a hard-coded
+`colour_T241_red.csv` that is absent from the source data and was evidently exported by
+hand from Cytoscape. With neither its input nor its output surviving, nothing about it
+could be verified, so it is left behind rather than reconstructed on guesswork.
