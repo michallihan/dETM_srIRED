@@ -50,6 +50,18 @@ figures_fitness_landscape/3D_final_fitness_landscape.png   (600 dpi)
   md5-identical and the raster embedded in the SVGs decodes byte-identical. Only the
   timestamp in the SVG metadata differs. Swapping in the high-confidence table changes
   nothing about the figure.
+- Against the **published** PNG, the regenerated figure differs in about 10% of pixels.
+  This is a matplotlib version artefact, not a data or code difference. The published
+  panel was rendered with **matplotlib 3.5.2** (recorded in the original SVG); the figure
+  here was rendered with 3.10.9. `kcat_app` reaches 100.189, and the two versions autoscale
+  the 3D z-axis differently - 3.5.2 ticks to 80, 3.10.9 extends to 100 - which rescales the
+  whole projection slightly. The surface, its peaks, the colour mapping and the four labels
+  are the same; what moves is the tick range, the wireframe antialiasing and the label box
+  positions.
+
+To reproduce the published panel pixel-for-pixel you would need matplotlib 3.5.2, which
+has no wheel for current Python versions. The figure committed here is what the script
+produces on a current toolchain.
 
 ## What was removed
 
