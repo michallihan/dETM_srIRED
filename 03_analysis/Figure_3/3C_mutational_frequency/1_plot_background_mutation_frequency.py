@@ -5,9 +5,8 @@ Backgrounds are exclusive: each variant is counted in the background of the last
 it carries, so the three sets are disjoint. The WT background holds variants carrying
 neither T241A nor S68P.
 
-Outputs, written next to this script:
-    figure_3F_background_mutation_frequency.pdf / .png / .svg
-    figure_3F_source_data.csv   the counts and percentages behind the figure
+Output, written next to this script:
+    figure_3F_background_mutation_frequency.pdf / .png
 """
 
 import csv
@@ -30,7 +29,6 @@ ORDER = ["WT", "T241A", "S68P-T241A"]
 COLOURS = {"WT": "#7F7F7F", "T241A": "#92C4D2", "S68P-T241A": "#F5A2A7"}
 
 FIGURE_STEM = "figure_3F_background_mutation_frequency"
-SOURCE_DATA = THIS_DIR / "figure_3F_source_data.csv"
 
 
 def load_variants():
@@ -105,19 +103,9 @@ def plot(freqs, totals):
     legend._legend_box.align = "left"
 
     fig.tight_layout()
-    for ext in ("pdf", "png", "svg"):
+    for ext in ("pdf", "png"):
         fig.savefig(THIS_DIR / f"{FIGURE_STEM}.{ext}", dpi=400)
     plt.close(fig)
-
-
-def write_source_data(backgrounds):
-    with open(SOURCE_DATA, "w", newline="") as fh:
-        writer = csv.writer(fh)
-        writer.writerow(["mutation", "background", "n_with_mutation", "n_background", "percent"])
-        for label, group in backgrounds.items():
-            for m in MUTATIONS:
-                hits = sum(1 for v in group if m in set(v.split("-")))
-                writer.writerow([m, label, hits, len(group), round(100 * hits / len(group), 2)])
 
 
 def main():
@@ -131,12 +119,11 @@ def main():
           f"  (carrying S68P without T241A, so outside all three: {len(variants) - assigned})")
 
     plot(freqs, totals)
-    write_source_data(backgrounds)
 
     for label in ORDER:
         print(f"  {label:12s} n={totals[label]:3d} " +
               "  ".join(f"{m} {v:5.1f}%" for m, v in zip(MUTATIONS, freqs[label])))
-    print(f"  wrote {FIGURE_STEM}.pdf/.png/.svg and {SOURCE_DATA.name}")
+    print(f"  wrote {FIGURE_STEM}.pdf and .png")
 
 
 if __name__ == "__main__":

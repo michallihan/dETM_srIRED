@@ -15,7 +15,8 @@ Code and processed data for the figures in the Rike et al. paper.
 
 `01_` and `02_` produce the backbone datasets everything else builds on. Each folder under
 `03_analysis` is one figure panel: it either reads from `01_`/`02_` or processes its own
-intermediate data, and holds the script, its outputs and a README describing them.
+intermediate data, and holds the script and its outputs. What each script does is described
+in its docstring.
 
 ## Setting up
 
