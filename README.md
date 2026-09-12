@@ -6,6 +6,10 @@ Code and processed data for the figures in the Rike et al. paper.
 
 ```
 01_fitness_score_processing/   backbone dataset: fitness scores from lrDMS
+  01_lrDMS_pipeline/             raw reads to per-variant counts, via DiMSum
+    01_NGS/                      download and merge the Illumina reads
+    02_DiMSum_DMS/               one run per FACS gate, gives the fitness scores
+    03_DiMSum_population_dynamics/  one run per selection round, gives per-round counts
   02a_high_confidence_fitness_scores/
   02b_low_confidence_fitness_scores/
 02_long_read_processing/       backbone dataset: nanopore long-read processing
@@ -13,7 +17,10 @@ Code and processed data for the figures in the Rike et al. paper.
   Figure_1/  Figure_2/  Figure_3/  Figure_4/  SI_figures/
 ```
 
-`01_` and `02_` produce the backbone datasets everything else builds on. Each folder under
+`01_` and `02_` produce the backbone datasets everything else builds on. Inside `01_`, the
+`01_lrDMS_pipeline` folder holds the sequencing-side steps that come before the fitness
+score calculation; they need DiMSum installed and the reads downloaded, so they are not
+run as part of a normal pass over the repo. Each folder under
 `03_analysis` is one figure panel: it either reads from `01_`/`02_` or processes its own
 intermediate data, and holds the script and its outputs. What each script does is described
 in its docstring.

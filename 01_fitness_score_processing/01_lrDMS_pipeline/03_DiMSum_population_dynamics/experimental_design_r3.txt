@@ -1,0 +1,11 @@
+sample_name	experiment_replicate	selection_id	selection_replicate	technical_replicate	pair1	pair2
+input1	1	0			Input-1_round3.fastq.gz	
+input2	2	0			Input-2_round3.fastq.gz	
+input3	3	0			Input-3_round3.fastq.gz	
+input4	4	0			Input-4_round3.fastq.gz	
+input6	5	0			Input-6_round3.fastq.gz	
+output1	1	1	1		Sort-1_round3.fastq.gz	
+output2	2	1	1		Sort-2_round3.fastq.gz	
+output3	3	1	1		Sort-3_round3.fastq.gz	
+output4	4	1	1		Sort-4_round3.fastq.gz	
+output6	5	1	1		Sort-6_round3.fastq.gz	

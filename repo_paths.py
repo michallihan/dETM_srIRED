@@ -50,6 +50,27 @@ FITNESS_HIGH_CONF_KCAT_CSV = (
     FITNESS_HIGH_CONF_DIR / "final_fitness_scores_ETM_with_kcat_app.csv"
 )
 
+# --- 01_fitness_score_processing/01_lrDMS_pipeline: the DiMSum runs upstream of the
+#     fitness scores. Reads are not held in the repo; see 01_NGS. ---
+LRDMS_PIPELINE_DIR = FITNESS_SCORE_DIR / "01_lrDMS_pipeline"
+
+# Barcode-identity map linking nucleotide barcodes to variants, from the nanopore long
+# reads. Copied from the original runs; to be produced by the nanopore pipeline in time.
+LRDMS_BARCODE_IDENTITY_TXT = LRDMS_PIPELINE_DIR / "VIF_all_rounds_upd.txt"
+
+# DiMSum of the sorted droplet libraries, one run per FACS gate. These two tables are the
+# lrDMS_all_variants_lenient.csv and _stringent.csv that 02a_ and 02b_ read.
+DIMSUM_DMS_DIR = LRDMS_PIPELINE_DIR / "02_DiMSum_DMS"
+DIMSUM_DMS_LENIENT_CSV = DIMSUM_DMS_DIR / "lenient_gate" / "all_variants.csv"
+DIMSUM_DMS_STRINGENT_CSV = DIMSUM_DMS_DIR / "stringent_gate" / "all_variants.csv"
+
+# DiMSum of each selection round, counting every variant in that round's read pool.
+DIMSUM_POPULATION_DYNAMICS_DIR = LRDMS_PIPELINE_DIR / "03_DiMSum_population_dynamics"
+DIMSUM_ROUND_COUNTS_TSV = {
+    round_number: DIMSUM_POPULATION_DYNAMICS_DIR / f"round{round_number}" / "variant_data_merge.tsv"
+    for round_number in range(1, 6)
+}
+
 # --- 02_long_read_processing: backbone nanopore long-read dataset(s) ---
 LONG_READ_DIR = REPO_ROOT / "02_long_read_processing"
 

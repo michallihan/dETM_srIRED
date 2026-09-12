@@ -1,0 +1,7 @@
+sample_name	experiment_replicate	selection_id	selection_replicate	technical_replicate	pair1	pair2
+input4	1	0			Input-4_S10_L001_R1_001.fastq.gz	Input-4_S10_L001_R2_001.fastq.gz
+input2	2	0			Input-2_S8_L001_R1_001.fastq.gz	Input-2_S8_L001_R2_001.fastq.gz
+input6	3	0			Input-6_S12_L001_R1_001.fastq.gz	Input-6_S12_L001_R2_001.fastq.gz
+output4	1	1	1		Sort-4_S4_L001_R1_001.fastq.gz	Sort-4_S4_L001_R2_001.fastq.gz
+output5	2	1	1		Sort-5_S5_L001_R1_001.fastq.gz	Sort-5_S5_L001_R2_001.fastq.gz
+output6	3	1	1		Sort-6_S6_L001_R1_001.fastq.gz	Sort-6_S6_L001_R2_001.fastq.gz

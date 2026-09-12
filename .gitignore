@@ -23,3 +23,10 @@ scratch/
 
 # Regenerated deterministically by the fitness-landscape script
 fitness_graph.pickle
+
+# Sequencing reads and DiMSum scratch under the lrDMS pipeline. Reads are downloaded into
+# 01_NGS and split into 03_'s fastq/ folder; neither belongs in the repo.
+01_fitness_score_processing/01_lrDMS_pipeline/01_NGS/raw_reads/
+01_fitness_score_processing/01_lrDMS_pipeline/01_NGS/merged_reads/
+01_fitness_score_processing/01_lrDMS_pipeline/03_DiMSum_population_dynamics/fastq/
+**/tmp/
