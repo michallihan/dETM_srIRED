@@ -1,7 +1,7 @@
 """
-Figure 2A/2C - build the mutational trajectory network.
+Build the mutational trajectory network.
 
-Reads the collapsed unique-variant table and writes the network that panels 2A and 2C are
+Reads the collapsed unique-variant table and writes the network the trajectory panels are
 drawn from. Two variants are connected when one carries exactly one more amino-acid
 mutation than the other and the smaller variant's mutation set is contained in the larger.
 

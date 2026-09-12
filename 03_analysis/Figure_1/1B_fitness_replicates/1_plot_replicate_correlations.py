@@ -1,5 +1,5 @@
 """
-Figure 1B - fitness replicate correlations.
+Fitness replicate correlations.
 
 Plots the three sequencing replicates of the low-confidence fitness dataset against each
 other as a 3 x 3 grid: scatter plots below the diagonal, Pearson r, p and R-squared above

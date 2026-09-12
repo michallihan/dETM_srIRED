@@ -1,5 +1,5 @@
 """
-Figure 2B - fitness landscape.
+Fitness landscape.
 
 Builds the mutational network from the high-confidence fitness table and renders it three
 ways, with modelled apparent kcat (kcat_app) as the value axis throughout.

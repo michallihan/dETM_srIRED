@@ -1,5 +1,5 @@
 """
-Figure 2A/2C - per-round variant selections.
+Per-round variant selections.
 
 Splits the collapsed unique-variant table by the round in which each variant is first
 observed, ordered within each round by that round's occurrence count.

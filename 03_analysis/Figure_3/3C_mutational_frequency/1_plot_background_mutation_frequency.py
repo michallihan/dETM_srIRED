@@ -1,12 +1,12 @@
 """
-Figure 3C - frequency of four mutations across three nested founder backgrounds.
+Frequency of four mutations across three nested founder backgrounds.
 
 Backgrounds are exclusive: each variant is counted in the background of the last founder
 it carries, so the three sets are disjoint. The WT background holds variants carrying
 neither T241A nor S68P.
 
 Output, written next to this script:
-    figure_3F_background_mutation_frequency.pdf / .png
+    background_mutation_frequency.pdf / .png
 """
 
 import csv
@@ -28,7 +28,7 @@ MUTATIONS = ["H244Y", "P203Q", "A72T", "G37C"]
 ORDER = ["WT", "T241A", "S68P-T241A"]
 COLOURS = {"WT": "#7F7F7F", "T241A": "#92C4D2", "S68P-T241A": "#F5A2A7"}
 
-FIGURE_STEM = "figure_3F_background_mutation_frequency"
+FIGURE_STEM = "background_mutation_frequency"
 
 
 def load_variants():
