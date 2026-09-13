@@ -1,0 +1,6 @@
+round,variants,wild_type,frameshift,no_translation,premature_stop,mutations,variants_with_1_mutations,variants_with_2_mutations,variants_with_3_mutations,variants_with_4_mutations,variants_with_5_mutations,variants_with_6_mutations,variants_with_7_mutations,variants_with_8_mutations,variants_with_9_mutations,variants_with_10_mutations,variants_with_11_mutations,variants_with_12_mutations
+1,219,1,0,0,0,450,85,74,32,16,9,2,0,0,0,0,0,0
+2,190,1,0,0,0,373,74,60,42,12,1,0,0,0,0,0,0,0
+3,427,1,0,0,0,959,118,155,100,37,13,3,0,0,0,0,0,0
+4,235,1,0,0,0,678,26,56,91,43,13,5,0,0,0,0,0,0
+5,549,1,0,0,0,1772,17,122,210,136,46,13,3,1,0,0,0,0

@@ -71,6 +71,12 @@ DIMSUM_ROUND_COUNTS_TSV = {
     for round_number in range(1, 6)
 }
 
+# The naive library, before any selection. Same kind of table as the five rounds above, but
+# counted from two replicates with no sorted output, and held only as the workbook it was
+# analysed from: the DiMSum run behind it has not been located, so there is no .tsv to go
+# with it and its columns carry no "_bNA_count" suffix.
+DIMSUM_NAIVE_COUNTS_XLSX = DIMSUM_POPULATION_DYNAMICS_DIR / "round0" / "merge_variants.xlsx"
+
 # --- 02_long_read_processing: backbone nanopore long-read dataset(s) ---
 LONG_READ_DIR = REPO_ROOT / "02_long_read_processing"
 
