@@ -1,0 +1,218 @@
+"""
+How the variant pool changed from round to round, in fitness and in mutation count.
+
+Two panels, both built from the per-round DiMSum tables in 01_lrDMS_pipeline/03_ and the
+fitness scores in 01_fitness_score_processing/02a_.
+
+The first is a swarm of every scored variant present in a round, against round number, with
+that round's mean and upper 85th percentile drawn across it. Only variants the lrDMS
+measured have a score, so each round contributes the part of its pool that overlaps the
+594-variant table: 64 of 130 in round 1, rising to 252 of 492 by round 5.
+
+The second counts variants by how many amino-acid substitutions they carry, coloured by the
+round each one is first seen in. A variant is counted once, in its first round, so the bars
+add up to the number of distinct variants across the campaign rather than to the sum of the
+round sizes.
+
+Rounds are treated the same way the population-dynamics analysis treats them: rows DiMSum
+flagged are dropped, and rows sharing an amino-acid sequence are summed so that synonymous
+nucleotide variants count once. Variants are named by their differences from each round
+table's own wild-type row, which is how the fitness table's mut_id is built, so the two
+sides join directly.
+
+The naive library, r0, is not used. The original script loaded it, but the first panel
+excludes it through the round ordering and the second skips it outright, so neither figure
+depends on it — which is just as well, since the DiMSum run that produced it has not been
+located and it is not in the repo.
+
+Outputs, written next to this script:
+    fitness_per_round.csv
+    fitness_score_by_round.svg / .png
+    mutation_number_by_round.svg / .png
+"""
+
+import sys
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+
+import matplotlib.pyplot as plt  # noqa: E402
+import numpy as np  # noqa: E402
+import pandas as pd  # noqa: E402
+import seaborn as sns  # noqa: E402
+
+THIS_DIR = Path(__file__).resolve().parent
+REPO_ROOT = THIS_DIR
+while not (REPO_ROOT / ".project-root").exists():
+    REPO_ROOT = REPO_ROOT.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+from repo_paths import DIMSUM_ROUND_COUNTS_TSV, FITNESS_HIGH_CONF_CSV  # noqa: E402
+
+ROUNDS = tuple(sorted(DIMSUM_ROUND_COUNTS_TSV))
+
+# Rows DiMSum flags that the population-dynamics analysis drops: column -> value removed.
+DISCARD = {"STOP": True, "STOP_readthrough": True, "barcode_valid": False, "indel": True}
+
+PERCENTILE = 85
+MEAN_COLOUR = "darkblue"
+PERCENTILE_COLOUR = "darkgreen"
+
+# Left out of the mutation-count panel: 0 is the wild type, and 7 holds a single variant.
+# Both were left out of the published panel; they are reported below rather than dropped
+# silently.
+EXCLUDED_MUTATION_NUMBERS = (0, 7)
+
+plt.rcParams["svg.fonttype"] = "none"  # keep SVG text editable
+
+
+def mutation_ids(sequences, wild_type):
+    """Name each sequence by its differences from the wild type, N-terminal end first."""
+    names = []
+    for sequence in sequences:
+        if len(sequence) != len(wild_type):
+            names.append(None)
+            continue
+        differences = [f"{wild_type[i]}{i + 1}{sequence[i]}"
+                       for i in range(len(wild_type)) if wild_type[i] != sequence[i]]
+        names.append("WT" if not differences else "-".join(differences))
+    return names
+
+
+def round_variants(round_number):
+    """One round's distinct amino-acid variants, named and carrying their mutation count."""
+    table = pd.read_csv(DIMSUM_ROUND_COUNTS_TSV[round_number], sep="\t")
+    for column, discarded in DISCARD.items():
+        if column in table.columns:
+            table = table[table[column] != discarded]
+
+    inputs = [c for c in table.columns if c.startswith("input")]
+    collapsed = table.groupby("aa_seq", as_index=False).agg(
+        {**{c: "sum" for c in inputs}, "WT": "first", "Nham_aa": "first"}
+    )
+
+    wild_type = collapsed.loc[collapsed["WT"] == True, "aa_seq"]  # noqa: E712
+    if len(wild_type) != 1:
+        raise ValueError(f"round {round_number} has {len(wild_type)} wild-type rows, expected 1")
+    collapsed["mut_id"] = mutation_ids(collapsed["aa_seq"], wild_type.iloc[0])
+    collapsed["round"] = round_number
+    return collapsed[["round", "mut_id", "aa_seq", "Nham_aa"]]
+
+
+def load_rounds():
+    """Every round's variants, in round order."""
+    return [round_variants(r) for r in ROUNDS]
+
+
+def fitness_per_round(rounds):
+    """Scored variants present in each round, one row per variant per round."""
+    fitness = pd.read_csv(FITNESS_HIGH_CONF_CSV)[["mut_id", "fitness_final", "sigma_final"]]
+    scored = pd.concat(rounds, ignore_index=True).merge(fitness, on="mut_id", how="left")
+    scored = scored[np.isfinite(scored["fitness_final"])]
+    return scored[["round", "mut_id", "fitness_final", "sigma_final"]].reset_index(drop=True)
+
+
+def plot_fitness(scored):
+    """Swarm of fitness score against round, with each round's mean and percentile."""
+    fig, ax = plt.subplots(figsize=(8, 6))
+    sns.swarmplot(x="round", y="fitness_final", data=scored, color="black", size=3,
+                  order=list(ROUNDS), ax=ax)
+
+    summary = []
+    for position, round_number in enumerate(ROUNDS):
+        values = scored.loc[scored["round"] == round_number, "fitness_final"]
+        mean = round(float(np.mean(values)), 1)
+        percentile = round(float(np.percentile(values, PERCENTILE)), 1)
+        summary.append((round_number, len(values), mean, percentile))
+
+        span = ((position + 0.2) / len(ROUNDS), (position + 1) / len(ROUNDS))
+        for value, colour in ((mean, MEAN_COLOUR), (percentile, PERCENTILE_COLOUR)):
+            ax.axhline(value, color=colour, linestyle="--", linewidth=1,
+                       xmin=span[0], xmax=span[1])
+            ax.text(position + 0.35, value, f"{value:.1f}", color=colour,
+                    ha="center", va="bottom")
+        ax.text(position, ax.get_ylim()[0] + 0.1, f"n={len(values)}",
+                color="black", ha="center", va="bottom")
+
+    handles = [plt.Line2D([], [], color=MEAN_COLOUR, linestyle="--", label="Mean"),
+               plt.Line2D([], [], color=PERCENTILE_COLOUR, linestyle="--",
+                          label=f"Upper {PERCENTILE}th percentile")]
+    ax.legend(handles=handles, loc="upper left", fontsize=10)
+
+    ax.set_xticks(range(len(ROUNDS)))
+    ax.set_xticklabels([str(r) for r in ROUNDS])
+    ax.set_xlabel("Round number")
+    ax.set_ylabel("Fitness score")
+
+    fig.tight_layout()
+    for extension in ("svg", "png"):
+        fig.savefig(THIS_DIR / f"fitness_score_by_round.{extension}", dpi=400)
+    plt.close(fig)
+    return summary
+
+
+def first_appearance(rounds):
+    """Each distinct variant counted once, in the round it is first seen."""
+    seen, counts = set(), []
+    for table in rounds:
+        fresh = table[~table["mut_id"].isin(seen)]
+        seen.update(fresh["mut_id"])
+        tally = fresh["Nham_aa"].value_counts().rename_axis("mutation_number").reset_index(
+            name="variants")
+        tally["round"] = table["round"].iloc[0]
+        counts.append(tally)
+    return pd.concat(counts, ignore_index=True)
+
+
+def plot_mutation_numbers(counts):
+    """Stacked bars: variants by mutation count, coloured by the round they first appear in."""
+    shown = counts[~counts["mutation_number"].isin(EXCLUDED_MUTATION_NUMBERS)]
+    colours = plt.get_cmap("viridis")(np.linspace(0, 1, len(ROUNDS)))
+
+    fig, ax = plt.subplots(figsize=(4, 4))
+    bottoms = {n: 0.0 for n in shown["mutation_number"].unique()}
+    for colour, round_number in zip(colours, ROUNDS):
+        subset = shown[shown["round"] == round_number]
+        ax.bar(subset["mutation_number"], subset["variants"], color=colour,
+               label=f"r{round_number}",
+               bottom=[bottoms[n] for n in subset["mutation_number"]])
+        for n, v in zip(subset["mutation_number"], subset["variants"]):
+            bottoms[n] += v
+
+    ax.set_xlabel("Mutation number")
+    ax.set_ylabel("Count of variants per round")
+    ax.legend(title="Round")
+
+    fig.tight_layout()
+    for extension in ("svg", "png"):
+        fig.savefig(THIS_DIR / f"mutation_number_by_round.{extension}", dpi=400)
+    plt.close(fig)
+
+
+def main():
+    rounds = load_rounds()
+    for table in rounds:
+        print(f"round {table['round'].iloc[0]}: {len(table)} distinct amino-acid variants")
+
+    scored = fitness_per_round(rounds)
+    scored.to_csv(THIS_DIR / "fitness_per_round.csv", index=False)
+    print(f"\nwrote fitness_per_round.csv: {len(scored)} scored variant-round pairs")
+
+    print(f"\nfitness_score_by_round: mean and upper {PERCENTILE}th percentile")
+    for round_number, n, mean, percentile in plot_fitness(scored):
+        print(f"  round {round_number}: n={n:4d}   mean {mean:4.1f}   "
+              f"p{PERCENTILE} {percentile:4.1f}")
+
+    counts = first_appearance(rounds)
+    plot_mutation_numbers(counts)
+    totals = counts.groupby("mutation_number")["variants"].sum()
+    print(f"\nmutation_number_by_round: {int(totals.sum())} distinct variants across the campaign")
+    for number, total in totals.items():
+        note = "  (left out of the panel)" if number in EXCLUDED_MUTATION_NUMBERS else ""
+        print(f"  {int(number)} mutations: {int(total):4d}{note}")
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
