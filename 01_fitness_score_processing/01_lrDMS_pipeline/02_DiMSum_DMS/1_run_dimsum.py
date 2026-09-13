@@ -28,9 +28,13 @@ pattern and should be checked against whatever the deposited reads are named.
 Reads are not in the repo. Put them in 01_NGS/raw_reads, or point LRDMS_RAW_READS_DIR
 elsewhere. DiMSum must be installed separately and on PATH.
 
+all_variants.csv, the table 02a_ and 02b_ read, is not written by DiMSum — run
+2_export_all_variants.R afterwards to get it out of each run's fitness_replicates.RData.
+
 Outputs, one folder per run:
     lenient_gate/ stringent_gate/
-        variant_data_merge.tsv, all_variants.csv, fitness_*.txt, report.html
+        variant_data_merge.tsv, fitness_*.txt, report.html,
+        DiMSum_Project_fitness_replicates.RData, and all_variants.csv from step 2
 """
 
 import argparse

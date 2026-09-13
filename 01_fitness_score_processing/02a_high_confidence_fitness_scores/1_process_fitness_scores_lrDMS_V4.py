@@ -4,6 +4,10 @@ Author: Mink Sieders
 Generates a .csv file with fitness scores from two files with different sorting gates,
 directly derived from dimsum R data file (via csv writer)
 
+The two gate tables are read from 01_lrDMS_pipeline/02_DiMSum_DMS, where each gate's DiMSum
+run leaves its all_variants.csv. Those are the files that used to sit in this folder as
+lrDMS_all_variants_stringent.csv and lrDMS_all_variants_lenient.csv.
+
 Edited on 28-08-2024
 Author: Friederike Nintzel
 
@@ -11,6 +15,7 @@ This is the high-confidence version of the QC filter: all four QC steps are appl
 """
 
 import os
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -29,6 +34,13 @@ plt.rcParams["svg.fonttype"] = "none"  # keep SVG text editable (e.g. in Affinit
 # Anchor all paths to this script's own location (not the working directory), so the
 # repo works no matter where it's cloned/downloaded to or what directory it's run from.
 THIS_DIR = Path(__file__).resolve().parent
+REPO_ROOT = THIS_DIR
+while not (REPO_ROOT / ".project-root").exists():
+    REPO_ROOT = REPO_ROOT.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+from repo_paths import DIMSUM_DMS_LENIENT_CSV, DIMSUM_DMS_STRINGENT_CSV  # noqa: E402
+
 output_dir = THIS_DIR / "diagnostic_plots"
 output_dir.mkdir(exist_ok=True)
 
@@ -408,8 +420,9 @@ def figure_filtering_report():
 
 
 if __name__ == "__main__":
-    dimsum_file_1 = THIS_DIR / "lrDMS_all_variants_stringent.csv"
-    dimsum_file_2 = THIS_DIR / "lrDMS_all_variants_lenient.csv"
+    # Each gate's table comes straight from its own DiMSum run in 01_lrDMS_pipeline.
+    dimsum_file_1 = DIMSUM_DMS_STRINGENT_CSV
+    dimsum_file_2 = DIMSUM_DMS_LENIENT_CSV
     stringent_gate = 1
     output = THIS_DIR / "final_fitness_scores_ETM.csv"
 
