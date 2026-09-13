@@ -81,5 +81,12 @@ COLLAPSED_UNIQUE_VARIANTS_CSV = (
     LONG_READ_DIR / "Rike_IRED_evolution_CHX_CPA_dictionary_collapsed_unique_variants.csv"
 )
 
+# --- 04_biophysics: laboratory measurements on purified variants ---
+# Measured by hand, not derived from anything else in the repo: melting temperature and
+# Michaelis-Menten kinetics for the variants that were expressed and purified, keyed by the
+# same mutation identifier the fitness table uses, with commas where that table uses dashes.
+BIOPHYSICS_DIR = REPO_ROOT / "04_biophysics"
+BIOPHYSICAL_DATA_CSV = BIOPHYSICS_DIR / "srired_chx_cpa_biophysical_data.csv"
+
 # --- 03_analysis: per-figure analysis folders ---
 ANALYSIS_DIR = REPO_ROOT / "03_analysis"

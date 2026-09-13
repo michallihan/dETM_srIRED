@@ -15,6 +15,7 @@ Code and processed data for the figures in the Rike et al. paper.
 02_long_read_processing/       backbone dataset: nanopore long-read processing
 03_analysis/                   one folder per figure panel
   Figure_1/  Figure_2/  Figure_3/  Figure_4/  SI_figures/
+04_biophysics/                 laboratory measurements on purified variants
 ```
 
 `01_` and `02_` produce the backbone datasets everything else builds on. Inside `01_`, the
