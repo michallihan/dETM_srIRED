@@ -1,0 +1,22 @@
+Gate estimates by round, from the kcat(app) of the variants that survived each sort
+
+Wild-type kcat(app) = 6.405 s-1.
+The top 0.1% of each round's population was sorted.
+Only survivors are observed, so the gate is the truncation point below this distribution. The observed minimum is a lower edge, the 5th percentile a conservative estimate, and the 10th percentile the practical proxy, being less dominated by a single low-end outlier.
+
+Per round, as a fold-change over the wild type:
+r1: n=63, min=0.25x, p5=0.52x, p10=0.62x, median=1.12x, p90=2.13x
+r2: n=147, min=0.28x, p5=0.65x, p10=0.72x, median=1.17x, p90=3.19x
+r3: n=191, min=0.30x, p5=0.64x, p10=0.72x, median=1.55x, p90=3.76x
+r4: n=148, min=0.45x, p5=0.94x, p10=1.17x, median=3.02x, p90=6.34x
+r5: n=251, min=0.38x, p5=0.86x, p10=1.15x, median=3.29x, p90=6.34x
+
+Reading:
+Conservative p5 estimates: r1=0.52x, r2=0.65x, r3=0.64x, r4=0.94x, r5=0.86x.
+p10 gate proxies: r1=0.62x, r2=0.72x, r3=0.72x, r4=1.17x, r5=1.15x.
+Median survivor: r1=1.12x, r2=1.17x, r3=1.55x, r4=3.02x, r5=3.29x.
+The lower tail stays below or near the wild type through most rounds, so the recovered set contains survivors with low kcat(app) despite a nominal top-0.1% sort. Measurement noise, imperfect genotype recovery at the sorting boundary, and kcat(app) being inferred from fitness rather than measured per clone all contribute.
+The clearer signal is the shift of the whole distribution: the median survivor moves from 1.1x the wild type in r1 to 3.3x in r5, and the 90th percentile from 2.1x to 6.3x.
+
+Caveat:
+This reads the lower tail of the recovered survivors, not the library that went into the sort. Survivors too rare to be recovered would bias the apparent gate upward.
