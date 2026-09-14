@@ -98,5 +98,12 @@ COLLAPSED_UNIQUE_VARIANTS_CSV = (
 BIOPHYSICS_DIR = REPO_ROOT / "04_biophysics"
 BIOPHYSICAL_DATA_CSV = BIOPHYSICS_DIR / "srired_chx_cpa_biophysical_data.csv"
 
+# A separate, self-contained set of measurements: the wild type, T241A, and the singles and
+# combinations along the alternative routes through G37C and A72T, all assayed together on
+# cyclohexanone. Its kcat scale is its own - do not mix its numbers with the table above.
+ALTERNATIVE_PATHS_KINETICS_CSV = (
+    BIOPHYSICS_DIR / "srired_chx_cpa_alternative_paths_kinetics.csv"
+)
+
 # --- 03_analysis: per-figure analysis folders ---
 ANALYSIS_DIR = REPO_ROOT / "03_analysis"
