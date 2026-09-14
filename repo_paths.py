@@ -44,11 +44,15 @@ FITNESS_LOW_CONF_DIR = FITNESS_SCORE_DIR / "02b_low_confidence_fitness_scores"
 FITNESS_HIGH_CONF_CSV = FITNESS_HIGH_CONF_DIR / "final_fitness_scores_ETM.csv"
 FITNESS_LOW_CONF_CSV = FITNESS_LOW_CONF_DIR / "final_fitness_scores_ETM.csv"
 
-# High-confidence table with modelled apparent kcat joined on (kcat_app, kcat_app_error).
-# Source of the Figure 2B fitness landscape.
+# --- 01_fitness_score_processing/03_deriving_kcatapp: the fitness-to-kcat conversion ---
+# The high-confidence table with the modelled apparent kcat joined on, and the fitted
+# parameters of the conversion behind it. Anything in the repo that speaks in kcat(app)
+# reads one of these two.
+DERIVING_KCAT_APP_DIR = FITNESS_SCORE_DIR / "03_deriving_kcatapp"
 FITNESS_HIGH_CONF_KCAT_CSV = (
-    FITNESS_HIGH_CONF_DIR / "final_fitness_scores_ETM_with_kcat_app.csv"
+    DERIVING_KCAT_APP_DIR / "final_fitness_scores_ETM_with_kcat_app.csv"
 )
+KCAT_APP_FIT_JSON = DERIVING_KCAT_APP_DIR / "kcat_app_fit.json"
 
 # --- 01_fitness_score_processing/01_lrDMS_pipeline: the DiMSum runs upstream of the
 #     fitness scores. Reads are not held in the repo; see 01_NGS. ---

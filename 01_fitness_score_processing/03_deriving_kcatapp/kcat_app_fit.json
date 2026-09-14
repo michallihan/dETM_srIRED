@@ -1,0 +1,6 @@
+{
+  "model": "kcat = a * exp(b * fitness_final)",
+  "a": 6.217083234657242,
+  "b": 0.6361058983327817,
+  "n_overlap": 27
+}

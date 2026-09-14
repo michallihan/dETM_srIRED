@@ -30,3 +30,7 @@ fitness_graph.pickle
 01_fitness_score_processing/01_lrDMS_pipeline/01_NGS/merged_reads/
 01_fitness_score_processing/01_lrDMS_pipeline/03_DiMSum_population_dynamics/fastq/
 **/tmp/
+
+# R session leftovers
+.Rhistory
+.RData

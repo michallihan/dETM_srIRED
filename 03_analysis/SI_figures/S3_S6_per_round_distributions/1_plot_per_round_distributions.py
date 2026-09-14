@@ -49,12 +49,8 @@ while not (REPO_ROOT / ".project-root").exists():
     REPO_ROOT = REPO_ROOT.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from repo_paths import DIMSUM_ROUND_COUNTS_TSV, FITNESS_HIGH_CONF_CSV  # noqa: E402
-
-ROUNDS = tuple(sorted(DIMSUM_ROUND_COUNTS_TSV))
-
-# Rows DiMSum flags that the population-dynamics analysis drops: column -> value removed.
-DISCARD = {"STOP": True, "STOP_readthrough": True, "barcode_valid": False, "indel": True}
+from repo_paths import FITNESS_HIGH_CONF_CSV  # noqa: E402
+from variant_rounds import ROUNDS, variants_per_round  # noqa: E402
 
 PERCENTILE = 85
 MEAN_COLOUR = "darkblue"
@@ -68,42 +64,10 @@ EXCLUDED_MUTATION_NUMBERS = (0, 7)
 plt.rcParams["svg.fonttype"] = "none"  # keep SVG text editable
 
 
-def mutation_ids(sequences, wild_type):
-    """Name each sequence by its differences from the wild type, N-terminal end first."""
-    names = []
-    for sequence in sequences:
-        if len(sequence) != len(wild_type):
-            names.append(None)
-            continue
-        differences = [f"{wild_type[i]}{i + 1}{sequence[i]}"
-                       for i in range(len(wild_type)) if wild_type[i] != sequence[i]]
-        names.append("WT" if not differences else "-".join(differences))
-    return names
-
-
-def round_variants(round_number):
-    """One round's distinct amino-acid variants, named and carrying their mutation count."""
-    table = pd.read_csv(DIMSUM_ROUND_COUNTS_TSV[round_number], sep="\t")
-    for column, discarded in DISCARD.items():
-        if column in table.columns:
-            table = table[table[column] != discarded]
-
-    inputs = [c for c in table.columns if c.startswith("input")]
-    collapsed = table.groupby("aa_seq", as_index=False).agg(
-        {**{c: "sum" for c in inputs}, "WT": "first", "Nham_aa": "first"}
-    )
-
-    wild_type = collapsed.loc[collapsed["WT"] == True, "aa_seq"]  # noqa: E712
-    if len(wild_type) != 1:
-        raise ValueError(f"round {round_number} has {len(wild_type)} wild-type rows, expected 1")
-    collapsed["mut_id"] = mutation_ids(collapsed["aa_seq"], wild_type.iloc[0])
-    collapsed["round"] = round_number
-    return collapsed[["round", "mut_id", "aa_seq", "Nham_aa"]]
-
-
 def load_rounds():
-    """Every round's variants, in round order."""
-    return [round_variants(r) for r in ROUNDS]
+    """Every round's variants, in round order, one table per round."""
+    rounds = variants_per_round()
+    return [table.drop(columns="round_label") for _, table in rounds.groupby("round")]
 
 
 def fitness_per_round(rounds):

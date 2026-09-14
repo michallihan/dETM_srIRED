@@ -1,0 +1,17 @@
+Fitted model: kcat = a * exp(b * fitness_final)
+n_overlap = 27
+a = 6.21708323
+b = 0.63610590
+R2_exponential_original_space = 0.82753180
+log_linear_r2 = 0.80887392
+log_linear_p = 1.80909041e-10
+linear_r2_original_space = 0.71996855
+linear_p_original_space = 2.25941143e-08
+
+Check of kcat(app) against the purified kcat it was fitted to
+n_check = 27
+check_slope = 0.81879149
+check_intercept = 7.84455401
+check_r2 = 0.82768904
+check_pearson_r = 0.90977417
+check_pearson_p = 4.90133979e-11

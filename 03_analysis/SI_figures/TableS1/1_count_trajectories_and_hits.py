@@ -39,16 +39,11 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from repo_paths import (  # noqa: E402
     COLLAPSED_UNIQUE_VARIANTS_CSV,
-    DIMSUM_ROUND_COUNTS_TSV,
     FITNESS_HIGH_CONF_KCAT_CSV,
 )
+from variant_rounds import mutation_ids, variants_per_round  # noqa: E402
 
 FOLD_OVER_WILD_TYPE = 4  # the 5x cut was also drawn at one point; 4x is the one that is used
-
-ROUNDS = tuple(sorted(DIMSUM_ROUND_COUNTS_TSV))
-
-# Rows DiMSum flags that the population-dynamics analysis drops: column -> value removed.
-DISCARD = {"STOP": True, "STOP_readthrough": True, "barcode_valid": False, "indel": True}
 
 TRAJECTORY_NOTES = [
     ("round", "Round the variant was picked up in. A variant seen in several rounds has a row "
@@ -77,19 +72,6 @@ FOLD_NOTE = ("fold_over_WT", "kcat_app(variant) / kcat_app(wild type), point est
                              "reference. It is not what the hit call tests.")
 
 
-def mutation_ids(sequences, wild_type):
-    """Name each sequence by its differences from the wild type, N-terminal end first."""
-    names = []
-    for sequence in sequences:
-        if len(sequence) != len(wild_type):
-            names.append(None)
-            continue
-        differences = [f"{wild_type[i]}{i + 1}{sequence[i]}"
-                       for i in range(len(wild_type)) if wild_type[i] != sequence[i]]
-        names.append("WT" if not differences else "-".join(differences))
-    return names
-
-
 def substitutions(mut_id):
     """A variant name as its substitutions, ordered by residue position."""
     if mut_id == "WT":
@@ -116,26 +98,6 @@ def trajectory_counter(reference):
         return total
 
     return count
-
-
-def rounds_seen():
-    """Each round's distinct variants, named against that round's own wild-type row."""
-    seen = []
-    for round_number in ROUNDS:
-        table = pd.read_csv(DIMSUM_ROUND_COUNTS_TSV[round_number], sep="\t")
-        for column, discarded in DISCARD.items():
-            if column in table.columns:
-                table = table[table[column] != discarded]
-
-        collapsed = table.drop_duplicates(subset="aa_seq")
-        wild_type = collapsed.loc[collapsed["WT"] == True, "aa_seq"]  # noqa: E712
-        if len(wild_type) != 1:
-            raise ValueError(f"round {round_number} has {len(wild_type)} wild-type rows")
-        seen.append(pd.DataFrame({
-            "round": f"r{round_number}",
-            "mut_id": mutation_ids(collapsed["aa_seq"], wild_type.iloc[0]),
-        }))
-    return pd.concat(seen, ignore_index=True)
 
 
 def nanopore_variants():
@@ -188,7 +150,8 @@ def main():
                "kcat_app", "kcat_app_error", "kcat_app_min",
                "n_trajectories", "n_trajectories_campaign"]
 
-    per_round = rounds_seen().merge(scored, on="mut_id", how="inner")
+    rounds = variants_per_round().rename(columns={"round_label": "round"})
+    per_round = rounds[["round", "mut_id"]].merge(scored, on="mut_id", how="inner")
     per_round = per_round.sort_values(["n_trajectories", "fitness_final"], ascending=False,
                                       kind="stable").reset_index(drop=True)
     write_workbook(THIS_DIR / "trajectory_counts.xlsx", per_round[columns],
