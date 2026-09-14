@@ -30,7 +30,7 @@ holds some of the same variants on a different scale, and the two must not be mi
 
 Outputs, written next to this script:
     expected_against_observed_kcat.csv
-    expected_against_observed_kcat.svg / .png
+    expected_against_observed_kcat.pdf / .png
 """
 
 import sys
@@ -69,7 +69,7 @@ BAR_WIDTH = 0.38
 Y_LIMIT = 150
 Y_STEP = 50
 
-plt.rcParams["svg.fonttype"] = "none"  # keep SVG text editable
+plt.rcParams["pdf.fonttype"] = 42  # embed TrueType so the PDF's text stays editable
 plt.rcParams["font.family"] = "sans-serif"
 plt.rcParams["font.sans-serif"] = ["Arial", "Helvetica", "DejaVu Sans"]
 
@@ -152,7 +152,7 @@ def plot(table):
               loc="upper left", fontsize=9, frameon=False)
 
     figure.tight_layout()
-    for extension in ("svg", "png"):
+    for extension in ("pdf", "png"):
         figure.savefig(THIS_DIR / f"expected_against_observed_kcat.{extension}", dpi=400)
     plt.close(figure)
 
