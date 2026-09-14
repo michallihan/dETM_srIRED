@@ -10,9 +10,15 @@ measured pieces
 
     expected kcat = kcat(first piece) * kcat(second piece) / kcat(wild type)
 
-Its error carries only the wild type's, as the original calculation did: the expected value
-is recomputed with kcat(WT) at each end of its error bar and the two offsets averaged, which
-comes to expected * kcat_error(WT) / kcat(WT). The pieces' own errors are not propagated.
+The error on that is propagated from all three measurements. Since the expectation is a
+product and a quotient, the relative errors add in quadrature:
+
+    expected_error / expected = sqrt( (dA/A)^2 + (dB/B)^2 + (dW/W)^2 )
+
+The original calculation carried only the wild type's error, which understated the expected
+bars - the pieces are measured no better than the variant itself, and on the triples the
+double contributes most of the uncertainty. Both are in the csv, the original as
+expected_kcat_error_wild_type_only, so the change is visible rather than silent.
 
 The doubles are built from their two singles. The triples are built from the double that
 already carries T241A plus S68P on its own - S68P added last, to the established background -
@@ -96,12 +102,17 @@ def expectations(measured):
             if name not in measured.index:
                 raise KeyError(f"{name} is not in the kinetics table")
         expected = float(np.prod([measured.loc[p, "kcat"] for p in pieces]) / wild_type["kcat"])
+        # A product and a quotient, so the relative errors add in quadrature.
+        relative = [measured.loc[p, "kcat_error"] / measured.loc[p, "kcat"] for p in pieces]
+        relative.append(wild_type["kcat_error"] / wild_type["kcat"])
         rows.append({
             "variant": variant,
             "built_from": " x ".join(pieces),
             "expected_kcat": expected,
-            # Only the wild type's error is carried, as in the original calculation.
-            "expected_kcat_error": expected * wild_type["kcat_error"] / wild_type["kcat"],
+            "expected_kcat_error": expected * float(np.sqrt(np.sum(np.square(relative)))),
+            # What the original workbook drew: the wild type's error and nothing else.
+            "expected_kcat_error_wild_type_only":
+                expected * wild_type["kcat_error"] / wild_type["kcat"],
             "observed_kcat": measured.loc[variant, "kcat"],
             "observed_kcat_error": measured.loc[variant, "kcat_error"],
         })
@@ -117,7 +128,7 @@ def label(variant):
 
 def plot(table):
     positions = np.arange(len(table))
-    figure, ax = plt.subplots(figsize=(4.8, 2.9))
+    figure, ax = plt.subplots(figsize=(4.1, 2.9))
 
     ax.bar(positions - BAR_WIDTH / 2, table["expected_kcat"], BAR_WIDTH,
            yerr=table["expected_kcat_error"], color=EXPECTED_COLOUR, label="Expected",
