@@ -10,7 +10,7 @@ exponentially with fitness, and fitting
 gives a conversion that can be applied to every scored variant, whether or not it was ever
 purified. The result, kcat_app, is the number the rest of the repo means whenever it talks
 about apparent kcat: Figure 1C's campaign progression, Figure 3's epistasis expectations,
-Figure S8's gate estimates and Table S1's hit call all read it from here.
+Figure S21's gate estimates and Table S1's hit call all read it from here.
 
 The error carries the fitness uncertainty through the same mapping and nothing else:
 
