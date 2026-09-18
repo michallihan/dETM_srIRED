@@ -8,9 +8,9 @@ of two. Three panels: doubles from their singles, triples from their singles, an
 a double plus the remaining single.
 
 The prediction needs single mutants, and the campaign only scored a few dozen. The 1,122
-singles held here come from Max's deep mutational scan of the same enzyme, scored the same
-way, and are what make the panels possible; the multiple mutants are the campaign's own
-high-confidence table. kcat(app) is computed with the conversion fitted in
+singles in 01_fitness_score_processing/max_single_mutants.csv come from Max's deep mutational
+scan of the same enzyme, scored the same way, and are what make the panels possible; the
+multiple mutants are the campaign's own high-confidence table. kcat(app) is computed with the conversion fitted in
 01_fitness_score_processing/03_deriving_kcatapp.
 
 epistasis_models.py holds the expectation arithmetic and defines four further panels, for
@@ -40,7 +40,11 @@ while not (REPO_ROOT / ".project-root").exists():
     REPO_ROOT = REPO_ROOT.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from repo_paths import FITNESS_HIGH_CONF_CSV, KCAT_APP_FIT_JSON  # noqa: E402
+from repo_paths import (  # noqa: E402
+    FITNESS_HIGH_CONF_CSV,
+    KCAT_APP_FIT_JSON,
+    MAX_SINGLE_MUTANTS_CSV,
+)
 
 from epistasis_models import (  # noqa: E402
     CATEGORY_COLOURS,
@@ -49,7 +53,6 @@ from epistasis_models import (  # noqa: E402
     panel_rows,
 )
 
-MAX_SINGLES_CSV = THIS_DIR / "max_single_mutants.csv"
 COLUMNS = ["mut_id", "fitness_final", "sigma_final", "Nham_aa"]
 
 ALL_PANELS = False  # True also draws the four quadruple-mutant panels
@@ -66,7 +69,7 @@ plt.rcParams["font.size"] = 11
 def variants():
     """The campaign's scored variants and Max's single mutants, in one table."""
     campaign = pd.read_csv(FITNESS_HIGH_CONF_CSV)[COLUMNS]
-    singles = pd.read_csv(MAX_SINGLES_CSV)[COLUMNS]
+    singles = pd.read_csv(MAX_SINGLE_MUTANTS_CSV)[COLUMNS]
     overlap = set(campaign["mut_id"]) & set(singles["mut_id"])
     if overlap:
         raise ValueError(f"{len(overlap)} variants are in both tables, e.g. {sorted(overlap)[:3]}")
