@@ -16,6 +16,10 @@ multiple mutants are the campaign's own high-confidence table. kcat(app) is comp
 epistasis_models.py holds the expectation arithmetic and defines four further panels, for
 quadruple mutants, that the figure does not use. Set ALL_PANELS to draw those as well.
 
+Each row of the CSV is labelled positive, negative or additive on the same rule the band
+draws: observed above twofold the expectation is positive epistasis, below half of it is
+negative, anything inside the corridor is additive.
+
 Outputs, written next to this script:
     epistasis_expectations.csv
     epistasis.svg / .png                  logarithmic axes, as published
@@ -85,6 +89,17 @@ def with_kcat_app(table):
     return table, fit["a"]
 
 
+def epistasis_call(rows):
+    """Label each row by where it sits relative to the twofold corridor."""
+    observed = rows["observed_kcat_app"]
+    expected = rows["expected_kcat_app"]
+    return np.select(
+        [observed > expected * BAND, observed < expected / BAND],
+        ["positive", "negative"],
+        default="additive",
+    )
+
+
 def axis_span(rows, logarithmic):
     """Shared limits and the diagonal's corridor, over every panel drawn."""
     low = min(rows["expected_kcat_app"].min(), rows["observed_kcat_app"].min())
@@ -139,15 +154,19 @@ def main():
     rows = rows[np.isfinite(rows["expected_kcat_app"]) & np.isfinite(rows["observed_kcat_app"])]
     rows = rows[rows["panel"].isin([panel for panel, _ in PANELS_DRAWN])].reset_index(drop=True)
 
+    rows["epistasis"] = epistasis_call(rows)
+
     rows.to_csv(THIS_DIR / "epistasis_expectations.csv", index=False)
     plot(rows, logarithmic=True, stem="epistasis")
     plot(rows, logarithmic=False, stem="epistasis_linear_axes")
 
     for panel, _ in PANELS_DRAWN:
         subset = rows[rows["panel"] == panel]
-        above = (subset["observed_kcat_app"] > subset["expected_kcat_app"] * BAND).sum()
-        below = (subset["observed_kcat_app"] < subset["expected_kcat_app"] / BAND).sum()
-        print(f"{panel}: {len(subset)} variants, {above} above the band, {below} below")
+        counts = subset["epistasis"].value_counts()
+        print(f"{panel}: {len(subset)} variants, "
+              f"{counts.get('positive', 0)} positive, "
+              f"{counts.get('negative', 0)} negative, "
+              f"{counts.get('additive', 0)} additive")
 
 
 if __name__ == "__main__":

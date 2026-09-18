@@ -1,508 +1,508 @@
-panel,title,mut_id,n_mutations,category,expected_kcat_app,observed_kcat_app,n_decompositions
-triple_from_singles,Triple mutants against a singles model,S68P-T241A-H244Y,3,S68P-T241A-H244Y,12.395689149314839,90.92443562755366,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-H244Y,3,S68P-T241A-H244Y,22.85745742956445,90.92443562755366,2
-triple_from_singles,Triple mutants against a singles model,S68P-P203Q-T241A,3,S68P-P203Q-T241A,13.626012214532851,56.885450073006126,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-P203Q-T241A,3,S68P-P203Q-T241A,32.51080061892903,56.885450073006126,2
-triple_from_singles,Triple mutants against a singles model,G37C-H238Q-T241A,3,T241A,4.362954454188174,56.41400135049744,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-H238Q-T241A,3,T241A,4.19879639863773,56.41400135049744,1
-triple_from_singles,Triple mutants against a singles model,S68P-E143D-T241A,3,T241A+S68P,11.17718712931454,54.49674402851504,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-E143D-T241A,3,T241A+S68P,23.10514370945809,54.49674402851504,2
-triple_from_singles,Triple mutants against a singles model,M1V-S68P-T241A,3,T241A+S68P,12.034504698301152,53.73072618619139,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,M1V-S68P-T241A,3,T241A+S68P,37.79602017811084,53.73072618619139,1
-triple_from_singles,Triple mutants against a singles model,S68P-E210G-T241A,3,T241A+S68P,12.505134537176442,50.74170159051985,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-E210G-T241A,3,T241A+S68P,25.739172419622104,50.74170159051985,3
-triple_from_singles,Triple mutants against a singles model,S68P-T241A-A266V,3,T241A+S68P,15.097377311279198,48.95125698210124,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-A266V,3,T241A+S68P,47.41539363678281,48.95125698210124,1
-triple_from_singles,Triple mutants against a singles model,S68P-T241A-M282I,3,T241A+S68P,10.726429128013281,48.624247849721606,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-M282I,3,T241A+S68P,26.860524323651568,48.624247849721606,2
-triple_from_singles,Triple mutants against a singles model,K38N-E210G-T241A,3,T241A,15.697950942580757,46.856631563227545,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-E210G-T241A,3,T241A,19.585349532830968,46.856631563227545,2
-triple_from_singles,Triple mutants against a singles model,N33S-S51G-T241A,3,T241A,13.901458551062603,46.41402575972983,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,N33S-S51G-T241A,3,T241A,45.009958779780376,46.41402575972983,1
-double_from_singles,Double mutants,N33S-T241A,2,T241A,14.094536419660653,45.635103751077054,1
-triple_from_singles,Triple mutants against a singles model,S68P-V216I-T241A,3,T241A+S68P,8.92636910262818,44.4960243540093,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-V216I-T241A,3,T241A+S68P,22.923749207845468,44.4960243540093,2
-double_from_singles,Double mutants,T234S-T241A,2,T241A,11.179460898628427,42.82891635975795,1
-triple_from_singles,Triple mutants against a singles model,F184L-V216I-T241A,3,T241A,2.1931924323083365,42.2307004770849,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,F184L-V216I-T241A,3,T241A,4.376622816104371,42.2307004770849,1
-triple_from_singles,Triple mutants against a singles model,S68P-L181M-T241A,3,T241A+S68P,11.499224672689616,41.966322326457274,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-L181M-T241A,3,T241A+S68P,23.151478306710338,41.966322326457274,2
-triple_from_singles,Triple mutants against a singles model,S68P-G175D-T241A,3,T241A+S68P,6.351064800251612,41.91247593677574,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G175D-T241A,3,T241A+S68P,19.94639408605535,41.91247593677574,1
-triple_from_singles,Triple mutants against a singles model,S68P-A205V-T241A,3,T241A+S68P,9.766606516061948,40.60539357213288,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A205V-T241A,3,T241A+S68P,30.673373454651237,40.60539357213288,1
-double_from_singles,Double mutants,R34H-T241A,2,T241A,25.970024884180297,40.575992577473926,1
-triple_from_singles,Triple mutants against a singles model,N33S-V216I-T241A,3,T241A,9.905407962084102,40.14810786011796,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,N33S-V216I-T241A,3,T241A,25.919162636800536,40.14810786011796,2
-double_from_singles,Double mutants,S68P-T241A,2,T241A+S68P,12.701449036113738,39.890650765874014,1
-triple_from_singles,Triple mutants against a singles model,S68P-G192D-T241A,3,T241A+S68P,11.897958960204512,39.59195446461066,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G192D-T241A,3,T241A+S68P,37.36717947367668,39.59195446461066,1
-double_from_singles,Double mutants,V67A-T241A,2,T241A,11.918888216426334,39.51211582511271,1
-triple_from_singles,Triple mutants against a singles model,A28T-S68P-T241A,3,T241A+S68P,10.592068774868425,38.649730319454356,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A28T-S68P-T241A,3,T241A+S68P,21.531929560587937,38.649730319454356,2
-triple_from_singles,Triple mutants against a singles model,S68P-L231Q-T241A,3,T241A+S68P,14.60214877542252,38.35798264624912,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-L231Q-T241A,3,T241A+S68P,45.86006018490776,38.35798264624912,1
-triple_from_singles,Triple mutants against a singles model,S68P-D224G-T241A,3,T241A+S68P,7.7009123149037295,37.52376858053015,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-D224G-T241A,3,T241A+S68P,24.185776194432957,37.52376858053015,1
-triple_from_singles,Triple mutants against a singles model,S68P-P203S-T241A,3,T241A+S68P,16.76535620141845,36.393077988587876,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-P203S-T241A,3,T241A+S68P,27.370482600723864,36.393077988587876,3
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-D267E,3,T241A+S68P,11.913030642445843,36.39140084256703,1
-triple_from_singles,Triple mutants against a singles model,A72T-G221C-T241A,3,T241A,12.90729978449573,36.33654973765114,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-G221C-T241A,3,T241A,35.19543942862912,36.33654973765114,1
-triple_from_singles,Triple mutants against a singles model,S68P-S97C-T241A,3,T241A+S68P,12.256706443511845,36.257432627461455,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-S97C-T241A,3,T241A+S68P,32.22911811127645,36.257432627461455,3
-triple_from_singles,Triple mutants against a singles model,S68P-E197K-T241A,3,T241A+S68P,11.994588062450935,35.872318538783134,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-E197K-T241A,3,T241A+S68P,26.112364572034387,35.872318538783134,2
-triple_from_singles,Triple mutants against a singles model,S68P-T180M-T241A,3,T241A+S68P,8.61253065917939,35.24549897181019,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T180M-T241A,3,T241A+S68P,27.048839211878345,35.24549897181019,1
-triple_from_singles,Triple mutants against a singles model,S68P-A188V-T241A,3,T241A+S68P,14.100225257326217,35.241009412162185,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A188V-T241A,3,T241A+S68P,26.81880599768,35.241009412162185,2
-triple_from_singles,Triple mutants against a singles model,K38N-T241A-T264M,3,T241A,12.263287108766228,34.85639262857353,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-T241A-T264M,3,T241A,20.004968995321903,34.85639262857353,2
-triple_from_singles,Triple mutants against a singles model,S68P-T241A-A266T,3,T241A+S68P,9.755703933451514,34.548390327368416,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-A266T,3,T241A+S68P,30.639132391751854,34.548390327368416,1
-double_from_singles,Double mutants,G20C-T241A,2,T241A,16.06502270131578,34.31652908621227,1
-triple_from_singles,Triple mutants against a singles model,S68P-T199M-T241A,3,T241A+S68P,15.498118689456803,33.44754997803402,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T199M-T241A,3,T241A+S68P,30.770810725773558,33.44754997803402,2
-triple_from_singles,Triple mutants against a singles model,S68P-E197D-T241A,3,T241A+S68P,12.242249087799205,33.34600931604895,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-E197D-T241A,3,T241A+S68P,27.17034015631586,33.34600931604895,2
-triple_from_singles,Triple mutants against a singles model,G20C-S68P-T241A,3,T241A+S68P,14.081476235713914,33.30271523069735,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G20C-S68P-T241A,3,T241A+S68P,37.15214380230122,33.30271523069735,2
-triple_from_singles,Triple mutants against a singles model,R34H-T241A-H244Y,3,T241A,25.344852760419126,32.7151494122097,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-T241A-H244Y,3,T241A,26.73561871860489,32.7151494122097,2
-triple_from_singles,Triple mutants against a singles model,K38N-P203Q-T241A,3,T241A,17.105011597503363,32.33237796410041,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-P203Q-T241A,3,T241A,29.930676061895504,32.33237796410041,2
-triple_from_singles,Triple mutants against a singles model,S68P-T241A-A271E,3,T241A+S68P,9.244348555320794,32.33164607095121,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-A271E,3,T241A+S68P,29.033150369679724,32.33164607095121,1
-triple_from_singles,Triple mutants against a singles model,S68P-T241A-T256A,3,T241A+S68P,15.59415752696886,31.97035152265296,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-T256A,3,T241A+S68P,48.97560035297141,31.97035152265296,1
-triple_from_singles,Triple mutants against a singles model,V73L-T241A-A251V,3,T241A,30.38491364680831,31.73819488249752,1
-triple_from_singles,Triple mutants against a singles model,S68P-A194V-T241A,3,T241A+S68P,12.24914934802432,31.39407678240139,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A194V-T241A,3,T241A+S68P,38.47014127535928,31.39407678240139,1
-triple_from_singles,Triple mutants against a singles model,A72T-G175D-T241A,3,T241A,5.339807110651766,31.22241433493331,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-G175D-T241A,3,T241A,14.560509235964085,31.22241433493331,1
-triple_from_singles,Triple mutants against a singles model,V63I-S68P-T241A,3,T241A+S68P,14.741530031618307,30.7651649886759,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,V63I-S68P-T241A,3,T241A+S68P,46.29780622462388,30.7651649886759,1
-double_from_singles,Double mutants,T241A-G272E,2,T241A,16.606697585570533,30.573047445675947,1
-triple_from_singles,Triple mutants against a singles model,S68P-G226E-T241A,3,T241A+S68P,8.781035635190037,30.530922733716437,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G226E-T241A,3,T241A+S68P,18.78545015291331,30.530922733716437,2
-triple_from_singles,Triple mutants against a singles model,R2W-S68P-T241A,3,T241A+S68P,15.497091798868453,30.403724258918956,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,R2W-S68P-T241A,3,T241A+S68P,48.67075205967988,30.403724258918956,1
-triple_from_singles,Triple mutants against a singles model,S68P-G175S-T241A,3,T241A+S68P,17.445311846941046,30.364743279934967,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G175S-T241A,3,T241A+S68P,36.0164621378115,30.364743279934967,2
-triple_from_singles,Triple mutants against a singles model,S97C-D130N-T241A,3,T241A,9.308659700794259,30.32183462510655,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S97C-D130N-T241A,3,T241A,12.735814029049278,30.32183462510655,1
-triple_from_singles,Triple mutants against a singles model,S68P-A218T-T241A,3,T241A+S68P,7.437539526529747,30.009850958121344,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A218T-T241A,3,T241A+S68P,23.35861766374963,30.009850958121344,1
-double_from_singles,Double mutants,K38N-T241A,2,T241A,15.944388545029044,29.790541566235344,1
-double_from_singles,Double mutants,S35F-T241A,2,T241A,27.251809099584417,29.699096645988526,1
-triple_from_singles,Triple mutants against a singles model,G40D-S68P-T241A,3,T241A+S68P,18.142528453209636,29.56674530982551,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G40D-S68P-T241A,3,T241A+S68P,56.97911037387855,29.56674530982551,1
-triple_from_singles,Triple mutants against a singles model,N182I-E210G-T241A,3,T241A,3.343867365339629,29.550929762034674,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,N182I-E210G-T241A,3,T241A,2.0961760399407114,29.550929762034674,1
-triple_from_singles,Triple mutants against a singles model,S51N-S68P-T241A,3,T241A+S68P,10.37164471087528,29.486620623312795,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S51N-S68P-T241A,3,T241A+S68P,32.57357927059318,29.486620623312795,1
-triple_from_singles,Triple mutants against a singles model,S68P-T241A-R260C,3,T241A+S68P,10.285847211060213,29.209130397530878,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-R260C,3,T241A+S68P,19.815877258672113,29.209130397530878,2
-double_from_singles,Double mutants,A72T-T241A,2,T241A,10.679042020785898,29.119458203785673,1
-triple_from_singles,Triple mutants against a singles model,K38N-S217T-T241A,3,T241A,22.133142359636494,29.00134317788053,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-S217T-T241A,3,T241A,41.35362705155114,29.00134317788053,1
-triple_from_singles,Triple mutants against a singles model,M1I-S68P-T241A,3,T241A+S68P,10.275908409385202,28.657515055898973,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,M1I-S68P-T241A,3,T241A+S68P,32.27290622474631,28.657515055898973,1
-triple_from_singles,Triple mutants against a singles model,K38N-P203S-T241A,3,T241A,21.045894260661285,28.238291203426204,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-P203S-T241A,3,T241A,28.267422902436685,28.238291203426204,2
-triple_from_singles,Triple mutants against a singles model,K38N-A108T-T241A,3,T241A,20.07137579819886,28.13075643666426,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-A108T-T241A,3,T241A,37.50141645878237,28.13075643666426,1
-triple_from_singles,Triple mutants against a singles model,S68P-A102T-T241A,3,T241A+S68P,11.912339440678984,28.008583335675773,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A102T-T241A,3,T241A+S68P,37.4123433540199,28.008583335675773,1
-double_from_singles,Double mutants,Y142F-T241A,2,T241A,11.816181195373384,27.730727844302905,1
-triple_from_singles,Triple mutants against a singles model,S68P-E143V-T241A,3,T241A+S68P,5.999026826889833,27.34622067742608,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-E143V-T241A,3,T241A+S68P,13.911393952162479,27.34622067742608,2
-triple_from_singles,Triple mutants against a singles model,S68P-A129T-T241A,3,T241A+S68P,8.99235285768251,27.2787854967701,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A129T-T241A,3,T241A+S68P,28.241723160043232,27.2787854967701,1
-triple_from_singles,Triple mutants against a singles model,V76M-P203Q-T241A,3,T241A,14.263282619071974,27.078540790025638,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,V76M-P203Q-T241A,3,T241A,23.266770412715605,27.078540790025638,1
-triple_from_singles,Triple mutants against a singles model,S68P-L191V-T241A,3,T241A+S68P,15.405781959096137,27.018022943397803,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-L191V-T241A,3,T241A+S68P,29.887443320295034,27.018022943397803,2
-triple_from_singles,Triple mutants against a singles model,S68P-V212I-T241A,3,T241A+S68P,8.610823875770869,26.864419468767693,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-V212I-T241A,3,T241A+S68P,27.043478823414894,26.864419468767693,1
-triple_from_singles,Triple mutants against a singles model,H238Q-T241A-N255S,3,T241A,7.2669154274363885,26.716306565911808,1
-triple_from_singles,Triple mutants against a singles model,L13Q-P203Q-T241A,3,T241A,16.158387059044394,26.582837535449457,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,L13Q-P203Q-T241A,3,T241A,24.9676161784862,26.582837535449457,2
-double_from_singles,Double mutants,T237I-T241A,2,T241A,21.445618081461333,26.511728730401426,1
-triple_from_singles,Triple mutants against a singles model,A72T-G192D-T241A,3,T241A,10.003488841024886,26.40642830761625,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-G192D-T241A,3,T241A,27.277369508545423,26.40642830761625,1
-triple_from_singles,Triple mutants against a singles model,A53S-S68P-T241A,3,T241A+S68P,9.01276153439965,26.363897617931098,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A53S-S68P-T241A,3,T241A+S68P,28.30581942128101,26.363897617931098,1
-triple_from_singles,Triple mutants against a singles model,L49Q-P203Q-T241A,3,T241A,11.36546980116276,25.950013014825448,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,L49Q-P203Q-T241A,3,T241A,18.539755788244477,25.950013014825448,1
-double_from_singles,Double mutants,A59S-M120L,2,Other,4.441522936981495,25.612585571641155,1
-double_from_singles,Double mutants,P203Q-T241A,2,T241A,15.545401056722252,25.358207294912056,1
-triple_from_singles,Triple mutants against a singles model,A72T-D130E-T241A,3,T241A,11.9429183264216,25.22434916339905,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-D130E-T241A,3,T241A,32.56577793781041,25.22434916339905,1
-triple_from_singles,Triple mutants against a singles model,S68P-A161T-T241A,3,T241A+S68P,4.926788134125718,24.927708752982074,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A161T-T241A,3,T241A+S68P,15.473256972260716,24.927708752982074,1
-triple_from_singles,Triple mutants against a singles model,K38N-L115I-T241A,3,T241A,13.837666434003602,24.695038404614866,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-L115I-T241A,3,T241A,18.74648498490134,24.695038404614866,2
-double_from_singles,Double mutants,G10D-W32R,2,Other,1.6553838005189088,24.38591753785083,1
-triple_from_singles,Triple mutants against a singles model,A72T-A188V-T241A,3,T241A,11.85509602860284,24.208242081073756,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-A188V-T241A,3,T241A,20.095413346673922,24.208242081073756,2
-triple_from_singles,Triple mutants against a singles model,T96N-A161V-T241A,3,T241A,21.99096820110831,24.071406019883714,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,T96N-A161V-T241A,3,T241A,29.72573346030326,24.071406019883714,1
-double_from_singles,Double mutants,T241A-I283F,2,T241A,30.276265887295736,24.04308150182088,1
-triple_from_singles,Triple mutants against a singles model,S166P-T241A-G273S,3,T241A,20.97066588862982,23.94209969302639,1
-triple_from_singles,Triple mutants against a singles model,S68P-G221C-T241A,3,T241A+S68P,15.351696349496104,23.82193889490366,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G221C-T241A,3,T241A+S68P,48.214117617627714,23.82193889490366,1
-triple_from_singles,Triple mutants against a singles model,S68P-D236A-T241A,3,T241A+S68P,16.996597525788133,23.713468499451157,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-D236A-T241A,3,T241A+S68P,53.38015640432645,23.713468499451157,1
-triple_from_singles,Triple mutants against a singles model,K38N-A172V-T241A,3,T241A,5.70378613136418,23.691535937485128,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-A172V-T241A,3,T241A,10.656970466534236,23.691535937485128,1
-triple_from_singles,Triple mutants against a singles model,T96N-T241A-E250K,3,T241A,16.09610765137468,23.507551024625702,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,T96N-T241A-E250K,3,T241A,21.75750523658152,23.507551024625702,1
-double_from_singles,Double mutants,M1K-T241A,2,T241A,9.538272950401641,23.4212196294098,1
-double_from_singles,Double mutants,T96N-T241A,2,T241A,17.151545844128886,23.184167042224733,1
-triple_from_singles,Triple mutants against a singles model,V48I-S68P-T241A,3,T241A+S68P,12.722256160060585,22.953371340102755,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,V48I-S68P-T241A,3,T241A+S68P,39.9559984055367,22.953371340102755,1
-triple_from_singles,Triple mutants against a singles model,K24R-P203Q-T241A,3,T241A,14.604952923312235,22.926429305161943,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K24R-P203Q-T241A,3,T241A,23.824115081394556,22.926429305161943,1
-double_from_singles,Double mutants,T241A-M282I,2,T241A,12.237376576224557,22.85514169020258,1
-triple_from_singles,Triple mutants against a singles model,A39V-E44G-T241A,3,T241A,8.043819245565013,22.755699253081616,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A39V-E44G-T241A,3,T241A,9.791411773878577,22.755699253081616,2
-triple_from_singles,Triple mutants against a singles model,S68P-G175C-T241A,3,T241A+S68P,9.380199546708912,22.755664301764078,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G175C-T241A,3,T241A+S68P,18.787626555793636,22.755664301764078,2
-double_from_singles,Double mutants,A75S-G117V,2,Other,4.0129382295458695,22.672207643566455,1
-triple_from_singles,Triple mutants against a singles model,S68P-D82G-T241A,3,T241A+S68P,11.367032399240706,22.53925447902255,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-D82G-T241A,3,T241A+S68P,35.69973145530366,22.53925447902255,1
-triple_from_singles,Triple mutants against a singles model,K38N-E143D-T241A,3,T241A,14.030951423225705,22.449508890218567,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-E143D-T241A,3,T241A,20.079026045256946,22.449508890218567,2
-double_from_singles,Double mutants,L13Q-T241A,2,T241A,15.061995138780102,21.977328181243735,1
-triple_from_singles,Triple mutants against a singles model,S51G-A72T-T241A,3,T241A,10.532752237947339,21.717274603914102,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S51G-A72T-T241A,3,T241A,28.720557327778554,21.717274603914102,1
-double_from_singles,Double mutants,A72V-T241A,2,T241A,8.150255518349816,21.51720950143179,1
-triple_from_singles,Triple mutants against a singles model,S68P-H238Q-T241A,3,T241A+S68P,4.275660809902722,21.38260208855467,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-H238Q-T241A,3,T241A+S68P,13.428301895021374,21.38260208855467,1
-triple_from_singles,Triple mutants against a singles model,L11R-V216I-T241A,3,T241A,2.289811223694627,21.35552773972356,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,L11R-V216I-T241A,3,T241A,4.569430342072626,21.35552773972356,1
-triple_from_singles,Triple mutants against a singles model,P203S-T241A-A269V,3,T241A,16.796385959257595,21.285528391677445,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,P203S-T241A-A269V,3,T241A,14.451649953578862,21.285528391677445,2
-triple_from_singles,Triple mutants against a singles model,H163N-P203Q-T241A,3,T241A,5.843037504803435,21.20560617627288,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,H163N-P203Q-T241A,3,T241A,9.531369164302067,21.20560617627288,1
-double_from_singles,Double mutants,G37D-T241A,2,T241A,15.142743722118091,21.195196957387473,1
-triple_from_singles,Triple mutants against a singles model,A59S-S68P-T241A,3,T241A+S68P,10.975561008298143,21.185697977663636,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A59S-S68P-T241A,3,T241A+S68P,34.470261613199824,21.185697977663636,1
-double_from_singles,Double mutants,L134V-T241A,2,T241A,11.688802666704271,21.088351820937472,1
-double_from_singles,Double mutants,A21T-T241A,2,T241A,10.722419697556052,21.053829886565783,1
-triple_from_singles,Triple mutants against a singles model,Y142F-P203S-T241A,3,T241A,15.59684144050627,21.01345434658094,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,Y142F-P203S-T241A,3,T241A,24.67970447431276,21.01345434658094,2
-double_from_singles,Double mutants,L18V-T241A,2,T241A,8.62200119963227,20.93482988151914,1
-triple_from_singles,Triple mutants against a singles model,R34H-E58V-P203Q,3,Other,9.625085768345297,20.93432386741179,1
-triple_from_singles,Triple mutants against a singles model,R2W-E210G-T241A,3,T241A,17.40678083095384,20.462130617353967,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,R2W-E210G-T241A,3,T241A,10.911819436545963,20.462130617353967,1
-double_from_singles,Double mutants,V216I-T241A,2,T241A,10.183756296115012,20.322184001115247,1
-triple_from_singles,Triple mutants against a singles model,G12S-T200A-T241A,3,T241A,2.6452325673242174,20.311687013632106,1
-triple_from_singles,Triple mutants against a singles model,E44G-A218T-T241A,3,T241A,7.203388176544137,20.096665554157564,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E44G-A218T-T241A,3,T241A,5.828786454913924,20.096665554157564,1
-double_from_singles,Double mutants,G175S-T241A,2,T241A,19.90269529709093,19.672477163952884,1
-triple_from_singles,Triple mutants against a singles model,G37C-T241A-M282I,3,T241A,10.945424303352087,19.642203092194702,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-T241A-M282I,3,T241A,15.487912213603918,19.642203092194702,2
-double_from_singles,Double mutants,P229L-T241A,2,T241A,11.869028450470662,19.634992399302963,1
-triple_from_singles,Triple mutants against a singles model,F204L-T241A-H244Y,3,T241A,12.195344307156306,19.579145728915528,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,F204L-T241A-H244Y,3,T241A,6.674890200661621,19.579145728915528,1
-double_from_singles,Double mutants,E36D-V67I,2,Other,3.9985688406739803,19.353808598064482,1
-double_from_singles,Double mutants,S97C-T241A,2,T241A,13.9832119844783,19.13138873772488,1
-triple_from_singles,Triple mutants against a singles model,A28E-S68P-T241A,3,T241A+S68P,13.819947430154446,19.066086936295846,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A28E-S68P-T241A,3,T241A+S68P,43.4034490845547,19.066086936295846,1
-triple_from_singles,Triple mutants against a singles model,V67I-E210G-T241A,3,T241A,12.053192342344953,18.888286319729534,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,V67I-E210G-T241A,3,T241A,9.632730698303902,18.888286319729534,2
-triple_from_singles,Triple mutants against a singles model,A43S-A72T-T241A,3,T241A,9.816549366946763,18.880985328938365,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A43S-A72T-T241A,3,T241A,26.767625639061617,18.880985328938365,1
-triple_from_singles,Triple mutants against a singles model,G175D-P203Q-T241A,3,T241A,7.773117002353558,18.82185729099025,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G175D-P203Q-T241A,3,T241A,12.679783014543084,18.82185729099025,1
-triple_from_singles,Triple mutants against a singles model,A72T-A218T-T241A,3,T241A,6.2532862911340015,18.812628253794962,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-A218T-T241A,3,T241A,17.05137112828608,18.812628253794962,1
-double_from_singles,Double mutants,S52C-A194T,2,Other,6.555836606202208,18.65771682605299,1
-double_from_singles,Double mutants,T93A-T241A,2,T241A,6.738054660337346,18.587475426273045,1
-triple_from_singles,Triple mutants against a singles model,T96N-G226E-T241A,3,T241A,11.857571118670798,18.56591067960429,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,T96N-G226E-T241A,3,T241A,14.761063343166192,18.56591067960429,2
-triple_from_singles,Triple mutants against a singles model,D55N-S68P-T241A,3,T241A+S68P,9.011867595249873,18.52990733457078,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,D55N-S68P-T241A,3,T241A+S68P,28.303011882209816,18.52990733457078,1
-double_from_singles,Double mutants,D69E-T241A,2,T241A,5.02744419413149,18.436279430493883,1
-triple_from_singles,Triple mutants against a singles model,E44G-T237I-T241A,3,T241A,18.205933094853737,18.37106744425402,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E44G-T237I-T241A,3,T241A,18.619239333442213,18.37106744425402,2
-double_from_singles,Double mutants,Q99H-A161T,2,Other,0.8989479531647482,18.31933334443368,1
-double_from_singles,Double mutants,E197D-T241A,2,T241A,13.966718135123537,18.13082053693565,1
-double_from_singles,Double mutants,A230V-T241A,2,T241A,5.028139651880273,18.062166303079113,1
-triple_from_singles,Triple mutants against a singles model,A144V-G175S-T241A,3,T241A,14.009494659738625,18.003022777383208,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A144V-G175S-T241A,3,T241A,13.847444261105236,18.003022777383208,1
-triple_from_singles,Triple mutants against a singles model,R34H-A205V-T241A,3,T241A,19.969297482118794,17.819153138819924,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-A205V-T241A,3,T241A,31.200357721081787,17.819153138819924,1
-double_from_singles,Double mutants,S68P-S97C,2,Other,5.258647250536681,17.77275727622304,1
-triple_from_singles,Triple mutants against a singles model,P79L-T241A-A271E,3,T241A,11.643648101074918,17.50675182459969,1
-double_from_singles,Double mutants,G37S-T241A,2,T241A,10.239467708572587,17.409265834384,1
-triple_from_singles,Triple mutants against a singles model,G37C-E197K-T241A,3,T241A,12.239474490590672,17.406527890937,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-E197K-T241A,3,T241A,13.315086762480343,17.406527890937,2
-triple_from_singles,Triple mutants against a singles model,G37S-P203Q-T241A,3,T241A,10.984818477846261,17.38240526163789,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G37S-P203Q-T241A,3,T241A,18.297672029081767,17.38240526163789,2
-double_from_singles,Double mutants,A47V-T103M,2,Other,4.09351888615986,17.180924972343554,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,P203Q-T241A-D267E,3,T241A,14.58044972753011,17.178073650398613,1
-triple_from_singles,Triple mutants against a singles model,A140V-P203Q-T241A,3,T241A,15.35028282993956,17.113790482960653,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A140V-P203Q-T241A,3,T241A,25.039923551461673,17.113790482960653,1
-triple_from_singles,Triple mutants against a singles model,P203Q-P229L-T241A,3,T241A,12.732998115483912,17.11309892046109,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,P203Q-P229L-T241A,3,T241A,20.91738898114486,17.11309892046109,2
-triple_from_singles,Triple mutants against a singles model,L13Q-S68P-T241A,3,T241A+S68P,13.202292368488168,17.017844662166414,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,L13Q-S68P-T241A,3,T241A+S68P,30.36370415623202,17.017844662166414,2
-double_from_singles,Double mutants,S217F-T241A,2,T241A,12.930340122129492,16.957131336353072,1
-triple_from_singles,Triple mutants against a singles model,S68P-M120L-T241A,3,T241A+S68P,10.500864131499888,16.87710674096706,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-M120L-T241A,3,T241A+S68P,32.97941066555045,16.87710674096706,1
-triple_from_singles,Triple mutants against a singles model,E197D-T241A-M282I,3,T241A,11.794954402555218,16.786990070088102,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E197D-T241A-M282I,3,T241A,18.6702043869983,16.786990070088102,2
-double_from_singles,Double mutants,E197K-T241A,2,T241A,13.684171054984295,16.604190056340478,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A59S-S97N-T241A,3,T241A,15.315649389005683,16.347492306375354,1
-double_from_singles,Double mutants,S68T-T241A,2,T241A,21.443063049334025,16.319325254211094,1
-double_from_singles,Double mutants,A121T-T241A,2,T241A,8.203438132400203,16.306559517168164,1
-double_from_singles,Double mutants,D69E-A266V,2,Other,2.5638685339664624,16.1370509698502,1
-triple_from_singles,Triple mutants against a singles model,A28V-D130N-T241A,3,T241A,7.048929136352434,15.812712903631384,1
-double_from_singles,Double mutants,H145Y-L265V,2,Other,1.3509616946565561,15.717241230524845,1
-triple_from_singles,Triple mutants against a singles model,R34H-E58V-T241A,3,T241A,20.91167638439481,15.671643203039514,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-E58V-T241A,3,T241A,32.672745965392345,15.671643203039514,1
-double_from_singles,Double mutants,P203S-T241A,2,T241A,19.12695966409644,15.643212636838417,1
-double_from_singles,Double mutants,T241A-T264M,2,T241A,11.145138095511625,15.53828077938032,1
-double_from_singles,Double mutants,P203S-E284D,2,Other,16.987466942132524,15.53706564419192,1
-triple_from_singles,Triple mutants against a singles model,G175S-V216I-T241A,3,T241A,13.987286320942003,15.49679551436415,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G175S-V216I-T241A,3,T241A,20.868903545238457,15.49679551436415,2
-double_from_singles,Double mutants,P138Q-T241A,2,T241A,17.922257368332357,15.245587190314854,1
-triple_from_singles,Triple mutants against a singles model,P61S-P203Q-T241A,3,T241A,14.63384712548898,15.066516329216537,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,P61S-P203Q-T241A,3,T241A,23.871248324579824,15.066516329216537,1
-triple_from_singles,Triple mutants against a singles model,R34H-S68T-T241A,3,T241A,38.43021032667497,14.94428028367146,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-S68T-T241A,3,T241A,44.64572465222312,14.94428028367146,2
-triple_from_singles,Triple mutants against a singles model,L13Q-K38N-T241A,3,T241A,16.573107415518514,14.869877983011106,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,L13Q-K38N-T241A,3,T241A,27.573735525381565,14.869877983011106,2
-double_from_singles,Double mutants,G15S-T241A,2,T241A,22.360084819615064,14.750082387965735,1
-double_from_singles,Double mutants,T199M-T241A,2,T241A,17.681216401327617,14.680207837545636,1
-double_from_singles,Double mutants,R110H-T241A,2,T241A,7.69156958544914,14.652808076295743,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-T241A-D267E,3,T241A,14.954670823141864,14.621005274870539,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A50T-T241A-D267E,3,T241A,9.356222577930728,14.359881275556122,1
-double_from_singles,Double mutants,A19S-T241A,2,T241A,15.044481415781252,14.27119251090184,1
-triple_from_singles,Triple mutants against a singles model,A43S-A230V-T241A,3,T241A,4.622042035279186,14.135262247408594,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A43S-A230V-T241A,3,T241A,16.60337573754859,14.135262247408594,1
-double_from_singles,Double mutants,A56V-L191V,2,Other,2.315534546779227,14.109684743734787,1
-double_from_singles,Double mutants,E210K-T241A,2,T241A,8.421120897238238,13.81043352938646,1
-triple_from_singles,Triple mutants against a singles model,G226E-T241A-V262M,3,T241A,13.836555119918813,13.774152858449787,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G226E-T241A-V262M,3,T241A,15.746046126244831,13.774152858449787,1
-triple_from_singles,Triple mutants against a singles model,R34H-A230V-T241A,3,T241A,9.011420799774895,13.754969517253127,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-A230V-T241A,3,T241A,23.225283101545983,13.754969517253127,2
-triple_from_singles,Triple mutants against a singles model,D78G-A141V-A202V,3,Other,3.9191701982369858,13.749645561728151,1
-triple_from_singles,Triple mutants against a singles model,S68T-T241S-F286L,3,Other,2.2350789699069686,13.683260939949275,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68T-T241S-F286L,3,Other,4.883784419623753,13.683260939949275,1
-triple_from_singles,Triple mutants against a singles model,A28T-L181M-T241A,3,T241A,10.940300180824977,13.674530271692557,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A28T-L181M-T241A,3,T241A,9.906497759784877,13.674530271692557,2
-double_from_singles,Double mutants,A85T-T241A,2,T241A,13.41485813918448,13.629450666934257,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,V8I-T241A-D267E,3,T241A,13.513158324453745,13.432127070613044,1
-triple_from_singles,Triple mutants against a singles model,D78E-E210G-T241A,3,T241A,13.022615621025095,13.321775207611564,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,D78E-E210G-T241A,3,T241A,8.163510049800635,13.321775207611564,1
-double_from_singles,Double mutants,L77M-T241A,2,T241A,14.665148985017334,13.128663860120314,1
-double_from_singles,Double mutants,F22L-T96N,2,Other,7.105918625520035,13.09899065530016,1
-triple_from_singles,Triple mutants against a singles model,K38N-S68P-T241A,3,T241A+S68P,13.975736764531721,13.076827482666758,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-S68P-T241A,3,T241A+S68P,35.002516926725136,13.076827482666758,2
-double_from_singles,Double mutants,A188V-A211V,2,Other,5.641355755847827,13.022658249800111,1
-double_from_singles,Double mutants,L191V-T241A,2,T241A,17.5758729242249,12.995452736493174,1
-triple_from_singles,Triple mutants against a singles model,G37C-G221C-T241A,3,T241A,15.66512287697167,12.98847718905914,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-G221C-T241A,3,T241A,15.075715827587066,12.98847718905914,1
-double_from_singles,Double mutants,S68P-E210G,2,Other,5.365233446243192,12.91602383833847,1
-triple_from_singles,Triple mutants against a singles model,S52G-P203Q-T241A,3,T241A,20.785480748357248,12.74664434970259,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S52G-P203Q-T241A,3,T241A,33.906010376832455,12.74664434970259,1
-double_from_singles,Double mutants,E143D-T241A,2,T241A,12.751629301044591,12.6713172429848,1
-double_from_singles,Double mutants,G37C-E105K,2,Other,6.5943023628321535,12.489383233320561,1
-double_from_singles,Double mutants,G37C-T241A,2,T241A,12.960767027732803,12.47311254129356,1
-triple_from_singles,Triple mutants against a singles model,G37C-T241A-R260C,3,T241A,10.495847285326448,12.45471847123155,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-T241A-R260C,3,T241A,8.789087286812016,12.45471847123155,2
-double_from_singles,Double mutants,H186Y-T241A,2,T241A,8.635909759690824,12.450074458368595,1
-triple_from_singles,Triple mutants against a singles model,S97C-E210G-T241A,3,T241A,13.767086466321926,12.408933962820873,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S97C-E210G-T241A,3,T241A,13.73294521849872,12.408933962820873,2
-triple_from_singles,Triple mutants against a singles model,G37C-P203S-T241A,3,T241A,17.107644588087457,12.235230030149012,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-P203S-T241A,3,T241A,15.227826846352986,12.235230030149012,2
-double_from_singles,Double mutants,P147T-T241A,2,T241A,26.210969117762147,12.184421699003725,1
-triple_from_singles,Triple mutants against a singles model,A140V-T241A-T256M,3,T241A,13.848885194943215,12.110020526787372,1
-triple_from_singles,Triple mutants against a singles model,A72T-T241A-E284D,3,T241A,22.106231983551258,12.096030841928748,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-T241A-E284D,3,T241A,60.2789554564219,12.096030841928748,1
-double_from_singles,Double mutants,H70Q-T241A,2,T241A,11.903154067879738,12.076004476467634,1
-triple_from_singles,Triple mutants against a singles model,R34H-G226E-T241A,3,T241A,17.954149428649263,12.041929086935253,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-G226E-T241A,3,T241A,24.241869813904152,12.041929086935253,2
-triple_from_singles,Triple mutants against a singles model,G37S-S52C-S97C,3,Other,6.273666958954505,11.921900270358297,1
-double_from_singles,Double mutants,V67I-T241A,2,T241A,12.242411931166474,11.893481931275813,1
-triple_from_singles,Triple mutants against a singles model,E210V-G221C-T241A,3,T241A,22.415905613523798,11.881508879999878,1
-double_from_singles,Double mutants,L80M-T241A,2,T241A,26.81454566335555,11.838520282828338,1
-triple_from_singles,Triple mutants against a singles model,A141V-G221S-T241A,3,T241A,16.739528041723375,11.77462071276352,1
-double_from_singles,Double mutants,A100V-T241A,2,T241A,17.156565385364452,11.728698776979032,1
-double_from_singles,Double mutants,A205T-T241A,2,T241A,7.409478869228514,11.664879001201601,1
-double_from_singles,Double mutants,L181M-T241A,2,T241A,13.119029732533106,11.623168338508886,1
-double_from_singles,Double mutants,T241A-A269V,2,T241A,12.724957208744367,11.489907787717222,1
-double_from_singles,Double mutants,R54W-A154V,2,Other,14.308818828007013,11.488743982478534,1
-double_from_singles,Double mutants,G226E-T241A,2,T241A,10.0179508496851,11.400461661335886,1
-triple_from_singles,Triple mutants against a singles model,E143V-T241A-A271G,3,T241A,2.126171087041435,11.35384114441034,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E143V-T241A-A271G,3,T241A,3.1834006799979133,11.35384114441034,1
-double_from_singles,Double mutants,A28T-T241A,2,T241A,12.084089940129225,11.178175753578072,1
-double_from_singles,Double mutants,R150W-T241A,2,T241A,9.319719593532438,11.044724264919267,1
-double_from_singles,Double mutants,V126A-T241A,2,T241A,34.773289311272,11.020210197623701,1
-triple_from_singles,Triple mutants against a singles model,T148I-K195R-T241A,3,T241A,14.624186327291813,10.955892523877298,1
-double_from_singles,Double mutants,T241A-G275C,2,T241A,11.03129893236653,10.87631268382815,1
-double_from_singles,Double mutants,R54W-T241A,2,T241A,12.448429485960233,10.771276224617116,1
-triple_from_singles,Triple mutants against a singles model,A17T-K24R-T241A,3,T241A,7.204788011242516,10.682207824345786,1
-double_from_singles,Double mutants,A188V-T241A,2,T241A,16.086412749687643,10.671523533502128,1
-triple_from_singles,Triple mutants against a singles model,Y114F-P203S-E284D,3,Other,9.576971588234649,10.665816191761905,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,Y114F-P203S-E284D,3,Other,8.75928334376398,10.665816191761905,1
-double_from_singles,Double mutants,L115I-T241A,2,T241A,12.575967761233628,10.57744003361531,1
-triple_from_singles,Triple mutants against a singles model,E44G-P203S-T241A,3,T241A,16.23754310226798,10.575126245860785,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E44G-P203S-T241A,3,T241A,13.209524247354508,10.575126245860785,2
-triple_from_singles,Triple mutants against a singles model,L13Q-K195R-T241A,3,T241A,21.00794625389428,10.453073140976995,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,L13Q-K195R-T241A,3,T241A,30.65321194049716,10.453073140976995,1
-double_from_singles,Double mutants,R150Q-T241A,2,T241A,10.373802392456225,10.345074920259364,1
-triple_from_singles,Triple mutants against a singles model,G37S-S52C-T241A,3,T241A,15.153072140478512,10.31552871234134,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G37S-S52C-T241A,3,T241A,25.763435034843592,10.31552871234134,1
-double_from_singles,Double mutants,E143V-T241A,2,T241A,6.844062408411362,10.247243534480576,1
-double_from_singles,Double mutants,L13Q-T180A,2,Other,6.100719859981964,10.225585481731498,1
-double_from_singles,Double mutants,R207H-S217P,2,Other,2.5912501760849542,10.214823972936378,1
-triple_from_singles,Triple mutants against a singles model,G175C-P203S-T241A,3,T241A,14.12552991874796,9.988298013941161,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G175C-P203S-T241A,3,T241A,11.88684161108117,9.988298013941161,2
-double_from_singles,Double mutants,E44G-T241A,2,T241A,12.301577354360527,9.954102944313702,1
-triple_from_singles,Triple mutants against a singles model,G37S-G117V-A144T,3,Other,5.518657809856251,9.80521256497812,1
-double_from_singles,Double mutants,G40S-T241A,2,T241A,16.389145521077314,9.743721432284236,1
-triple_from_singles,Triple mutants against a singles model,V8L-P203Q-T241A,3,T241A,10.327664654266139,9.728704969966044,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,V8L-P203Q-T241A,3,T241A,16.846851375504926,9.728704969966044,1
-triple_from_singles,Triple mutants against a singles model,E105K-G175S-T241A,3,T241A,23.602053572734786,9.684916355702137,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E105K-G175S-T241A,3,T241A,23.329044282755184,9.684916355702137,1
-triple_from_singles,Triple mutants against a singles model,G37C-A172V-T241A,3,T241A,4.636455202772397,9.612596666562895,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-A172V-T241A,3,T241A,4.462006562813929,9.612596666562895,1
-double_from_singles,Double mutants,A129V-E143V,2,Other,2.370633215928505,9.580433583541309,1
-double_from_singles,Double mutants,G226R-T241A,2,T241A,12.255669391825851,9.56871413197548,1
-double_from_singles,Double mutants,A240V-T241A,2,T241A,6.7879331858695195,9.546020435897223,1
-triple_from_singles,Triple mutants against a singles model,P203Q-G221C-T241A,3,T241A,18.78905910462599,9.423549550953219,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,P203Q-G221C-T241A,3,T241A,30.649376874418284,9.423549550953219,1
-double_from_singles,Double mutants,T103M-T241A,2,T241A,14.150305737941318,9.290245013927644,1
-double_from_singles,Double mutants,H70Q-M120L,2,Other,4.222154089041333,9.26681766979089,1
-double_from_singles,Double mutants,G175C-T241A,2,T241A,10.701514254489716,9.258602554995615,1
-triple_from_singles,Triple mutants against a singles model,G175S-A230T-T241A,3,T241A,15.00997306612713,9.20867843040384,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G175S-A230T-T241A,3,T241A,14.836349949953451,9.20867843040384,1
-double_from_singles,Double mutants,A28T-P203Q,2,Other,5.561983648185096,9.138161478106525,1
-triple_from_singles,Triple mutants against a singles model,A72T-T241A-A271T,3,T241A,8.99872630495786,9.090771044357314,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-T241A-A271T,3,T241A,24.53759747498803,9.090771044357314,1
-double_from_singles,Double mutants,V67I-T96N,2,Other,6.217046058189858,8.987061387154418,1
-double_from_singles,Double mutants,E210G-T241A,2,T241A,14.266634183796027,8.943350162943714,1
-double_from_singles,Double mutants,L18M-T241A,2,T241A,10.524029702414824,8.836822873764024,1
-triple_from_singles,Triple mutants against a singles model,S68P-A230V-T241A,3,T241A+S68P,4.407315839771819,8.738611096477099,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A230V-T241A,3,T241A+S68P,14.836907703997227,8.738611096477099,2
-triple_from_singles,Triple mutants against a singles model,Q124P-A188V-T241A,3,T241A,5.949053131346615,8.735794405267246,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,Q124P-A188V-T241A,3,T241A,3.9465268908043316,8.735794405267246,1
-triple_from_singles,Triple mutants against a singles model,F22L-T96N-T241A,3,T241A,16.56227437495329,8.67640059314912,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,F22L-T96N-T241A,3,T241A,26.45919581280782,8.67640059314912,2
-triple_from_singles,Triple mutants against a singles model,P203Q-T241A-T256R,3,T241A,25.760573697493783,8.614036749277815,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,P203Q-T241A-T256R,3,T241A,42.02155772458679,8.614036749277815,1
-double_from_singles,Double mutants,E36V-P147S,2,Other,14.687917539242367,8.59361634879918,1
-triple_from_singles,Triple mutants against a singles model,E44G-M120L-E284D,3,Other,9.032651484788147,8.587472037575733,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E44G-M120L-E284D,3,Other,15.452153482832177,8.587472037575733,1
-double_from_singles,Double mutants,S167Y-T241A,2,T241A,3.4934653730353453,8.522456207799989,1
-double_from_singles,Double mutants,F201L-P203S,2,Other,4.524746447550343,8.433732212716773,1
-double_from_singles,Double mutants,T241A-R260C,2,T241A,11.734733360473575,8.359820125270609,1
-triple_from_singles,Triple mutants against a singles model,S68P-A121S-T241A,3,T241A+S68P,8.683930330567993,8.343000176331698,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A121S-T241A,3,T241A+S68P,27.273079717671255,8.343000176331698,1
-triple_from_singles,Triple mutants against a singles model,E197K-V216I-T241A,3,T241A,9.617009945320765,8.255765507635,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E197K-V216I-T241A,3,T241A,15.430182556388207,8.255765507635,2
-double_from_singles,Double mutants,T241A-F286L,2,T241A,11.295391582337524,8.251699830714863,1
-double_from_singles,Double mutants,V126D-F132L,2,Other,1.7317637102526096,8.102765616245575,1
-triple_from_singles,Triple mutants against a singles model,F22L-A85V-T241A,3,T241A,9.275199717563373,7.919901185436389,1
-double_from_singles,Double mutants,G117V-T241A,2,T241A,13.693620648632262,7.895538427761237,1
-triple_from_singles,Triple mutants against a singles model,V67I-Y169C-V171I,3,Other,1.2326035110239255,7.865016458743117,1
-double_from_singles,Double mutants,T241A-H244Y,2,T241A,14.14177208758401,7.740230496978514,1
-double_from_singles,Double mutants,E36V-G37D,2,Other,17.65065159175651,7.6331076249556915,1
-triple_from_singles,Triple mutants against a singles model,R34H-P203Q-T241A,3,T241A,27.860433504666943,7.582164144538202,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-P203Q-T241A,3,T241A,44.488260603183036,7.582164144538202,2
-double_from_singles,Double mutants,E44G-M120L,2,Other,4.363478354743608,7.464600773102412,1
-double_from_singles,Double mutants,D82E-T241A,2,T241A,12.957931282168595,7.4406540117095386,1
-double_from_singles,Double mutants,R34H-N206I,2,Other,9.833337542598521,7.37180615966729,1
-triple_from_singles,Triple mutants against a singles model,A47T-S68P-L191V,3,Other,4.4234503212192315,7.354034807715118,1
-triple_from_singles,Triple mutants against a singles model,F22L-A227V-R260L,3,Other,29.953358165113787,7.174463809656687,1
-double_from_singles,Double mutants,A59S-G221S,2,Other,5.977351746909671,7.17128973441417,1
-double_from_singles,Double mutants,Q16R-T241A,2,T241A,12.151815445330902,7.142952970895548,1
-triple_from_singles,Triple mutants against a singles model,E36D-V67I-G175S,3,Other,5.491993879492228,7.081849220427735,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E36D-V67I-G175S,3,Other,26.58226045384735,7.081849220427735,1
-triple_from_singles,Triple mutants against a singles model,E143D-T241A-M282I,3,T241A,10.768806580686228,7.0788238724641035,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E143D-T241A-M282I,3,T241A,15.406674497966977,7.0788238724641035,2
-double_from_singles,Double mutants,Y142F-L173S,2,Other,1.8940510043783119,7.066075788768606,1
-double_from_singles,Double mutants,E44D-A251D,2,Other,2.7682078325841357,7.025342031275439,1
-double_from_singles,Double mutants,M1K-E284D,2,Other,8.471346166643318,7.001753669067411,1
-triple_from_singles,Triple mutants against a singles model,G192D-N206I-A227V,3,Other,4.399563621274579,6.955802617061866,1
-double_from_singles,Double mutants,A75V-T241A,2,T241A,15.56690657153143,6.936378617033549,1
-double_from_singles,Double mutants,A266V-Q274H,2,Other,5.487524033122113,6.79990515735095,1
-triple_from_singles,Triple mutants against a singles model,E36V-G37D-G179A,3,Other,23.736798290412057,6.793540289998998,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E36V-G37D-G179A,3,Other,10.265090502789127,6.793540289998998,1
-double_from_singles,Double mutants,S68P-P203S,2,Other,7.19304934805931,6.755612016795347,1
-double_from_singles,Double mutants,T128A-F184L,2,Other,1.7282222097153397,6.59575586140924,1
-double_from_singles,Double mutants,S97T-A108V,2,Other,4.2880454589176376,6.567958277219614,1
-triple_from_singles,Triple mutants against a singles model,A43S-P229L-T241A,3,T241A,10.910426562135244,6.509030288512379,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A43S-P229L-T241A,3,T241A,18.04917255988072,6.509030288512379,1
-double_from_singles,Double mutants,E58K-P147T,2,Other,9.454291051207825,6.489774162244113,1
-double_from_singles,Double mutants,E36D-E105K,2,Other,5.612571847014818,6.374600970049742,1
-double_from_singles,Double mutants,R34C-G164D,2,Other,1.679145704766828,6.365203246337167,1
-triple_from_singles,Triple mutants against a singles model,F22L-D78E-A240V,3,Other,2.5670316110421534,6.342259914334935,1
-double_from_singles,Double mutants,D25E-S217T,2,Other,6.684109009432552,6.335237883441531,1
-triple_from_singles,Triple mutants against a singles model,N206I-A227V-R268C,3,Other,2.0544150467851314,6.161728725198165,1
-triple_from_singles,Triple mutants against a singles model,E139G-T241A-G275C,3,T241A,8.765616238791308,6.109039776521199,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,E139G-T241A-G275C,3,T241A,8.642462112943873,6.109039776521199,1
-double_from_singles,Double mutants,M177V-T241A,2,T241A,5.645908561168836,6.092999401734214,1
-triple_from_singles,Triple mutants against a singles model,A118V-A154V-V239A,3,Other,4.588842392921502,6.091385015889042,1
-double_from_singles,Double mutants,T241A-A281V,2,T241A,12.637657653800025,6.057161103474831,1
-double_from_singles,Double mutants,S52C-P203Q,2,Other,9.870189611789627,6.007016979216509,1
-triple_from_singles,Triple mutants against a singles model,D82E-T213S-A240V,3,Other,3.107788137008381,5.961301633159266,1
-triple_from_singles,Triple mutants against a singles model,K24R-A129V-E143V,3,Other,2.227217322392862,5.954430849187381,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,K24R-A129V-E143V,3,Other,9.000847322111024,5.954430849187381,1
-double_from_singles,Double mutants,M1K-N255S,2,Other,6.096543890601318,5.863022354481677,1
-double_from_singles,Double mutants,Q41R-S68P,2,Other,4.9044842229222025,5.861346920659385,1
-double_from_singles,Double mutants,G37S-G40C,2,Other,4.816153445847555,5.772429700471985,1
-double_from_singles,Double mutants,T96N-P203Q,2,Other,7.894398171379529,5.724322301735776,1
-double_from_singles,Double mutants,K24N-V262M,2,Other,10.608987655440671,5.713413369166215,1
-triple_from_singles,Triple mutants against a singles model,Q16R-P203Q-A271T,3,Other,4.713089331542826,5.684805708482999,1
-triple_from_singles,Triple mutants against a singles model,D78E-R87H-T200A,3,Other,4.171492503881447,5.6737725772162,1
-double_from_singles,Double mutants,A39V-E44G,2,Other,3.451139843680928,5.609293601920948,1
-double_from_singles,Double mutants,L18M-L181M,2,Other,4.087875018147523,5.546586348297314,1
-triple_from_singles,Triple mutants against a singles model,P61S-T241S-F286L,3,Other,1.4218345380961437,5.485551724632315,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,P61S-T241S-F286L,3,Other,3.106795535159955,5.485551724632315,1
-double_from_singles,Double mutants,L115I-L261F,2,Other,8.929425965649772,5.232623009899512,1
-double_from_singles,Double mutants,Q16R-G221S,2,Other,5.800829400753988,5.114825484153582,1
-triple_from_singles,Triple mutants against a singles model,M120L-A141D-G155D,3,Other,3.3677457922887672,5.06808079578544,1
-triple_from_singles,Triple mutants against a singles model,H70Q-M177V-T241A,3,T241A,4.63777278916177,5.020327399542022,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,H70Q-M177V-T241A,3,T241A,4.855075313160967,5.020327399542022,2
-double_from_singles,Double mutants,A75T-E210G,2,Other,6.744436886989496,4.9959723327582095,1
-triple_from_singles,Triple mutants against a singles model,A100S-P138L-S167P,3,Other,2.1734774873927996,4.923850663256418,1
-double_from_singles,Double mutants,A118V-T256M,2,Other,1.7052064087715209,4.898761259089146,1
-double_from_singles,Double mutants,D69N-V88A,2,Other,4.097191946136271,4.830900255432234,1
-triple_from_singles,Triple mutants against a singles model,G37S-G40C-P229Q,3,Other,3.857658147250937,4.817190855417404,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,G37S-G40C-P229Q,3,Other,4.623619391250577,4.817190855417404,1
-double_from_singles,Double mutants,D5G-L13M,2,Other,3.1129056650205182,4.757226545768899,1
-double_from_singles,Double mutants,Q45H-E146D,2,Other,3.567319224745488,4.6789390827085455,1
-double_from_singles,Double mutants,G272R-G278S,2,Other,5.2839233113829795,4.599194567093801,1
-double_from_singles,Double mutants,V171I-P203Q,2,Other,4.071012748969926,4.580259345359958,1
-double_from_singles,Double mutants,A141V-T200A,2,Other,5.075006302755809,4.502589634557219,1
-double_from_singles,Double mutants,D78E-P203S,2,Other,7.490708438550873,4.464056470893796,1
-triple_from_singles,Triple mutants against a singles model,V196M-E197D-T241A,3,T241A,5.53252555489951,4.445367404842486,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,V196M-E197D-T241A,3,T241A,7.1820184943544785,4.445367404842486,1
-double_from_singles,Double mutants,R54W-A194V,2,Other,5.150714503360022,4.4363686879197175,1
-double_from_singles,Double mutants,S52G-G278S,2,Other,9.708811228459972,4.3643368783750915,1
-triple_from_singles,Triple mutants against a singles model,D5E-E44D-P203S,3,Other,5.418868488029406,4.275279563848871,1
-triple_from_singles,Triple mutants against a singles model,A129V-E143V-T241A,3,T241A,5.525404924224331,4.249765944940535,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A129V-E143V-T241A,3,T241A,15.30134655725799,4.249765944940535,2
-double_from_singles,Double mutants,L115I-V262M,2,Other,7.452307232914493,4.087126169235551,1
-double_from_singles,Double mutants,V216I-D243E,2,Other,3.861486205625037,4.072222121360916,1
-double_from_singles,Double mutants,G111E-T241A,2,T241A,12.263714823506232,4.040776923780682,1
-triple_from_singles,Triple mutants against a singles model,A72T-T241A-G275C,3,T241A,8.12966260398662,3.9458082688146336,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-T241A-G275C,3,T241A,15.091645249146758,3.9458082688146336,2
-double_from_singles,Double mutants,V90A-A240T,2,Other,1.915608649667958,3.8866403276560564,1
-double_from_singles,Double mutants,F215Y-G272V,2,Other,6.710685311376003,3.7908361833426527,1
-double_from_singles,Double mutants,E143V-R263C,2,Other,1.3625949987401764,3.746441745986354,1
-double_from_singles,Double mutants,R110C-V262M,2,Other,8.48607377624927,3.6818913279579113,1
-double_from_singles,Double mutants,A43T-V126L,2,Other,6.507379407041001,3.633440682360668,1
-triple_from_singles,Triple mutants against a singles model,A19S-A220T-T241A,3,T241A,4.422732808515299,3.5503195202289977,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A19S-A220T-T241A,3,T241A,4.195403589544448,3.5503195202289977,1
-triple_from_singles,Triple mutants against a singles model,A118T-P203Q-T241A,3,T241A,11.69578848653798,3.3134473403002205,1
-triple_from_double_single,Triple mutants against a doubles-plus-single model,A118T-P203Q-T241A,3,T241A,19.078583295271418,3.3134473403002205,1
-double_from_singles,Double mutants,T241S-F286L,2,Other,1.5104017379343389,3.300320290429558,1
-double_from_singles,Double mutants,G221S-G278S,2,Other,8.078981015181018,2.456901036177267,1
+panel,title,mut_id,n_mutations,category,expected_kcat_app,observed_kcat_app,n_decompositions,epistasis
+triple_from_singles,Triple mutants against a singles model,S68P-T241A-H244Y,3,S68P-T241A-H244Y,12.395689149314839,90.92443562755366,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-H244Y,3,S68P-T241A-H244Y,22.85745742956445,90.92443562755366,2,positive
+triple_from_singles,Triple mutants against a singles model,S68P-P203Q-T241A,3,S68P-P203Q-T241A,13.626012214532851,56.885450073006126,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-P203Q-T241A,3,S68P-P203Q-T241A,32.51080061892903,56.885450073006126,2,additive
+triple_from_singles,Triple mutants against a singles model,G37C-H238Q-T241A,3,T241A,4.362954454188174,56.41400135049744,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-H238Q-T241A,3,T241A,4.19879639863773,56.41400135049744,1,positive
+triple_from_singles,Triple mutants against a singles model,S68P-E143D-T241A,3,T241A+S68P,11.17718712931454,54.49674402851504,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-E143D-T241A,3,T241A+S68P,23.10514370945809,54.49674402851504,2,positive
+triple_from_singles,Triple mutants against a singles model,M1V-S68P-T241A,3,T241A+S68P,12.034504698301152,53.73072618619139,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,M1V-S68P-T241A,3,T241A+S68P,37.79602017811084,53.73072618619139,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-E210G-T241A,3,T241A+S68P,12.505134537176442,50.74170159051985,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-E210G-T241A,3,T241A+S68P,25.739172419622104,50.74170159051985,3,additive
+triple_from_singles,Triple mutants against a singles model,S68P-T241A-A266V,3,T241A+S68P,15.097377311279198,48.95125698210124,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-A266V,3,T241A+S68P,47.41539363678281,48.95125698210124,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-T241A-M282I,3,T241A+S68P,10.726429128013281,48.624247849721606,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-M282I,3,T241A+S68P,26.860524323651568,48.624247849721606,2,additive
+triple_from_singles,Triple mutants against a singles model,K38N-E210G-T241A,3,T241A,15.697950942580757,46.856631563227545,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-E210G-T241A,3,T241A,19.585349532830968,46.856631563227545,2,positive
+triple_from_singles,Triple mutants against a singles model,N33S-S51G-T241A,3,T241A,13.901458551062603,46.41402575972983,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,N33S-S51G-T241A,3,T241A,45.009958779780376,46.41402575972983,1,additive
+double_from_singles,Double mutants,N33S-T241A,2,T241A,14.094536419660653,45.635103751077054,1,positive
+triple_from_singles,Triple mutants against a singles model,S68P-V216I-T241A,3,T241A+S68P,8.92636910262818,44.4960243540093,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-V216I-T241A,3,T241A+S68P,22.923749207845468,44.4960243540093,2,additive
+double_from_singles,Double mutants,T234S-T241A,2,T241A,11.179460898628427,42.82891635975795,1,positive
+triple_from_singles,Triple mutants against a singles model,F184L-V216I-T241A,3,T241A,2.1931924323083365,42.2307004770849,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,F184L-V216I-T241A,3,T241A,4.376622816104371,42.2307004770849,1,positive
+triple_from_singles,Triple mutants against a singles model,S68P-L181M-T241A,3,T241A+S68P,11.499224672689616,41.966322326457274,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-L181M-T241A,3,T241A+S68P,23.151478306710338,41.966322326457274,2,additive
+triple_from_singles,Triple mutants against a singles model,S68P-G175D-T241A,3,T241A+S68P,6.351064800251612,41.91247593677574,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G175D-T241A,3,T241A+S68P,19.94639408605535,41.91247593677574,1,positive
+triple_from_singles,Triple mutants against a singles model,S68P-A205V-T241A,3,T241A+S68P,9.766606516061948,40.60539357213288,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A205V-T241A,3,T241A+S68P,30.673373454651237,40.60539357213288,1,additive
+double_from_singles,Double mutants,R34H-T241A,2,T241A,25.970024884180297,40.575992577473926,1,additive
+triple_from_singles,Triple mutants against a singles model,N33S-V216I-T241A,3,T241A,9.905407962084102,40.14810786011796,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,N33S-V216I-T241A,3,T241A,25.919162636800536,40.14810786011796,2,additive
+double_from_singles,Double mutants,S68P-T241A,2,T241A+S68P,12.701449036113738,39.890650765874014,1,positive
+triple_from_singles,Triple mutants against a singles model,S68P-G192D-T241A,3,T241A+S68P,11.897958960204512,39.59195446461066,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G192D-T241A,3,T241A+S68P,37.36717947367668,39.59195446461066,1,additive
+double_from_singles,Double mutants,V67A-T241A,2,T241A,11.918888216426334,39.51211582511271,1,positive
+triple_from_singles,Triple mutants against a singles model,A28T-S68P-T241A,3,T241A+S68P,10.592068774868425,38.649730319454356,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A28T-S68P-T241A,3,T241A+S68P,21.531929560587937,38.649730319454356,2,additive
+triple_from_singles,Triple mutants against a singles model,S68P-L231Q-T241A,3,T241A+S68P,14.60214877542252,38.35798264624912,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-L231Q-T241A,3,T241A+S68P,45.86006018490776,38.35798264624912,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-D224G-T241A,3,T241A+S68P,7.7009123149037295,37.52376858053015,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-D224G-T241A,3,T241A+S68P,24.185776194432957,37.52376858053015,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-P203S-T241A,3,T241A+S68P,16.76535620141845,36.393077988587876,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-P203S-T241A,3,T241A+S68P,27.370482600723864,36.393077988587876,3,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-D267E,3,T241A+S68P,11.913030642445843,36.39140084256703,1,positive
+triple_from_singles,Triple mutants against a singles model,A72T-G221C-T241A,3,T241A,12.90729978449573,36.33654973765114,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-G221C-T241A,3,T241A,35.19543942862912,36.33654973765114,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-S97C-T241A,3,T241A+S68P,12.256706443511845,36.257432627461455,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-S97C-T241A,3,T241A+S68P,32.22911811127645,36.257432627461455,3,additive
+triple_from_singles,Triple mutants against a singles model,S68P-E197K-T241A,3,T241A+S68P,11.994588062450935,35.872318538783134,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-E197K-T241A,3,T241A+S68P,26.112364572034387,35.872318538783134,2,additive
+triple_from_singles,Triple mutants against a singles model,S68P-T180M-T241A,3,T241A+S68P,8.61253065917939,35.24549897181019,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T180M-T241A,3,T241A+S68P,27.048839211878345,35.24549897181019,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-A188V-T241A,3,T241A+S68P,14.100225257326217,35.241009412162185,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A188V-T241A,3,T241A+S68P,26.81880599768,35.241009412162185,2,additive
+triple_from_singles,Triple mutants against a singles model,K38N-T241A-T264M,3,T241A,12.263287108766228,34.85639262857353,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-T241A-T264M,3,T241A,20.004968995321903,34.85639262857353,2,additive
+triple_from_singles,Triple mutants against a singles model,S68P-T241A-A266T,3,T241A+S68P,9.755703933451514,34.548390327368416,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-A266T,3,T241A+S68P,30.639132391751854,34.548390327368416,1,additive
+double_from_singles,Double mutants,G20C-T241A,2,T241A,16.06502270131578,34.31652908621227,1,positive
+triple_from_singles,Triple mutants against a singles model,S68P-T199M-T241A,3,T241A+S68P,15.498118689456803,33.44754997803402,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T199M-T241A,3,T241A+S68P,30.770810725773558,33.44754997803402,2,additive
+triple_from_singles,Triple mutants against a singles model,S68P-E197D-T241A,3,T241A+S68P,12.242249087799205,33.34600931604895,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-E197D-T241A,3,T241A+S68P,27.17034015631586,33.34600931604895,2,additive
+triple_from_singles,Triple mutants against a singles model,G20C-S68P-T241A,3,T241A+S68P,14.081476235713914,33.30271523069735,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G20C-S68P-T241A,3,T241A+S68P,37.15214380230122,33.30271523069735,2,additive
+triple_from_singles,Triple mutants against a singles model,R34H-T241A-H244Y,3,T241A,25.344852760419126,32.7151494122097,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-T241A-H244Y,3,T241A,26.73561871860489,32.7151494122097,2,additive
+triple_from_singles,Triple mutants against a singles model,K38N-P203Q-T241A,3,T241A,17.105011597503363,32.33237796410041,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-P203Q-T241A,3,T241A,29.930676061895504,32.33237796410041,2,additive
+triple_from_singles,Triple mutants against a singles model,S68P-T241A-A271E,3,T241A+S68P,9.244348555320794,32.33164607095121,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-A271E,3,T241A+S68P,29.033150369679724,32.33164607095121,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-T241A-T256A,3,T241A+S68P,15.59415752696886,31.97035152265296,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-T256A,3,T241A+S68P,48.97560035297141,31.97035152265296,1,additive
+triple_from_singles,Triple mutants against a singles model,V73L-T241A-A251V,3,T241A,30.38491364680831,31.73819488249752,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-A194V-T241A,3,T241A+S68P,12.24914934802432,31.39407678240139,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A194V-T241A,3,T241A+S68P,38.47014127535928,31.39407678240139,1,additive
+triple_from_singles,Triple mutants against a singles model,A72T-G175D-T241A,3,T241A,5.339807110651766,31.22241433493331,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-G175D-T241A,3,T241A,14.560509235964085,31.22241433493331,1,positive
+triple_from_singles,Triple mutants against a singles model,V63I-S68P-T241A,3,T241A+S68P,14.741530031618307,30.7651649886759,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,V63I-S68P-T241A,3,T241A+S68P,46.29780622462388,30.7651649886759,1,additive
+double_from_singles,Double mutants,T241A-G272E,2,T241A,16.606697585570533,30.573047445675947,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-G226E-T241A,3,T241A+S68P,8.781035635190037,30.530922733716437,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G226E-T241A,3,T241A+S68P,18.78545015291331,30.530922733716437,2,additive
+triple_from_singles,Triple mutants against a singles model,R2W-S68P-T241A,3,T241A+S68P,15.497091798868453,30.403724258918956,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,R2W-S68P-T241A,3,T241A+S68P,48.67075205967988,30.403724258918956,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-G175S-T241A,3,T241A+S68P,17.445311846941046,30.364743279934967,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G175S-T241A,3,T241A+S68P,36.0164621378115,30.364743279934967,2,additive
+triple_from_singles,Triple mutants against a singles model,S97C-D130N-T241A,3,T241A,9.308659700794259,30.32183462510655,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S97C-D130N-T241A,3,T241A,12.735814029049278,30.32183462510655,1,positive
+triple_from_singles,Triple mutants against a singles model,S68P-A218T-T241A,3,T241A+S68P,7.437539526529747,30.009850958121344,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A218T-T241A,3,T241A+S68P,23.35861766374963,30.009850958121344,1,additive
+double_from_singles,Double mutants,K38N-T241A,2,T241A,15.944388545029044,29.790541566235344,1,additive
+double_from_singles,Double mutants,S35F-T241A,2,T241A,27.251809099584417,29.699096645988526,1,additive
+triple_from_singles,Triple mutants against a singles model,G40D-S68P-T241A,3,T241A+S68P,18.142528453209636,29.56674530982551,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G40D-S68P-T241A,3,T241A+S68P,56.97911037387855,29.56674530982551,1,additive
+triple_from_singles,Triple mutants against a singles model,N182I-E210G-T241A,3,T241A,3.343867365339629,29.550929762034674,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,N182I-E210G-T241A,3,T241A,2.0961760399407114,29.550929762034674,1,positive
+triple_from_singles,Triple mutants against a singles model,S51N-S68P-T241A,3,T241A+S68P,10.37164471087528,29.486620623312795,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S51N-S68P-T241A,3,T241A+S68P,32.57357927059318,29.486620623312795,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-T241A-R260C,3,T241A+S68P,10.285847211060213,29.209130397530878,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-T241A-R260C,3,T241A+S68P,19.815877258672113,29.209130397530878,2,additive
+double_from_singles,Double mutants,A72T-T241A,2,T241A,10.679042020785898,29.119458203785673,1,positive
+triple_from_singles,Triple mutants against a singles model,K38N-S217T-T241A,3,T241A,22.133142359636494,29.00134317788053,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-S217T-T241A,3,T241A,41.35362705155114,29.00134317788053,1,additive
+triple_from_singles,Triple mutants against a singles model,M1I-S68P-T241A,3,T241A+S68P,10.275908409385202,28.657515055898973,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,M1I-S68P-T241A,3,T241A+S68P,32.27290622474631,28.657515055898973,1,additive
+triple_from_singles,Triple mutants against a singles model,K38N-P203S-T241A,3,T241A,21.045894260661285,28.238291203426204,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-P203S-T241A,3,T241A,28.267422902436685,28.238291203426204,2,additive
+triple_from_singles,Triple mutants against a singles model,K38N-A108T-T241A,3,T241A,20.07137579819886,28.13075643666426,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-A108T-T241A,3,T241A,37.50141645878237,28.13075643666426,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-A102T-T241A,3,T241A+S68P,11.912339440678984,28.008583335675773,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A102T-T241A,3,T241A+S68P,37.4123433540199,28.008583335675773,1,additive
+double_from_singles,Double mutants,Y142F-T241A,2,T241A,11.816181195373384,27.730727844302905,1,positive
+triple_from_singles,Triple mutants against a singles model,S68P-E143V-T241A,3,T241A+S68P,5.999026826889833,27.34622067742608,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-E143V-T241A,3,T241A+S68P,13.911393952162479,27.34622067742608,2,additive
+triple_from_singles,Triple mutants against a singles model,S68P-A129T-T241A,3,T241A+S68P,8.99235285768251,27.2787854967701,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A129T-T241A,3,T241A+S68P,28.241723160043232,27.2787854967701,1,additive
+triple_from_singles,Triple mutants against a singles model,V76M-P203Q-T241A,3,T241A,14.263282619071974,27.078540790025638,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,V76M-P203Q-T241A,3,T241A,23.266770412715605,27.078540790025638,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-L191V-T241A,3,T241A+S68P,15.405781959096137,27.018022943397803,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-L191V-T241A,3,T241A+S68P,29.887443320295034,27.018022943397803,2,additive
+triple_from_singles,Triple mutants against a singles model,S68P-V212I-T241A,3,T241A+S68P,8.610823875770869,26.864419468767693,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-V212I-T241A,3,T241A+S68P,27.043478823414894,26.864419468767693,1,additive
+triple_from_singles,Triple mutants against a singles model,H238Q-T241A-N255S,3,T241A,7.2669154274363885,26.716306565911808,1,positive
+triple_from_singles,Triple mutants against a singles model,L13Q-P203Q-T241A,3,T241A,16.158387059044394,26.582837535449457,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,L13Q-P203Q-T241A,3,T241A,24.9676161784862,26.582837535449457,2,additive
+double_from_singles,Double mutants,T237I-T241A,2,T241A,21.445618081461333,26.511728730401426,1,additive
+triple_from_singles,Triple mutants against a singles model,A72T-G192D-T241A,3,T241A,10.003488841024886,26.40642830761625,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-G192D-T241A,3,T241A,27.277369508545423,26.40642830761625,1,additive
+triple_from_singles,Triple mutants against a singles model,A53S-S68P-T241A,3,T241A+S68P,9.01276153439965,26.363897617931098,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A53S-S68P-T241A,3,T241A+S68P,28.30581942128101,26.363897617931098,1,additive
+triple_from_singles,Triple mutants against a singles model,L49Q-P203Q-T241A,3,T241A,11.36546980116276,25.950013014825448,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,L49Q-P203Q-T241A,3,T241A,18.539755788244477,25.950013014825448,1,additive
+double_from_singles,Double mutants,A59S-M120L,2,Other,4.441522936981495,25.612585571641155,1,positive
+double_from_singles,Double mutants,P203Q-T241A,2,T241A,15.545401056722252,25.358207294912056,1,additive
+triple_from_singles,Triple mutants against a singles model,A72T-D130E-T241A,3,T241A,11.9429183264216,25.22434916339905,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-D130E-T241A,3,T241A,32.56577793781041,25.22434916339905,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-A161T-T241A,3,T241A+S68P,4.926788134125718,24.927708752982074,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A161T-T241A,3,T241A+S68P,15.473256972260716,24.927708752982074,1,additive
+triple_from_singles,Triple mutants against a singles model,K38N-L115I-T241A,3,T241A,13.837666434003602,24.695038404614866,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-L115I-T241A,3,T241A,18.74648498490134,24.695038404614866,2,additive
+double_from_singles,Double mutants,G10D-W32R,2,Other,1.6553838005189088,24.38591753785083,1,positive
+triple_from_singles,Triple mutants against a singles model,A72T-A188V-T241A,3,T241A,11.85509602860284,24.208242081073756,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-A188V-T241A,3,T241A,20.095413346673922,24.208242081073756,2,additive
+triple_from_singles,Triple mutants against a singles model,T96N-A161V-T241A,3,T241A,21.99096820110831,24.071406019883714,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,T96N-A161V-T241A,3,T241A,29.72573346030326,24.071406019883714,1,additive
+double_from_singles,Double mutants,T241A-I283F,2,T241A,30.276265887295736,24.04308150182088,1,additive
+triple_from_singles,Triple mutants against a singles model,S166P-T241A-G273S,3,T241A,20.97066588862982,23.94209969302639,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-G221C-T241A,3,T241A+S68P,15.351696349496104,23.82193889490366,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G221C-T241A,3,T241A+S68P,48.214117617627714,23.82193889490366,1,negative
+triple_from_singles,Triple mutants against a singles model,S68P-D236A-T241A,3,T241A+S68P,16.996597525788133,23.713468499451157,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-D236A-T241A,3,T241A+S68P,53.38015640432645,23.713468499451157,1,negative
+triple_from_singles,Triple mutants against a singles model,K38N-A172V-T241A,3,T241A,5.70378613136418,23.691535937485128,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-A172V-T241A,3,T241A,10.656970466534236,23.691535937485128,1,positive
+triple_from_singles,Triple mutants against a singles model,T96N-T241A-E250K,3,T241A,16.09610765137468,23.507551024625702,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,T96N-T241A-E250K,3,T241A,21.75750523658152,23.507551024625702,1,additive
+double_from_singles,Double mutants,M1K-T241A,2,T241A,9.538272950401641,23.4212196294098,1,positive
+double_from_singles,Double mutants,T96N-T241A,2,T241A,17.151545844128886,23.184167042224733,1,additive
+triple_from_singles,Triple mutants against a singles model,V48I-S68P-T241A,3,T241A+S68P,12.722256160060585,22.953371340102755,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,V48I-S68P-T241A,3,T241A+S68P,39.9559984055367,22.953371340102755,1,additive
+triple_from_singles,Triple mutants against a singles model,K24R-P203Q-T241A,3,T241A,14.604952923312235,22.926429305161943,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K24R-P203Q-T241A,3,T241A,23.824115081394556,22.926429305161943,1,additive
+double_from_singles,Double mutants,T241A-M282I,2,T241A,12.237376576224557,22.85514169020258,1,additive
+triple_from_singles,Triple mutants against a singles model,A39V-E44G-T241A,3,T241A,8.043819245565013,22.755699253081616,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A39V-E44G-T241A,3,T241A,9.791411773878577,22.755699253081616,2,positive
+triple_from_singles,Triple mutants against a singles model,S68P-G175C-T241A,3,T241A+S68P,9.380199546708912,22.755664301764078,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-G175C-T241A,3,T241A+S68P,18.787626555793636,22.755664301764078,2,additive
+double_from_singles,Double mutants,A75S-G117V,2,Other,4.0129382295458695,22.672207643566455,1,positive
+triple_from_singles,Triple mutants against a singles model,S68P-D82G-T241A,3,T241A+S68P,11.367032399240706,22.53925447902255,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-D82G-T241A,3,T241A+S68P,35.69973145530366,22.53925447902255,1,additive
+triple_from_singles,Triple mutants against a singles model,K38N-E143D-T241A,3,T241A,14.030951423225705,22.449508890218567,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-E143D-T241A,3,T241A,20.079026045256946,22.449508890218567,2,additive
+double_from_singles,Double mutants,L13Q-T241A,2,T241A,15.061995138780102,21.977328181243735,1,additive
+triple_from_singles,Triple mutants against a singles model,S51G-A72T-T241A,3,T241A,10.532752237947339,21.717274603914102,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S51G-A72T-T241A,3,T241A,28.720557327778554,21.717274603914102,1,additive
+double_from_singles,Double mutants,A72V-T241A,2,T241A,8.150255518349816,21.51720950143179,1,positive
+triple_from_singles,Triple mutants against a singles model,S68P-H238Q-T241A,3,T241A+S68P,4.275660809902722,21.38260208855467,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-H238Q-T241A,3,T241A+S68P,13.428301895021374,21.38260208855467,1,additive
+triple_from_singles,Triple mutants against a singles model,L11R-V216I-T241A,3,T241A,2.289811223694627,21.35552773972356,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,L11R-V216I-T241A,3,T241A,4.569430342072626,21.35552773972356,1,positive
+triple_from_singles,Triple mutants against a singles model,P203S-T241A-A269V,3,T241A,16.796385959257595,21.285528391677445,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,P203S-T241A-A269V,3,T241A,14.451649953578862,21.285528391677445,2,additive
+triple_from_singles,Triple mutants against a singles model,H163N-P203Q-T241A,3,T241A,5.843037504803435,21.20560617627288,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,H163N-P203Q-T241A,3,T241A,9.531369164302067,21.20560617627288,1,positive
+double_from_singles,Double mutants,G37D-T241A,2,T241A,15.142743722118091,21.195196957387473,1,additive
+triple_from_singles,Triple mutants against a singles model,A59S-S68P-T241A,3,T241A+S68P,10.975561008298143,21.185697977663636,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A59S-S68P-T241A,3,T241A+S68P,34.470261613199824,21.185697977663636,1,additive
+double_from_singles,Double mutants,L134V-T241A,2,T241A,11.688802666704271,21.088351820937472,1,additive
+double_from_singles,Double mutants,A21T-T241A,2,T241A,10.722419697556052,21.053829886565783,1,additive
+triple_from_singles,Triple mutants against a singles model,Y142F-P203S-T241A,3,T241A,15.59684144050627,21.01345434658094,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,Y142F-P203S-T241A,3,T241A,24.67970447431276,21.01345434658094,2,additive
+double_from_singles,Double mutants,L18V-T241A,2,T241A,8.62200119963227,20.93482988151914,1,positive
+triple_from_singles,Triple mutants against a singles model,R34H-E58V-P203Q,3,Other,9.625085768345297,20.93432386741179,1,positive
+triple_from_singles,Triple mutants against a singles model,R2W-E210G-T241A,3,T241A,17.40678083095384,20.462130617353967,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,R2W-E210G-T241A,3,T241A,10.911819436545963,20.462130617353967,1,additive
+double_from_singles,Double mutants,V216I-T241A,2,T241A,10.183756296115012,20.322184001115247,1,additive
+triple_from_singles,Triple mutants against a singles model,G12S-T200A-T241A,3,T241A,2.6452325673242174,20.311687013632106,1,positive
+triple_from_singles,Triple mutants against a singles model,E44G-A218T-T241A,3,T241A,7.203388176544137,20.096665554157564,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E44G-A218T-T241A,3,T241A,5.828786454913924,20.096665554157564,1,positive
+double_from_singles,Double mutants,G175S-T241A,2,T241A,19.90269529709093,19.672477163952884,1,additive
+triple_from_singles,Triple mutants against a singles model,G37C-T241A-M282I,3,T241A,10.945424303352087,19.642203092194702,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-T241A-M282I,3,T241A,15.487912213603918,19.642203092194702,2,additive
+double_from_singles,Double mutants,P229L-T241A,2,T241A,11.869028450470662,19.634992399302963,1,additive
+triple_from_singles,Triple mutants against a singles model,F204L-T241A-H244Y,3,T241A,12.195344307156306,19.579145728915528,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,F204L-T241A-H244Y,3,T241A,6.674890200661621,19.579145728915528,1,positive
+double_from_singles,Double mutants,E36D-V67I,2,Other,3.9985688406739803,19.353808598064482,1,positive
+double_from_singles,Double mutants,S97C-T241A,2,T241A,13.9832119844783,19.13138873772488,1,additive
+triple_from_singles,Triple mutants against a singles model,A28E-S68P-T241A,3,T241A+S68P,13.819947430154446,19.066086936295846,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A28E-S68P-T241A,3,T241A+S68P,43.4034490845547,19.066086936295846,1,negative
+triple_from_singles,Triple mutants against a singles model,V67I-E210G-T241A,3,T241A,12.053192342344953,18.888286319729534,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,V67I-E210G-T241A,3,T241A,9.632730698303902,18.888286319729534,2,additive
+triple_from_singles,Triple mutants against a singles model,A43S-A72T-T241A,3,T241A,9.816549366946763,18.880985328938365,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A43S-A72T-T241A,3,T241A,26.767625639061617,18.880985328938365,1,additive
+triple_from_singles,Triple mutants against a singles model,G175D-P203Q-T241A,3,T241A,7.773117002353558,18.82185729099025,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G175D-P203Q-T241A,3,T241A,12.679783014543084,18.82185729099025,1,additive
+triple_from_singles,Triple mutants against a singles model,A72T-A218T-T241A,3,T241A,6.2532862911340015,18.812628253794962,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-A218T-T241A,3,T241A,17.05137112828608,18.812628253794962,1,additive
+double_from_singles,Double mutants,S52C-A194T,2,Other,6.555836606202208,18.65771682605299,1,positive
+double_from_singles,Double mutants,T93A-T241A,2,T241A,6.738054660337346,18.587475426273045,1,positive
+triple_from_singles,Triple mutants against a singles model,T96N-G226E-T241A,3,T241A,11.857571118670798,18.56591067960429,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,T96N-G226E-T241A,3,T241A,14.761063343166192,18.56591067960429,2,additive
+triple_from_singles,Triple mutants against a singles model,D55N-S68P-T241A,3,T241A+S68P,9.011867595249873,18.52990733457078,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,D55N-S68P-T241A,3,T241A+S68P,28.303011882209816,18.52990733457078,1,additive
+double_from_singles,Double mutants,D69E-T241A,2,T241A,5.02744419413149,18.436279430493883,1,positive
+triple_from_singles,Triple mutants against a singles model,E44G-T237I-T241A,3,T241A,18.205933094853737,18.37106744425402,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E44G-T237I-T241A,3,T241A,18.619239333442213,18.37106744425402,2,additive
+double_from_singles,Double mutants,Q99H-A161T,2,Other,0.8989479531647482,18.31933334443368,1,positive
+double_from_singles,Double mutants,E197D-T241A,2,T241A,13.966718135123537,18.13082053693565,1,additive
+double_from_singles,Double mutants,A230V-T241A,2,T241A,5.028139651880273,18.062166303079113,1,positive
+triple_from_singles,Triple mutants against a singles model,A144V-G175S-T241A,3,T241A,14.009494659738625,18.003022777383208,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A144V-G175S-T241A,3,T241A,13.847444261105236,18.003022777383208,1,additive
+triple_from_singles,Triple mutants against a singles model,R34H-A205V-T241A,3,T241A,19.969297482118794,17.819153138819924,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-A205V-T241A,3,T241A,31.200357721081787,17.819153138819924,1,additive
+double_from_singles,Double mutants,S68P-S97C,2,Other,5.258647250536681,17.77275727622304,1,positive
+triple_from_singles,Triple mutants against a singles model,P79L-T241A-A271E,3,T241A,11.643648101074918,17.50675182459969,1,additive
+double_from_singles,Double mutants,G37S-T241A,2,T241A,10.239467708572587,17.409265834384,1,additive
+triple_from_singles,Triple mutants against a singles model,G37C-E197K-T241A,3,T241A,12.239474490590672,17.406527890937,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-E197K-T241A,3,T241A,13.315086762480343,17.406527890937,2,additive
+triple_from_singles,Triple mutants against a singles model,G37S-P203Q-T241A,3,T241A,10.984818477846261,17.38240526163789,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G37S-P203Q-T241A,3,T241A,18.297672029081767,17.38240526163789,2,additive
+double_from_singles,Double mutants,A47V-T103M,2,Other,4.09351888615986,17.180924972343554,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,P203Q-T241A-D267E,3,T241A,14.58044972753011,17.178073650398613,1,additive
+triple_from_singles,Triple mutants against a singles model,A140V-P203Q-T241A,3,T241A,15.35028282993956,17.113790482960653,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A140V-P203Q-T241A,3,T241A,25.039923551461673,17.113790482960653,1,additive
+triple_from_singles,Triple mutants against a singles model,P203Q-P229L-T241A,3,T241A,12.732998115483912,17.11309892046109,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,P203Q-P229L-T241A,3,T241A,20.91738898114486,17.11309892046109,2,additive
+triple_from_singles,Triple mutants against a singles model,L13Q-S68P-T241A,3,T241A+S68P,13.202292368488168,17.017844662166414,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,L13Q-S68P-T241A,3,T241A+S68P,30.36370415623202,17.017844662166414,2,additive
+double_from_singles,Double mutants,S217F-T241A,2,T241A,12.930340122129492,16.957131336353072,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-M120L-T241A,3,T241A+S68P,10.500864131499888,16.87710674096706,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-M120L-T241A,3,T241A+S68P,32.97941066555045,16.87710674096706,1,additive
+triple_from_singles,Triple mutants against a singles model,E197D-T241A-M282I,3,T241A,11.794954402555218,16.786990070088102,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E197D-T241A-M282I,3,T241A,18.6702043869983,16.786990070088102,2,additive
+double_from_singles,Double mutants,E197K-T241A,2,T241A,13.684171054984295,16.604190056340478,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A59S-S97N-T241A,3,T241A,15.315649389005683,16.347492306375354,1,additive
+double_from_singles,Double mutants,S68T-T241A,2,T241A,21.443063049334025,16.319325254211094,1,additive
+double_from_singles,Double mutants,A121T-T241A,2,T241A,8.203438132400203,16.306559517168164,1,additive
+double_from_singles,Double mutants,D69E-A266V,2,Other,2.5638685339664624,16.1370509698502,1,positive
+triple_from_singles,Triple mutants against a singles model,A28V-D130N-T241A,3,T241A,7.048929136352434,15.812712903631384,1,positive
+double_from_singles,Double mutants,H145Y-L265V,2,Other,1.3509616946565561,15.717241230524845,1,positive
+triple_from_singles,Triple mutants against a singles model,R34H-E58V-T241A,3,T241A,20.91167638439481,15.671643203039514,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-E58V-T241A,3,T241A,32.672745965392345,15.671643203039514,1,negative
+double_from_singles,Double mutants,P203S-T241A,2,T241A,19.12695966409644,15.643212636838417,1,additive
+double_from_singles,Double mutants,T241A-T264M,2,T241A,11.145138095511625,15.53828077938032,1,additive
+double_from_singles,Double mutants,P203S-E284D,2,Other,16.987466942132524,15.53706564419192,1,additive
+triple_from_singles,Triple mutants against a singles model,G175S-V216I-T241A,3,T241A,13.987286320942003,15.49679551436415,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G175S-V216I-T241A,3,T241A,20.868903545238457,15.49679551436415,2,additive
+double_from_singles,Double mutants,P138Q-T241A,2,T241A,17.922257368332357,15.245587190314854,1,additive
+triple_from_singles,Triple mutants against a singles model,P61S-P203Q-T241A,3,T241A,14.63384712548898,15.066516329216537,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,P61S-P203Q-T241A,3,T241A,23.871248324579824,15.066516329216537,1,additive
+triple_from_singles,Triple mutants against a singles model,R34H-S68T-T241A,3,T241A,38.43021032667497,14.94428028367146,1,negative
+triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-S68T-T241A,3,T241A,44.64572465222312,14.94428028367146,2,negative
+triple_from_singles,Triple mutants against a singles model,L13Q-K38N-T241A,3,T241A,16.573107415518514,14.869877983011106,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,L13Q-K38N-T241A,3,T241A,27.573735525381565,14.869877983011106,2,additive
+double_from_singles,Double mutants,G15S-T241A,2,T241A,22.360084819615064,14.750082387965735,1,additive
+double_from_singles,Double mutants,T199M-T241A,2,T241A,17.681216401327617,14.680207837545636,1,additive
+double_from_singles,Double mutants,R110H-T241A,2,T241A,7.69156958544914,14.652808076295743,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-T241A-D267E,3,T241A,14.954670823141864,14.621005274870539,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A50T-T241A-D267E,3,T241A,9.356222577930728,14.359881275556122,1,additive
+double_from_singles,Double mutants,A19S-T241A,2,T241A,15.044481415781252,14.27119251090184,1,additive
+triple_from_singles,Triple mutants against a singles model,A43S-A230V-T241A,3,T241A,4.622042035279186,14.135262247408594,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A43S-A230V-T241A,3,T241A,16.60337573754859,14.135262247408594,1,additive
+double_from_singles,Double mutants,A56V-L191V,2,Other,2.315534546779227,14.109684743734787,1,positive
+double_from_singles,Double mutants,E210K-T241A,2,T241A,8.421120897238238,13.81043352938646,1,additive
+triple_from_singles,Triple mutants against a singles model,G226E-T241A-V262M,3,T241A,13.836555119918813,13.774152858449787,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G226E-T241A-V262M,3,T241A,15.746046126244831,13.774152858449787,1,additive
+triple_from_singles,Triple mutants against a singles model,R34H-A230V-T241A,3,T241A,9.011420799774895,13.754969517253127,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-A230V-T241A,3,T241A,23.225283101545983,13.754969517253127,2,additive
+triple_from_singles,Triple mutants against a singles model,D78G-A141V-A202V,3,Other,3.9191701982369858,13.749645561728151,1,positive
+triple_from_singles,Triple mutants against a singles model,S68T-T241S-F286L,3,Other,2.2350789699069686,13.683260939949275,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68T-T241S-F286L,3,Other,4.883784419623753,13.683260939949275,1,positive
+triple_from_singles,Triple mutants against a singles model,A28T-L181M-T241A,3,T241A,10.940300180824977,13.674530271692557,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A28T-L181M-T241A,3,T241A,9.906497759784877,13.674530271692557,2,additive
+double_from_singles,Double mutants,A85T-T241A,2,T241A,13.41485813918448,13.629450666934257,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,V8I-T241A-D267E,3,T241A,13.513158324453745,13.432127070613044,1,additive
+triple_from_singles,Triple mutants against a singles model,D78E-E210G-T241A,3,T241A,13.022615621025095,13.321775207611564,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,D78E-E210G-T241A,3,T241A,8.163510049800635,13.321775207611564,1,additive
+double_from_singles,Double mutants,L77M-T241A,2,T241A,14.665148985017334,13.128663860120314,1,additive
+double_from_singles,Double mutants,F22L-T96N,2,Other,7.105918625520035,13.09899065530016,1,additive
+triple_from_singles,Triple mutants against a singles model,K38N-S68P-T241A,3,T241A+S68P,13.975736764531721,13.076827482666758,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K38N-S68P-T241A,3,T241A+S68P,35.002516926725136,13.076827482666758,2,negative
+double_from_singles,Double mutants,A188V-A211V,2,Other,5.641355755847827,13.022658249800111,1,positive
+double_from_singles,Double mutants,L191V-T241A,2,T241A,17.5758729242249,12.995452736493174,1,additive
+triple_from_singles,Triple mutants against a singles model,G37C-G221C-T241A,3,T241A,15.66512287697167,12.98847718905914,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-G221C-T241A,3,T241A,15.075715827587066,12.98847718905914,1,additive
+double_from_singles,Double mutants,S68P-E210G,2,Other,5.365233446243192,12.91602383833847,1,positive
+triple_from_singles,Triple mutants against a singles model,S52G-P203Q-T241A,3,T241A,20.785480748357248,12.74664434970259,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S52G-P203Q-T241A,3,T241A,33.906010376832455,12.74664434970259,1,negative
+double_from_singles,Double mutants,E143D-T241A,2,T241A,12.751629301044591,12.6713172429848,1,additive
+double_from_singles,Double mutants,G37C-E105K,2,Other,6.5943023628321535,12.489383233320561,1,additive
+double_from_singles,Double mutants,G37C-T241A,2,T241A,12.960767027732803,12.47311254129356,1,additive
+triple_from_singles,Triple mutants against a singles model,G37C-T241A-R260C,3,T241A,10.495847285326448,12.45471847123155,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-T241A-R260C,3,T241A,8.789087286812016,12.45471847123155,2,additive
+double_from_singles,Double mutants,H186Y-T241A,2,T241A,8.635909759690824,12.450074458368595,1,additive
+triple_from_singles,Triple mutants against a singles model,S97C-E210G-T241A,3,T241A,13.767086466321926,12.408933962820873,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S97C-E210G-T241A,3,T241A,13.73294521849872,12.408933962820873,2,additive
+triple_from_singles,Triple mutants against a singles model,G37C-P203S-T241A,3,T241A,17.107644588087457,12.235230030149012,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-P203S-T241A,3,T241A,15.227826846352986,12.235230030149012,2,additive
+double_from_singles,Double mutants,P147T-T241A,2,T241A,26.210969117762147,12.184421699003725,1,negative
+triple_from_singles,Triple mutants against a singles model,A140V-T241A-T256M,3,T241A,13.848885194943215,12.110020526787372,1,additive
+triple_from_singles,Triple mutants against a singles model,A72T-T241A-E284D,3,T241A,22.106231983551258,12.096030841928748,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-T241A-E284D,3,T241A,60.2789554564219,12.096030841928748,1,negative
+double_from_singles,Double mutants,H70Q-T241A,2,T241A,11.903154067879738,12.076004476467634,1,additive
+triple_from_singles,Triple mutants against a singles model,R34H-G226E-T241A,3,T241A,17.954149428649263,12.041929086935253,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-G226E-T241A,3,T241A,24.241869813904152,12.041929086935253,2,negative
+triple_from_singles,Triple mutants against a singles model,G37S-S52C-S97C,3,Other,6.273666958954505,11.921900270358297,1,additive
+double_from_singles,Double mutants,V67I-T241A,2,T241A,12.242411931166474,11.893481931275813,1,additive
+triple_from_singles,Triple mutants against a singles model,E210V-G221C-T241A,3,T241A,22.415905613523798,11.881508879999878,1,additive
+double_from_singles,Double mutants,L80M-T241A,2,T241A,26.81454566335555,11.838520282828338,1,negative
+triple_from_singles,Triple mutants against a singles model,A141V-G221S-T241A,3,T241A,16.739528041723375,11.77462071276352,1,additive
+double_from_singles,Double mutants,A100V-T241A,2,T241A,17.156565385364452,11.728698776979032,1,additive
+double_from_singles,Double mutants,A205T-T241A,2,T241A,7.409478869228514,11.664879001201601,1,additive
+double_from_singles,Double mutants,L181M-T241A,2,T241A,13.119029732533106,11.623168338508886,1,additive
+double_from_singles,Double mutants,T241A-A269V,2,T241A,12.724957208744367,11.489907787717222,1,additive
+double_from_singles,Double mutants,R54W-A154V,2,Other,14.308818828007013,11.488743982478534,1,additive
+double_from_singles,Double mutants,G226E-T241A,2,T241A,10.0179508496851,11.400461661335886,1,additive
+triple_from_singles,Triple mutants against a singles model,E143V-T241A-A271G,3,T241A,2.126171087041435,11.35384114441034,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E143V-T241A-A271G,3,T241A,3.1834006799979133,11.35384114441034,1,positive
+double_from_singles,Double mutants,A28T-T241A,2,T241A,12.084089940129225,11.178175753578072,1,additive
+double_from_singles,Double mutants,R150W-T241A,2,T241A,9.319719593532438,11.044724264919267,1,additive
+double_from_singles,Double mutants,V126A-T241A,2,T241A,34.773289311272,11.020210197623701,1,negative
+triple_from_singles,Triple mutants against a singles model,T148I-K195R-T241A,3,T241A,14.624186327291813,10.955892523877298,1,additive
+double_from_singles,Double mutants,T241A-G275C,2,T241A,11.03129893236653,10.87631268382815,1,additive
+double_from_singles,Double mutants,R54W-T241A,2,T241A,12.448429485960233,10.771276224617116,1,additive
+triple_from_singles,Triple mutants against a singles model,A17T-K24R-T241A,3,T241A,7.204788011242516,10.682207824345786,1,additive
+double_from_singles,Double mutants,A188V-T241A,2,T241A,16.086412749687643,10.671523533502128,1,additive
+triple_from_singles,Triple mutants against a singles model,Y114F-P203S-E284D,3,Other,9.576971588234649,10.665816191761905,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,Y114F-P203S-E284D,3,Other,8.75928334376398,10.665816191761905,1,additive
+double_from_singles,Double mutants,L115I-T241A,2,T241A,12.575967761233628,10.57744003361531,1,additive
+triple_from_singles,Triple mutants against a singles model,E44G-P203S-T241A,3,T241A,16.23754310226798,10.575126245860785,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E44G-P203S-T241A,3,T241A,13.209524247354508,10.575126245860785,2,additive
+triple_from_singles,Triple mutants against a singles model,L13Q-K195R-T241A,3,T241A,21.00794625389428,10.453073140976995,1,negative
+triple_from_double_single,Triple mutants against a doubles-plus-single model,L13Q-K195R-T241A,3,T241A,30.65321194049716,10.453073140976995,1,negative
+double_from_singles,Double mutants,R150Q-T241A,2,T241A,10.373802392456225,10.345074920259364,1,additive
+triple_from_singles,Triple mutants against a singles model,G37S-S52C-T241A,3,T241A,15.153072140478512,10.31552871234134,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G37S-S52C-T241A,3,T241A,25.763435034843592,10.31552871234134,1,negative
+double_from_singles,Double mutants,E143V-T241A,2,T241A,6.844062408411362,10.247243534480576,1,additive
+double_from_singles,Double mutants,L13Q-T180A,2,Other,6.100719859981964,10.225585481731498,1,additive
+double_from_singles,Double mutants,R207H-S217P,2,Other,2.5912501760849542,10.214823972936378,1,positive
+triple_from_singles,Triple mutants against a singles model,G175C-P203S-T241A,3,T241A,14.12552991874796,9.988298013941161,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G175C-P203S-T241A,3,T241A,11.88684161108117,9.988298013941161,2,additive
+double_from_singles,Double mutants,E44G-T241A,2,T241A,12.301577354360527,9.954102944313702,1,additive
+triple_from_singles,Triple mutants against a singles model,G37S-G117V-A144T,3,Other,5.518657809856251,9.80521256497812,1,additive
+double_from_singles,Double mutants,G40S-T241A,2,T241A,16.389145521077314,9.743721432284236,1,additive
+triple_from_singles,Triple mutants against a singles model,V8L-P203Q-T241A,3,T241A,10.327664654266139,9.728704969966044,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,V8L-P203Q-T241A,3,T241A,16.846851375504926,9.728704969966044,1,additive
+triple_from_singles,Triple mutants against a singles model,E105K-G175S-T241A,3,T241A,23.602053572734786,9.684916355702137,1,negative
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E105K-G175S-T241A,3,T241A,23.329044282755184,9.684916355702137,1,negative
+triple_from_singles,Triple mutants against a singles model,G37C-A172V-T241A,3,T241A,4.636455202772397,9.612596666562895,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G37C-A172V-T241A,3,T241A,4.462006562813929,9.612596666562895,1,positive
+double_from_singles,Double mutants,A129V-E143V,2,Other,2.370633215928505,9.580433583541309,1,positive
+double_from_singles,Double mutants,G226R-T241A,2,T241A,12.255669391825851,9.56871413197548,1,additive
+double_from_singles,Double mutants,A240V-T241A,2,T241A,6.7879331858695195,9.546020435897223,1,additive
+triple_from_singles,Triple mutants against a singles model,P203Q-G221C-T241A,3,T241A,18.78905910462599,9.423549550953219,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,P203Q-G221C-T241A,3,T241A,30.649376874418284,9.423549550953219,1,negative
+double_from_singles,Double mutants,T103M-T241A,2,T241A,14.150305737941318,9.290245013927644,1,additive
+double_from_singles,Double mutants,H70Q-M120L,2,Other,4.222154089041333,9.26681766979089,1,positive
+double_from_singles,Double mutants,G175C-T241A,2,T241A,10.701514254489716,9.258602554995615,1,additive
+triple_from_singles,Triple mutants against a singles model,G175S-A230T-T241A,3,T241A,15.00997306612713,9.20867843040384,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G175S-A230T-T241A,3,T241A,14.836349949953451,9.20867843040384,1,additive
+double_from_singles,Double mutants,A28T-P203Q,2,Other,5.561983648185096,9.138161478106525,1,additive
+triple_from_singles,Triple mutants against a singles model,A72T-T241A-A271T,3,T241A,8.99872630495786,9.090771044357314,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-T241A-A271T,3,T241A,24.53759747498803,9.090771044357314,1,negative
+double_from_singles,Double mutants,V67I-T96N,2,Other,6.217046058189858,8.987061387154418,1,additive
+double_from_singles,Double mutants,E210G-T241A,2,T241A,14.266634183796027,8.943350162943714,1,additive
+double_from_singles,Double mutants,L18M-T241A,2,T241A,10.524029702414824,8.836822873764024,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-A230V-T241A,3,T241A+S68P,4.407315839771819,8.738611096477099,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A230V-T241A,3,T241A+S68P,14.836907703997227,8.738611096477099,2,additive
+triple_from_singles,Triple mutants against a singles model,Q124P-A188V-T241A,3,T241A,5.949053131346615,8.735794405267246,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,Q124P-A188V-T241A,3,T241A,3.9465268908043316,8.735794405267246,1,positive
+triple_from_singles,Triple mutants against a singles model,F22L-T96N-T241A,3,T241A,16.56227437495329,8.67640059314912,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,F22L-T96N-T241A,3,T241A,26.45919581280782,8.67640059314912,2,negative
+triple_from_singles,Triple mutants against a singles model,P203Q-T241A-T256R,3,T241A,25.760573697493783,8.614036749277815,1,negative
+triple_from_double_single,Triple mutants against a doubles-plus-single model,P203Q-T241A-T256R,3,T241A,42.02155772458679,8.614036749277815,1,negative
+double_from_singles,Double mutants,E36V-P147S,2,Other,14.687917539242367,8.59361634879918,1,additive
+triple_from_singles,Triple mutants against a singles model,E44G-M120L-E284D,3,Other,9.032651484788147,8.587472037575733,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E44G-M120L-E284D,3,Other,15.452153482832177,8.587472037575733,1,additive
+double_from_singles,Double mutants,S167Y-T241A,2,T241A,3.4934653730353453,8.522456207799989,1,positive
+double_from_singles,Double mutants,F201L-P203S,2,Other,4.524746447550343,8.433732212716773,1,additive
+double_from_singles,Double mutants,T241A-R260C,2,T241A,11.734733360473575,8.359820125270609,1,additive
+triple_from_singles,Triple mutants against a singles model,S68P-A121S-T241A,3,T241A+S68P,8.683930330567993,8.343000176331698,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,S68P-A121S-T241A,3,T241A+S68P,27.273079717671255,8.343000176331698,1,negative
+triple_from_singles,Triple mutants against a singles model,E197K-V216I-T241A,3,T241A,9.617009945320765,8.255765507635,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E197K-V216I-T241A,3,T241A,15.430182556388207,8.255765507635,2,additive
+double_from_singles,Double mutants,T241A-F286L,2,T241A,11.295391582337524,8.251699830714863,1,additive
+double_from_singles,Double mutants,V126D-F132L,2,Other,1.7317637102526096,8.102765616245575,1,positive
+triple_from_singles,Triple mutants against a singles model,F22L-A85V-T241A,3,T241A,9.275199717563373,7.919901185436389,1,additive
+double_from_singles,Double mutants,G117V-T241A,2,T241A,13.693620648632262,7.895538427761237,1,additive
+triple_from_singles,Triple mutants against a singles model,V67I-Y169C-V171I,3,Other,1.2326035110239255,7.865016458743117,1,positive
+double_from_singles,Double mutants,T241A-H244Y,2,T241A,14.14177208758401,7.740230496978514,1,additive
+double_from_singles,Double mutants,E36V-G37D,2,Other,17.65065159175651,7.6331076249556915,1,negative
+triple_from_singles,Triple mutants against a singles model,R34H-P203Q-T241A,3,T241A,27.860433504666943,7.582164144538202,1,negative
+triple_from_double_single,Triple mutants against a doubles-plus-single model,R34H-P203Q-T241A,3,T241A,44.488260603183036,7.582164144538202,2,negative
+double_from_singles,Double mutants,E44G-M120L,2,Other,4.363478354743608,7.464600773102412,1,additive
+double_from_singles,Double mutants,D82E-T241A,2,T241A,12.957931282168595,7.4406540117095386,1,additive
+double_from_singles,Double mutants,R34H-N206I,2,Other,9.833337542598521,7.37180615966729,1,additive
+triple_from_singles,Triple mutants against a singles model,A47T-S68P-L191V,3,Other,4.4234503212192315,7.354034807715118,1,additive
+triple_from_singles,Triple mutants against a singles model,F22L-A227V-R260L,3,Other,29.953358165113787,7.174463809656687,1,negative
+double_from_singles,Double mutants,A59S-G221S,2,Other,5.977351746909671,7.17128973441417,1,additive
+double_from_singles,Double mutants,Q16R-T241A,2,T241A,12.151815445330902,7.142952970895548,1,additive
+triple_from_singles,Triple mutants against a singles model,E36D-V67I-G175S,3,Other,5.491993879492228,7.081849220427735,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E36D-V67I-G175S,3,Other,26.58226045384735,7.081849220427735,1,negative
+triple_from_singles,Triple mutants against a singles model,E143D-T241A-M282I,3,T241A,10.768806580686228,7.0788238724641035,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E143D-T241A-M282I,3,T241A,15.406674497966977,7.0788238724641035,2,negative
+double_from_singles,Double mutants,Y142F-L173S,2,Other,1.8940510043783119,7.066075788768606,1,positive
+double_from_singles,Double mutants,E44D-A251D,2,Other,2.7682078325841357,7.025342031275439,1,positive
+double_from_singles,Double mutants,M1K-E284D,2,Other,8.471346166643318,7.001753669067411,1,additive
+triple_from_singles,Triple mutants against a singles model,G192D-N206I-A227V,3,Other,4.399563621274579,6.955802617061866,1,additive
+double_from_singles,Double mutants,A75V-T241A,2,T241A,15.56690657153143,6.936378617033549,1,negative
+double_from_singles,Double mutants,A266V-Q274H,2,Other,5.487524033122113,6.79990515735095,1,additive
+triple_from_singles,Triple mutants against a singles model,E36V-G37D-G179A,3,Other,23.736798290412057,6.793540289998998,1,negative
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E36V-G37D-G179A,3,Other,10.265090502789127,6.793540289998998,1,additive
+double_from_singles,Double mutants,S68P-P203S,2,Other,7.19304934805931,6.755612016795347,1,additive
+double_from_singles,Double mutants,T128A-F184L,2,Other,1.7282222097153397,6.59575586140924,1,positive
+double_from_singles,Double mutants,S97T-A108V,2,Other,4.2880454589176376,6.567958277219614,1,additive
+triple_from_singles,Triple mutants against a singles model,A43S-P229L-T241A,3,T241A,10.910426562135244,6.509030288512379,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A43S-P229L-T241A,3,T241A,18.04917255988072,6.509030288512379,1,negative
+double_from_singles,Double mutants,E58K-P147T,2,Other,9.454291051207825,6.489774162244113,1,additive
+double_from_singles,Double mutants,E36D-E105K,2,Other,5.612571847014818,6.374600970049742,1,additive
+double_from_singles,Double mutants,R34C-G164D,2,Other,1.679145704766828,6.365203246337167,1,positive
+triple_from_singles,Triple mutants against a singles model,F22L-D78E-A240V,3,Other,2.5670316110421534,6.342259914334935,1,positive
+double_from_singles,Double mutants,D25E-S217T,2,Other,6.684109009432552,6.335237883441531,1,additive
+triple_from_singles,Triple mutants against a singles model,N206I-A227V-R268C,3,Other,2.0544150467851314,6.161728725198165,1,positive
+triple_from_singles,Triple mutants against a singles model,E139G-T241A-G275C,3,T241A,8.765616238791308,6.109039776521199,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,E139G-T241A-G275C,3,T241A,8.642462112943873,6.109039776521199,1,additive
+double_from_singles,Double mutants,M177V-T241A,2,T241A,5.645908561168836,6.092999401734214,1,additive
+triple_from_singles,Triple mutants against a singles model,A118V-A154V-V239A,3,Other,4.588842392921502,6.091385015889042,1,additive
+double_from_singles,Double mutants,T241A-A281V,2,T241A,12.637657653800025,6.057161103474831,1,negative
+double_from_singles,Double mutants,S52C-P203Q,2,Other,9.870189611789627,6.007016979216509,1,additive
+triple_from_singles,Triple mutants against a singles model,D82E-T213S-A240V,3,Other,3.107788137008381,5.961301633159266,1,additive
+triple_from_singles,Triple mutants against a singles model,K24R-A129V-E143V,3,Other,2.227217322392862,5.954430849187381,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,K24R-A129V-E143V,3,Other,9.000847322111024,5.954430849187381,1,additive
+double_from_singles,Double mutants,M1K-N255S,2,Other,6.096543890601318,5.863022354481677,1,additive
+double_from_singles,Double mutants,Q41R-S68P,2,Other,4.9044842229222025,5.861346920659385,1,additive
+double_from_singles,Double mutants,G37S-G40C,2,Other,4.816153445847555,5.772429700471985,1,additive
+double_from_singles,Double mutants,T96N-P203Q,2,Other,7.894398171379529,5.724322301735776,1,additive
+double_from_singles,Double mutants,K24N-V262M,2,Other,10.608987655440671,5.713413369166215,1,additive
+triple_from_singles,Triple mutants against a singles model,Q16R-P203Q-A271T,3,Other,4.713089331542826,5.684805708482999,1,additive
+triple_from_singles,Triple mutants against a singles model,D78E-R87H-T200A,3,Other,4.171492503881447,5.6737725772162,1,additive
+double_from_singles,Double mutants,A39V-E44G,2,Other,3.451139843680928,5.609293601920948,1,additive
+double_from_singles,Double mutants,L18M-L181M,2,Other,4.087875018147523,5.546586348297314,1,additive
+triple_from_singles,Triple mutants against a singles model,P61S-T241S-F286L,3,Other,1.4218345380961437,5.485551724632315,1,positive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,P61S-T241S-F286L,3,Other,3.106795535159955,5.485551724632315,1,additive
+double_from_singles,Double mutants,L115I-L261F,2,Other,8.929425965649772,5.232623009899512,1,additive
+double_from_singles,Double mutants,Q16R-G221S,2,Other,5.800829400753988,5.114825484153582,1,additive
+triple_from_singles,Triple mutants against a singles model,M120L-A141D-G155D,3,Other,3.3677457922887672,5.06808079578544,1,additive
+triple_from_singles,Triple mutants against a singles model,H70Q-M177V-T241A,3,T241A,4.63777278916177,5.020327399542022,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,H70Q-M177V-T241A,3,T241A,4.855075313160967,5.020327399542022,2,additive
+double_from_singles,Double mutants,A75T-E210G,2,Other,6.744436886989496,4.9959723327582095,1,additive
+triple_from_singles,Triple mutants against a singles model,A100S-P138L-S167P,3,Other,2.1734774873927996,4.923850663256418,1,positive
+double_from_singles,Double mutants,A118V-T256M,2,Other,1.7052064087715209,4.898761259089146,1,positive
+double_from_singles,Double mutants,D69N-V88A,2,Other,4.097191946136271,4.830900255432234,1,additive
+triple_from_singles,Triple mutants against a singles model,G37S-G40C-P229Q,3,Other,3.857658147250937,4.817190855417404,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,G37S-G40C-P229Q,3,Other,4.623619391250577,4.817190855417404,1,additive
+double_from_singles,Double mutants,D5G-L13M,2,Other,3.1129056650205182,4.757226545768899,1,additive
+double_from_singles,Double mutants,Q45H-E146D,2,Other,3.567319224745488,4.6789390827085455,1,additive
+double_from_singles,Double mutants,G272R-G278S,2,Other,5.2839233113829795,4.599194567093801,1,additive
+double_from_singles,Double mutants,V171I-P203Q,2,Other,4.071012748969926,4.580259345359958,1,additive
+double_from_singles,Double mutants,A141V-T200A,2,Other,5.075006302755809,4.502589634557219,1,additive
+double_from_singles,Double mutants,D78E-P203S,2,Other,7.490708438550873,4.464056470893796,1,additive
+triple_from_singles,Triple mutants against a singles model,V196M-E197D-T241A,3,T241A,5.53252555489951,4.445367404842486,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,V196M-E197D-T241A,3,T241A,7.1820184943544785,4.445367404842486,1,additive
+double_from_singles,Double mutants,R54W-A194V,2,Other,5.150714503360022,4.4363686879197175,1,additive
+double_from_singles,Double mutants,S52G-G278S,2,Other,9.708811228459972,4.3643368783750915,1,negative
+triple_from_singles,Triple mutants against a singles model,D5E-E44D-P203S,3,Other,5.418868488029406,4.275279563848871,1,additive
+triple_from_singles,Triple mutants against a singles model,A129V-E143V-T241A,3,T241A,5.525404924224331,4.249765944940535,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A129V-E143V-T241A,3,T241A,15.30134655725799,4.249765944940535,2,negative
+double_from_singles,Double mutants,L115I-V262M,2,Other,7.452307232914493,4.087126169235551,1,additive
+double_from_singles,Double mutants,V216I-D243E,2,Other,3.861486205625037,4.072222121360916,1,additive
+double_from_singles,Double mutants,G111E-T241A,2,T241A,12.263714823506232,4.040776923780682,1,negative
+triple_from_singles,Triple mutants against a singles model,A72T-T241A-G275C,3,T241A,8.12966260398662,3.9458082688146336,1,negative
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A72T-T241A-G275C,3,T241A,15.091645249146758,3.9458082688146336,2,negative
+double_from_singles,Double mutants,V90A-A240T,2,Other,1.915608649667958,3.8866403276560564,1,positive
+double_from_singles,Double mutants,F215Y-G272V,2,Other,6.710685311376003,3.7908361833426527,1,additive
+double_from_singles,Double mutants,E143V-R263C,2,Other,1.3625949987401764,3.746441745986354,1,positive
+double_from_singles,Double mutants,R110C-V262M,2,Other,8.48607377624927,3.6818913279579113,1,negative
+double_from_singles,Double mutants,A43T-V126L,2,Other,6.507379407041001,3.633440682360668,1,additive
+triple_from_singles,Triple mutants against a singles model,A19S-A220T-T241A,3,T241A,4.422732808515299,3.5503195202289977,1,additive
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A19S-A220T-T241A,3,T241A,4.195403589544448,3.5503195202289977,1,additive
+triple_from_singles,Triple mutants against a singles model,A118T-P203Q-T241A,3,T241A,11.69578848653798,3.3134473403002205,1,negative
+triple_from_double_single,Triple mutants against a doubles-plus-single model,A118T-P203Q-T241A,3,T241A,19.078583295271418,3.3134473403002205,1,negative
+double_from_singles,Double mutants,T241S-F286L,2,Other,1.5104017379343389,3.300320290429558,1,positive
+double_from_singles,Double mutants,G221S-G278S,2,Other,8.078981015181018,2.456901036177267,1,negative
