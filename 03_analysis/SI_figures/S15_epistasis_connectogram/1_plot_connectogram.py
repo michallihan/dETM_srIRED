@@ -98,6 +98,12 @@ FITNESS_COLOUR_WINDOW = 4.0
 
 MIN_DEGREE = 0  # nodes at or below this degree are dropped after the graph is built
 
+# Layout, as fractions of the figure. The two colour bars sit side by side in their own axes
+# rather than each taking a slice off the network's, which is what keeps them together.
+GRAPH_BOX = (0.0, 0.0, 0.86, 1.0)           # left, bottom, width, height
+COLOURBAR_BOX = (0.875, 0.34, 0.006, 0.32)  # the kcat(app) bar
+COLOURBAR_GAP = 0.036                       # left edge to left edge of the epsilon bar
+
 NODE_CMAP = "jet"
 EDGE_CMAP = LinearSegmentedColormap.from_list("epistasis", ["blue", "lightgrey", "red"])
 KCAT_TICKS = [0.5, 1, 2, 5, 10, 20, 50, 100]
@@ -261,31 +267,28 @@ def draw(graph, kcat_by_node, node_window, eps_window, kcat_wt):
     ]
 
     plt.close()
-    plt.figure(figsize=(25, 15))
+    figure = plt.figure(figsize=(25, 15))
+    axes = figure.add_axes(GRAPH_BOX)
     nx.draw_networkx_edges(
-        graph, positions,
+        graph, positions, ax=axes,
         edge_color=list(nx.get_edge_attributes(graph, "colour").values()),
         width=list(nx.get_edge_attributes(graph, "width").values()),
         style=list(nx.get_edge_attributes(graph, "style").values()),
         alpha=0.5, connectionstyle="arc3",
     )
-    nx.draw_networkx_nodes(graph, positions, node_size=10, node_color=node_colours)
+    nx.draw_networkx_nodes(graph, positions, ax=axes, node_size=10, node_color=node_colours)
     nx.draw_networkx_labels(
         graph, {k: (x - 0.001, y) for k, (x, y) in positions.items()},
         {node: node for node in graph.nodes() if node in labelled},
-        font_size=8, horizontalalignment="right", verticalalignment="center",
+        ax=axes, font_size=8, horizontalalignment="right", verticalalignment="center",
     )
+    axes.margins(0.02)  # the default 5% leaves a wide empty strip beside the last column
+    axes.axis("off")
 
-    epsilon_bar = plt.colorbar(
-        plt.cm.ScalarMappable(cmap=EDGE_CMAP, norm=plt.Normalize(-eps_window, eps_window)),
-        ax=plt.gca(), orientation="vertical", shrink=0.25, pad=0.02,
-        label=r"$\varepsilon$ (log$_{10}$ observed / expected $k_\mathrm{cat,app}$)",
-    )
-    epsilon_bar.ax.axhline(0, color="black", linewidth=0.6)
-
-    kcat_bar = plt.colorbar(
+    left, bottom, width, height = COLOURBAR_BOX
+    kcat_bar = figure.colorbar(
         plt.cm.ScalarMappable(cmap=cmap, norm=plt.Normalize(node_vmin, node_vmax)),
-        ax=plt.gca(), orientation="vertical", shrink=0.25, pad=0.002,
+        cax=figure.add_axes([left, bottom, width, height]),
         label=r"Observed $k_\mathrm{cat,app}$ (s$^{-1}$)",
     )
     ticks = [t for t in KCAT_TICKS if node_vmin <= np.log10(t) <= node_vmax]
@@ -293,9 +296,15 @@ def draw(graph, kcat_by_node, node_window, eps_window, kcat_wt):
     kcat_bar.set_ticklabels([f"{t:g}" for t in ticks])
     kcat_bar.ax.axhline(np.log10(kcat_wt), color="black", linewidth=0.6)
 
-    plt.axis("off")
+    epsilon_bar = figure.colorbar(
+        plt.cm.ScalarMappable(cmap=EDGE_CMAP, norm=plt.Normalize(-eps_window, eps_window)),
+        cax=figure.add_axes([left + COLOURBAR_GAP, bottom, width, height]),
+        label=r"$\varepsilon$ (log$_{10}$ observed / expected $k_\mathrm{cat,app}$)",
+    )
+    epsilon_bar.ax.axhline(0, color="black", linewidth=0.6)
+
     for suffix in ("svg", "png"):
-        plt.savefig(THIS_DIR / f"connectogram.{suffix}", dpi=150, bbox_inches="tight")
+        figure.savefig(THIS_DIR / f"connectogram.{suffix}", dpi=120, bbox_inches="tight")
     plt.close()
 
 
