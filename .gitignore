@@ -34,3 +34,6 @@ fitness_graph.pickle
 # R session leftovers
 .Rhistory
 .RData
+
+# Files git could not unlink; safe to remove by hand
+_to_delete/

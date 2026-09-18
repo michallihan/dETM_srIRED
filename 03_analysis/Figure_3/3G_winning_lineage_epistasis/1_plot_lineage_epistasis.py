@@ -6,21 +6,27 @@ H244Y and P203Q. At each step the variant already in hand and the substitution a
 added have both been scored, so the step can be predicted before it is taken, and the
 prediction compared with what the enzyme actually did.
 
-The null is that a substitution contributes the same amount wherever it is added. Droplet
-fitness is a log-scale quantity, so on that scale contributions add:
+The null is that a substitution contributes the same amount wherever it is added, so its
+fold-change over the wild type carries across backgrounds and the two multiply:
 
-    expected fitness = fitness(variant so far) + fitness(the substitution on its own)
-    expected sigma   = sqrt( sigma(variant so far)^2 + sigma(the substitution)^2 )
+    expected = kcat_app(variant so far) * kcat_app(the substitution on its own) / a
 
-and the expectation is converted to an apparent kcat with the same fit the measured variants
-use, kcat_app = a * exp(b * fitness), from 01_fitness_score_processing/03_deriving_kcatapp.
-Adding fitness is exactly multiplying kcat(app) fold-changes over a, the fitted turnover at
-zero fitness -- which is a shade below the wild-type variant's own kcat_app, since the wild
-type scores slightly above zero.
+Every kcat_app here is the column of the same name in 03_deriving_kcatapp, and a is the
+turnover that fit gives at zero fitness. a rather than the wild-type variant's own kcat_app,
+which is 3% higher because the wild type scores slightly above zero: dividing by the variant
+would double-count that offset, since each single mutant's kcat_app already carries it.
+Relative errors add in quadrature over the two measured terms, a being a fitted constant
+rather than a measurement:
+
+    expected_error / expected = sqrt( (dParent/Parent)^2 + (dSingle/Single)^2 )
+
+Written in fitness this is just addition -- kcat_app = a * exp(b * fitness), so multiplying
+fold-changes over a adds the exponents and the relative error is |b| * sigma. Either form
+gives the same numbers to floating point; this one is in the units the panel is drawn in.
 
 Both terms of the error are carried, the variant's and the substitution's. On the H244Y steps
-the substitution dominates it: H244Y was scored once, at low confidence, and its sigma is
-0.74 against the 0.24 of the variant it is added to.
+the substitution dominates it: H244Y was scored once, at low confidence, and its relative
+error is 47% against the 15% of the variant it is added to.
 
 The wild type and T241A have no expected bar. They are where the lineage starts - there is
 nothing before them to predict from.
@@ -80,48 +86,53 @@ plt.rcParams["font.sans-serif"] = ["Arial", "Helvetica", "DejaVu Sans"]
 
 
 def scores():
-    """Fitness and its error for every variant this panel needs, campaign first."""
-    campaign = pd.read_csv(FITNESS_HIGH_CONF_KCAT_CSV)[["mut_id", "fitness_final",
-                                                        "sigma_final"]]
-    singles = pd.read_csv(MAX_SINGLE_MUTANTS_CSV)[["mut_id", "fitness_final", "sigma_final"]]
-    singles = singles[~singles["mut_id"].isin(set(campaign["mut_id"]))]
-    return pd.concat([campaign, singles], ignore_index=True).set_index("mut_id")
+    """kcat(app) and its error for every variant this panel needs, campaign first.
 
+    Max's singles carry fitness scores only, so theirs are converted here with the same fit.
+    """
+    columns = ["mut_id", "kcat_app", "kcat_app_error"]
+    campaign = pd.read_csv(FITNESS_HIGH_CONF_KCAT_CSV)[columns]
 
-def conversion():
     fit = json.loads(KCAT_APP_FIT_JSON.read_text())
-    return fit["a"], fit["b"]
+    singles = pd.read_csv(MAX_SINGLE_MUTANTS_CSV)
+    singles = singles[~singles["mut_id"].isin(set(campaign["mut_id"]))].copy()
+    singles["kcat_app"] = fit["a"] * np.exp(fit["b"] * singles["fitness_final"])
+    singles["kcat_app_error"] = (abs(fit["b"]) * singles["kcat_app"]
+                                 * singles["sigma_final"])
+
+    return pd.concat([campaign, singles[columns]], ignore_index=True).set_index("mut_id")
+
+
+def wild_type_scale():
+    """a: the turnover the fit gives at zero fitness, the denominator fold-changes are over."""
+    return json.loads(KCAT_APP_FIT_JSON.read_text())["a"]
 
 
 def lineage_table():
     measured = scores()
-    a, b = conversion()
-
-    def kcat_app(fitness, sigma):
-        value = a * np.exp(b * fitness)
-        return value, abs(b) * value * sigma
+    scale = wild_type_scale()
 
     rows = []
     for variant, step in LINEAGE.items():
         for name in (variant, *(step or ())):
             if name not in measured.index:
-                raise KeyError(f"{name} has no fitness score")
-        observed, observed_error = kcat_app(*measured.loc[variant])
+                raise KeyError(f"{name} has no kcat(app)")
+        observed = measured.loc[variant]
 
         row = {"variant": variant, "built_from": "", "expected_kcat_app": np.nan,
-               "expected_kcat_app_error": np.nan, "observed_kcat_app": observed,
-               "observed_kcat_app_error": observed_error,
+               "expected_kcat_app_error": np.nan,
+               "observed_kcat_app": observed["kcat_app"],
+               "observed_kcat_app_error": observed["kcat_app_error"],
                "observed_over_expected": np.nan}
         if step is not None:
-            parent, added = step
-            fitness = measured.loc[parent, "fitness_final"] + measured.loc[added, "fitness_final"]
-            sigma = float(np.hypot(measured.loc[parent, "sigma_final"],
-                                   measured.loc[added, "sigma_final"]))
-            expected, expected_error = kcat_app(fitness, sigma)
-            row.update({"built_from": f"{parent} + {added}",
+            parent, added = (measured.loc[name] for name in step)
+            expected = parent["kcat_app"] * added["kcat_app"] / scale
+            relative = np.hypot(parent["kcat_app_error"] / parent["kcat_app"],
+                                added["kcat_app_error"] / added["kcat_app"])
+            row.update({"built_from": " + ".join(step),
                         "expected_kcat_app": expected,
-                        "expected_kcat_app_error": expected_error,
-                        "observed_over_expected": observed / expected})
+                        "expected_kcat_app_error": expected * relative,
+                        "observed_over_expected": observed["kcat_app"] / expected})
         rows.append(row)
     return pd.DataFrame(rows)
 
