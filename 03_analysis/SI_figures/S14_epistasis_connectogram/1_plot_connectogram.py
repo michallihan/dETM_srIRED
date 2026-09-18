@@ -30,7 +30,7 @@ point of the figure.
 
 Both need the added substitution measured on its own, and the campaign scored only 90 single
 mutants against the 361 substitutions its variants carry. The 1,122 singles in
-01_fitness_score_processing/max_single_mutants.csv, from Max's deep mutational scan of the
+01_fitness_score_processing/lrdms_single_mutants.csv, from the lrDMS paper's scan of the
 same enzyme, supply the rest; they are what lift the analysis from 184 epsilon values to 461.
 Their kcat(app) is computed with the conversion fitted in
 01_fitness_score_processing/03_deriving_kcatapp, the same conversion behind the campaign
@@ -42,7 +42,7 @@ data without being set by it.
 
 Which variants appear. A variant with two or more substitutions becomes a node only if at
 least one route into it could be scored, and a single mutant only if it sits inside one of
-those variants -- most of Max's 1,122 singles are unrelated to this campaign and would
+those variants -- most of the lrDMS scan's 1,122 singles are unrelated to this campaign and
 otherwise hang off the wild type unconnected. Nodes left isolated or unreachable from the wild
 type once the edges are drawn are then dropped.
 
@@ -81,7 +81,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from repo_paths import (  # noqa: E402
     FITNESS_HIGH_CONF_KCAT_CSV,
     KCAT_APP_FIT_JSON,
-    MAX_SINGLE_MUTANTS_CSV,
+    LRDMS_SINGLE_MUTANTS_CSV,
 )
 
 COLUMNS = ["aa_seq", "mut_id", "Nham_aa", "fitness_final", "sigma_final"]
@@ -118,16 +118,16 @@ plt.rcParams["font.size"] = 11
 # Data
 # --------------------------------------------------------------------------------------
 def variants():
-    """The campaign's scored variants and Max's single mutants, with kcat(app) on both."""
+    """The campaign's scored variants and the lrDMS single mutants, with kcat(app) on both."""
     fit = json.loads(KCAT_APP_FIT_JSON.read_text())
 
     campaign = pd.read_csv(FITNESS_HIGH_CONF_KCAT_CSV)[COLUMNS + ["kcat_app", "kcat_app_error"]]
     campaign["source"] = "campaign"
 
-    singles = pd.read_csv(MAX_SINGLE_MUTANTS_CSV)[COLUMNS]
+    singles = pd.read_csv(LRDMS_SINGLE_MUTANTS_CSV)[COLUMNS]
     singles["kcat_app"] = fit["a"] * np.exp(fit["b"] * singles["fitness_final"])
     singles["kcat_app_error"] = abs(fit["b"]) * singles["kcat_app"] * singles["sigma_final"]
-    singles["source"] = "max_singles"
+    singles["source"] = "lrdms_singles"
 
     overlap = set(campaign["mut_id"]) & set(singles["mut_id"])
     if overlap:
@@ -138,7 +138,7 @@ def variants():
     table["mut_list"] = [
         [] if mut_id == "WT" else mut_id.split("-") for mut_id in table["mut_id"]
     ]
-    print(f"{len(campaign)} campaign variants and {len(singles)} of Max's singles")
+    print(f"{len(campaign)} campaign variants and {len(singles)} of the lrDMS singles")
     return table, fit
 
 
@@ -347,7 +347,7 @@ def main():
     print(f'gate "{GATE}": {int(passes.sum())} of {len(higher_order)} higher-order variants pass')
 
     # A higher-order variant is a node only if at least one route into it could be scored;
-    # a single mutant only if it sits inside one of those variants. Max's scan contributes
+    # a single mutant only if it sits inside one of those variants. The lrDMS scan contributes
     # 1,122 singles and all but a handful are unrelated to this campaign.
     gated = set(higher_order.loc[passes, "mut_id"])
     kept = gated & set(computed["daughter"])

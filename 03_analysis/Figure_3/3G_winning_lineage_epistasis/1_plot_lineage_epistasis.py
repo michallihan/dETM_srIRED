@@ -31,7 +31,7 @@ error is 47% against the 15% of the variant it is added to.
 The wild type and T241A have no expected bar. They are where the lineage starts - there is
 nothing before them to predict from.
 
-H244Y is not in the campaign's own tables at all and comes from Max's single-mutant scan,
+H244Y is not in the campaign's own tables at all and comes from the lrDMS paper's scan,
 which is why this panel reads both.
 
 Outputs, written next to this script:
@@ -60,7 +60,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from repo_paths import (  # noqa: E402
     FITNESS_HIGH_CONF_KCAT_CSV,
     KCAT_APP_FIT_JSON,
-    MAX_SINGLE_MUTANTS_CSV,
+    LRDMS_SINGLE_MUTANTS_CSV,
 )
 
 # The lineage in the order it was walked. None means the variant is a starting point and gets
@@ -89,13 +89,13 @@ plt.rcParams["font.sans-serif"] = ["Arial", "Helvetica", "DejaVu Sans"]
 def scores():
     """kcat(app) and its error for every variant this panel needs, campaign first.
 
-    Max's singles carry fitness scores only, so theirs are converted here with the same fit.
+    The lrDMS singles carry fitness scores only, so theirs are converted here with the same fit.
     """
     columns = ["mut_id", "kcat_app", "kcat_app_error"]
     campaign = pd.read_csv(FITNESS_HIGH_CONF_KCAT_CSV)[columns]
 
     fit = json.loads(KCAT_APP_FIT_JSON.read_text())
-    singles = pd.read_csv(MAX_SINGLE_MUTANTS_CSV)
+    singles = pd.read_csv(LRDMS_SINGLE_MUTANTS_CSV)
     singles = singles[~singles["mut_id"].isin(set(campaign["mut_id"]))].copy()
     singles["kcat_app"] = fit["a"] * np.exp(fit["b"] * singles["fitness_final"])
     singles["kcat_app_error"] = (abs(fit["b"]) * singles["kcat_app"]

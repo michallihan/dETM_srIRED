@@ -16,7 +16,7 @@ Where several exist the expectations are averaged and the count is kept, so a po
 one surviving decomposition can be told from one built from four.
 
 A decomposition only counts if every piece has been measured. The single mutants are what make
-that possible at all, and most of them come from Max's dataset rather than the campaign.
+that possible at all, and most of them come from the lrDMS dataset rather than the campaign.
 """
 
 import itertools

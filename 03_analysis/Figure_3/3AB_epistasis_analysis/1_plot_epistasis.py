@@ -8,10 +8,10 @@ of two. Three panels: doubles from their singles, triples from their singles, an
 a double plus the remaining single.
 
 The prediction needs single mutants, and the campaign only scored a few dozen. The 1,122
-singles in 01_fitness_score_processing/max_single_mutants.csv come from Max's deep mutational
-scan of the same enzyme, scored the same way, and are what make the panels possible; the
-multiple mutants are the campaign's own high-confidence table. kcat(app) is computed with the conversion fitted in
-01_fitness_score_processing/03_deriving_kcatapp.
+singles in 01_fitness_score_processing/lrdms_single_mutants.csv come from the lrDMS paper's
+deep mutational scan of the same enzyme, scored the same way, and are what make the panels
+possible; the multiple mutants are the campaign's own high-confidence table. kcat(app) is
+computed with the conversion fitted in 01_fitness_score_processing/03_deriving_kcatapp.
 
 epistasis_models.py holds the expectation arithmetic and defines four further panels, for
 quadruple mutants, that the figure does not use. Set ALL_PANELS to draw those as well.
@@ -47,7 +47,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from repo_paths import (  # noqa: E402
     FITNESS_HIGH_CONF_CSV,
     KCAT_APP_FIT_JSON,
-    MAX_SINGLE_MUTANTS_CSV,
+    LRDMS_SINGLE_MUTANTS_CSV,
 )
 
 from epistasis_models import (  # noqa: E402
@@ -71,13 +71,13 @@ plt.rcParams["font.size"] = 11
 
 
 def variants():
-    """The campaign's scored variants and Max's single mutants, in one table."""
+    """The campaign's scored variants and the lrDMS single mutants, in one table."""
     campaign = pd.read_csv(FITNESS_HIGH_CONF_CSV)[COLUMNS]
-    singles = pd.read_csv(MAX_SINGLE_MUTANTS_CSV)[COLUMNS]
+    singles = pd.read_csv(LRDMS_SINGLE_MUTANTS_CSV)[COLUMNS]
     overlap = set(campaign["mut_id"]) & set(singles["mut_id"])
     if overlap:
         raise ValueError(f"{len(overlap)} variants are in both tables, e.g. {sorted(overlap)[:3]}")
-    print(f"{len(campaign)} scored campaign variants and {len(singles)} of Max's singles")
+    print(f"{len(campaign)} scored campaign variants and {len(singles)} of the lrDMS singles")
     return pd.concat([campaign, singles], ignore_index=True)
 
 

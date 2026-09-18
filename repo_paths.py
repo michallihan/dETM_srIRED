@@ -54,11 +54,11 @@ FITNESS_HIGH_CONF_KCAT_CSV = (
 )
 KCAT_APP_FIT_JSON = DERIVING_KCAT_APP_DIR / "kcat_app_fit.json"
 
-# Single mutants from Max's deep mutational scan of the same enzyme, scored the same way and
-# in the same column layout as 02a_. Not produced by this repo and not part of the campaign;
-# it is here because the campaign scored too few single mutants for the epistasis panels in
-# Figure 3 to be built without it. H244Y, for one, appears nowhere else.
-MAX_SINGLE_MUTANTS_CSV = FITNESS_SCORE_DIR / "max_single_mutants.csv"
+# Single mutants from the lrDMS paper's deep mutational scan of the same enzyme, scored the
+# same way and in the same column layout as 02a_. Not produced by this repo and not part of
+# the campaign; it is here because the campaign scored too few single mutants for the
+# epistasis panels in Figure 3 to be built without it. H244Y, for one, appears nowhere else.
+LRDMS_SINGLE_MUTANTS_CSV = FITNESS_SCORE_DIR / "lrdms_single_mutants.csv"
 
 # --- 01_fitness_score_processing/01_lrDMS_pipeline: the DiMSum runs upstream of the
 #     fitness scores. Reads are not held in the repo; see 01_NGS. ---
