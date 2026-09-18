@@ -66,6 +66,7 @@ DECOMPOSITIONS = {
 OBSERVED_COLOUR = "#ABCDC2"
 EXPECTED_COLOUR = "#9A9A9A"
 BAR_WIDTH = 0.38
+VARIANT_LABEL_SIZE = 8.5
 Y_LIMIT = 150
 Y_STEP = 50
 
@@ -140,9 +141,11 @@ def plot(table):
     ax.set_ylabel("$k_\\mathregular{cat}$ [s$^{-1}$]", fontsize=11)
     ax.set_ylim(0, Y_LIMIT)
     ax.set_yticks(range(0, Y_LIMIT + 1, Y_STEP))
+    # tick_params after set_xticklabels would override the size, so it goes first.
+    ax.tick_params(axis="y", labelsize=9)
+    ax.tick_params(axis="x", labelsize=VARIANT_LABEL_SIZE)
     ax.set_xticks(positions)
-    ax.set_xticklabels([label(v) for v in table["variant"]], fontsize=8.5)
-    ax.tick_params(axis="both", labelsize=9)
+    ax.set_xticklabels([label(v) for v in table["variant"]])
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
 

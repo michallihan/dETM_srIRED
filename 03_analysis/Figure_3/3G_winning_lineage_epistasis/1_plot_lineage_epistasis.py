@@ -77,6 +77,7 @@ LINEAGE = {
 OBSERVED_COLOUR = "#ABCDC2"
 EXPECTED_COLOUR = "#9A9A9A"
 BAR_WIDTH = 0.38
+VARIANT_LABEL_SIZE = 6.5  # the names run to four lines, so they set how narrow this can go
 Y_LIMIT = 140
 Y_STEP = 20
 
@@ -144,7 +145,7 @@ def label(variant):
 
 def plot(table):
     positions = np.arange(len(table))
-    figure, ax = plt.subplots(figsize=(4.3, 3.1))
+    figure, ax = plt.subplots(figsize=(3.7, 3.1))
 
     ax.bar(positions - BAR_WIDTH / 2, table["expected_kcat_app"].fillna(0), BAR_WIDTH,
            yerr=table["expected_kcat_app_error"].fillna(0), color=EXPECTED_COLOUR,
@@ -157,9 +158,11 @@ def plot(table):
     ax.set_ylabel("$k_\\mathregular{cat}^\\mathregular{(app)}$ [s$^{-1}$]", fontsize=11)
     ax.set_ylim(0, Y_LIMIT)
     ax.set_yticks(range(0, Y_LIMIT + 1, Y_STEP))
+    # tick_params after set_xticklabels would override the size, so it goes first.
+    ax.tick_params(axis="y", labelsize=9)
+    ax.tick_params(axis="x", labelsize=VARIANT_LABEL_SIZE)
     ax.set_xticks(positions)
-    ax.set_xticklabels([label(v) for v in table["variant"]], fontsize=7.5)
-    ax.tick_params(axis="both", labelsize=9)
+    ax.set_xticklabels([label(v) for v in table["variant"]])
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
 
