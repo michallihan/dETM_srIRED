@@ -13,6 +13,13 @@ variants -- on one shared pair of axes, so the models can be compared with each 
 with no variant whose pieces were all measured has nothing to draw and is left out; in this
 dataset that is the five-mutation triple-plus-double model.
 
+A third figure follows the quadruple mutants through three models of increasing order: all
+singles, a double plus the two remaining singles, and a triple plus the remaining single.
+Each step folds one more interaction into the expectation, so a point that moves onto the
+diagonal from one panel to the next had its departure explained by the piece that was added.
+The two triple backgrounds share a colour elsewhere; here they are told apart, since they
+are the pieces that do the explaining in the last step.
+
 The prediction needs single mutants, and the campaign only scored a few dozen. The 1,122
 singles in 01_fitness_score_processing/lrdms_single_mutants.csv come from the lrDMS paper's
 deep mutational scan of the same enzyme, scored the same way, and are what make the panels
@@ -32,6 +39,8 @@ Outputs, written next to this script:
     epistasis_linear_axes.svg / .png
     epistasis_higher_order.svg / .png              triples, quadruples, five-mutation variants
     epistasis_higher_order_linear_axes.svg / .png
+    epistasis_quadruples.svg / .png                quadruples, singles to triple-plus-single
+    epistasis_quadruples_linear_axes.svg / .png
 """
 
 import json
@@ -70,6 +79,12 @@ COLUMNS = ["mut_id", "fitness_final", "sigma_final", "Nham_aa"]
 PUBLISHED_PANELS = PANELS[:3]
 HIGHER_ORDER_PANELS = PANELS[1:]  # every model from triples upward
 HIGHER_ORDER_COLUMNS = 4
+QUADRUPLE_PANELS = tuple(
+    (panel, title) for panel, title in PANELS
+    if panel in ("quad_from_singles", "quad_from_single_single_double", "quad_from_triple_single")
+)
+# The quadruple figure separates the two triple backgrounds; every other colour is shared.
+QUADRUPLE_COLOURS = {**CATEGORY_COLOURS, "S68P-P203Q-T241A": "#A07CC5"}
 
 BAND = 2.0  # the grey corridor is this factor either side of the diagonal
 
@@ -120,7 +135,8 @@ def axis_span(rows, logarithmic):
     return span, 0.0, high * 1.08
 
 
-def plot(rows, panels, logarithmic, stem, columns=None):
+def plot(rows, panels, logarithmic, stem, columns=None, colours=CATEGORY_COLOURS,
+         wrap_titles=False):
     """One scatter per panel, all on the same axes, legend in the space after the last."""
     rows = rows[rows["panel"].isin([panel for panel, _ in panels])]
     columns = columns or len(panels)
@@ -139,7 +155,7 @@ def plot(rows, panels, logarithmic, stem, columns=None):
             if points.empty:
                 continue
             ax.scatter(points["expected_kcat_app"], points["observed_kcat_app"], s=50,
-                       color=CATEGORY_COLOURS[category], alpha=0.8, label=category)
+                       color=colours[category], alpha=0.8, label=category)
         if logarithmic:
             ax.set_xscale("log")
             ax.set_yscale("log")
@@ -148,7 +164,7 @@ def plot(rows, panels, logarithmic, stem, columns=None):
         ax.set_xlim(low, high)
         ax.set_ylim(low, high)
         ax.grid(False)
-        if columns != len(panels):  # grid titles are too long for one line
+        if wrap_titles or columns != len(panels):  # too long for one line
             title = title.replace(" against ", "\nagainst ")
         ax.set_title(f"{title}\nn = {len(subset)}", fontsize=11)
         ax.set_xlabel("Expected kcat(app) [s$^{-1}$]")
@@ -166,7 +182,7 @@ def plot(rows, panels, logarithmic, stem, columns=None):
         ax.axis("off")
 
     handles = [plt.Line2D([], [], marker="o", linestyle="", markersize=8,
-                          color=CATEGORY_COLOURS[c], label=c) for c in CATEGORY_ORDER]
+                          color=colours[c], label=c) for c in CATEGORY_ORDER]
     if legend_outside:
         axes[len(panels) - 1].legend(handles=handles, title="Carries", fontsize=9,
                                      loc="upper left", bbox_to_anchor=(1.02, 1.0),
@@ -201,6 +217,10 @@ def main():
          columns=HIGHER_ORDER_COLUMNS)
     plot(rows, higher_order, logarithmic=False, stem="epistasis_higher_order_linear_axes",
          columns=HIGHER_ORDER_COLUMNS)
+    plot(rows, QUADRUPLE_PANELS, logarithmic=True, stem="epistasis_quadruples",
+         colours=QUADRUPLE_COLOURS, wrap_titles=True)
+    plot(rows, QUADRUPLE_PANELS, logarithmic=False, stem="epistasis_quadruples_linear_axes",
+         colours=QUADRUPLE_COLOURS, wrap_titles=True)
 
     for panel, _ in PANELS:
         subset = rows[rows["panel"] == panel]
