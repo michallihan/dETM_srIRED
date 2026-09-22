@@ -11,7 +11,9 @@ on the diagonal when its measured kcat(app) matches that, above it when the subs
 each other and below it when they get in each other's way.
 
 Most variants can be cut up more than one way. A triple splits into three singles, or into a
-double plus the remaining single three different ways; a quadruple has four decompositions.
+double plus the remaining single three different ways; a quadruple has four kinds of
+decomposition and a five-mutation variant six. Variants with six or more substitutions are not
+modelled.
 Where several exist the expectations are averaged and the count is kept, so a point built from
 one surviving decomposition can be told from one built from four.
 
@@ -24,8 +26,8 @@ import itertools
 import numpy as np
 import pandas as pd
 
-# Panels, in the order the original laid them out. The first three are the figure; the other
-# four are the rest of the decompositions, computed the same way and kept for reference.
+# Panels, in the order the original laid them out. The first three are the published figure;
+# the rest cover every decomposition of triples, quadruples and five-mutation variants.
 PANELS = (
     ("double_from_singles", "Double mutants"),
     ("triple_from_singles", "Triple mutants against a singles model"),
@@ -34,6 +36,12 @@ PANELS = (
     ("quad_from_single_single_double", "Quadruple mutants against a singles-plus-double model"),
     ("quad_from_double_double", "Quadruple mutants against a doubles-plus-doubles model"),
     ("quad_from_triple_single", "Quadruple mutants against a triples-plus-single model"),
+    ("pent_from_singles", "Five-mutation variants against a singles model"),
+    ("pent_from_double_single_single_single", "Five-mutation variants against a double-plus-singles model"),
+    ("pent_from_double_double_single", "Five-mutation variants against a doubles-plus-single model"),
+    ("pent_from_triple_single_single", "Five-mutation variants against a triple-plus-singles model"),
+    ("pent_from_triple_double", "Five-mutation variants against a triple-plus-double model"),
+    ("pent_from_quad_single", "Five-mutation variants against a quadruple-plus-single model"),
 )
 
 PANEL_TITLES = dict(PANELS)
@@ -103,6 +111,32 @@ def _decompositions(mutations, order):
         yield "quad_from_triple_single", [
             ["-".join(m for m in mutations if m != left_out), left_out]
             for left_out in mutations
+        ]
+    elif order == 5:
+        def rest(taken):
+            return [m for m in mutations if m not in taken]
+
+        yield "pent_from_singles", [list(mutations)]
+        yield "pent_from_double_single_single_single", [
+            ["-".join(pair), *rest(pair)] for pair in itertools.combinations(mutations, 2)
+        ]
+        # One single left out, the other four paired off in each of their three ways.
+        yield "pent_from_double_double_single", [
+            ["-".join(pair), "-".join(rest(pair + (single,))), single]
+            for single in mutations
+            for pair in itertools.combinations(rest((single,)), 2)
+            if pair[0] == rest((single,))[0]
+        ]
+        yield "pent_from_triple_single_single", [
+            ["-".join(triple), *rest(triple)] for triple in itertools.combinations(mutations, 3)
+        ]
+        # Every 3+2 split is distinct: choosing the pair fixes the triple, so all ten count.
+        yield "pent_from_triple_double", [
+            ["-".join(triple), "-".join(rest(triple))]
+            for triple in itertools.combinations(mutations, 3)
+        ]
+        yield "pent_from_quad_single", [
+            ["-".join(rest((left_out,))), left_out] for left_out in mutations
         ]
 
 
