@@ -5,6 +5,7 @@ seaborn
 scipy
 matplotlib-venn
 networkx
+scikit-learn
 
 # Only for 01_fitness_score_processing/01_lrDMS_pipeline. The vendored UMIC-seq helper
 # imports StripedSmithWaterman from skbio.alignment, dropped after scikit-bio 0.6.2.

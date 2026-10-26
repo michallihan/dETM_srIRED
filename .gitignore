@@ -31,6 +31,15 @@ fitness_graph.pickle
 01_fitness_score_processing/01_lrDMS_pipeline/03_DiMSum_population_dynamics/fastq/
 **/tmp/
 
+# Model-comparison scratch under Figure_4/4D. The fitted EVmutation parameter binary is
+# 129 MB, over GitHub's file size limit; 08_ refits it from the alignment with plmc when it
+# is absent. The rest is working space for GEMME and MULTI-evolve, and the per-variant ESM2
+# tensors, all of which their scripts rewrite.
+03_analysis/Figure_4/4D_model_comparisons/evmutation_model/srired_evmutation_params.bin
+03_analysis/Figure_4/4D_model_comparisons/gemme_run/
+03_analysis/Figure_4/4D_model_comparisons/multievolve_fcn_model_cache/
+03_analysis/Figure_4/4D_model_comparisons/esm2_t33_650M_mean_embedding_pt/
+
 # R session leftovers
 .Rhistory
 .RData
