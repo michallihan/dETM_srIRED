@@ -1,0 +1,48 @@
+# Environment for the analysis scripts.
+#
+#   conda env create -f environment.yaml
+#   conda activate rike-evo
+#
+# This covers everything under 03_analysis, 02_long_read_processing, and the
+# fitness-score steps 02a/02b/02c and 03 of 01_fitness_score_processing.
+#
+# It does NOT cover the sequencing pipeline in
+# 01_fitness_score_processing/01_lrDMS_pipeline, which needs DiMSum and the raw
+# reads -- see environment-pipeline.yaml for that.
+
+name: rike-evo
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10
+
+  # Pinned: the committed figures and tables were produced with these versions,
+  # and output depends on them. pandas changed the default stability of
+  # sort_values and the column order of DataFrame(list_of_dicts); matplotlib
+  # 3.10 autoscales 3D axes differently from the 3.5.2 that drew the published
+  # panels. Unpinning these will move tie-broken orderings and 3D views.
+  - numpy=2.2.6
+  - pandas=2.3.3
+  - matplotlib=3.10.9
+  - seaborn=0.13.2
+  - openpyxl=3.1.5          # pandas reads and writes the .xlsx tables through this
+
+  # Floors only: nothing in the output depends on the exact version.
+  - scipy>=1.11
+  - networkx>=3.1
+  - matplotlib-venn>=0.11
+
+  # For 01_lrDMS_pipeline/02_DiMSum_DMS/2_export_all_variants.R, which reads the
+  # two committed .RData files. DiMSum itself is not needed for that step.
+  - r-base>=4.2
+  - r-data.table
+
+  # Optional, for Figure 4E only. Scoring variants with ESM2 needs these plus the
+  # model weights, which are downloaded on first run (~2.5 GB for 650M) and want a
+  # GPU. 4_plot_esm_baseline.py redraws the panel from the committed summary and
+  # needs none of it, so these are left out by default. To score from scratch:
+  #
+  #   conda install -c conda-forge pytorch
+  #   pip install fair-esm

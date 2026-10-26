@@ -1,0 +1,34 @@
+# Environment for the sequencing pipeline in
+# 01_fitness_score_processing/01_lrDMS_pipeline.
+#
+#   conda env create -f environment-pipeline.yaml
+#   conda activate rike-evo-pipeline
+#
+# Kept separate from environment.yaml because DiMSum pulls in a large R stack
+# that none of the analysis scripts need, and because the pipeline cannot be run
+# without the raw reads, which are not in the repo (see README, Data).
+#
+# Both pipeline scripts take --dry-run, which prints the commands it would issue
+# and reports missing inputs without calling DiMSum. That path works with this
+# environment and no reads.
+
+name: rike-evo-pipeline
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - python=3.10
+
+  - r-dimsum=1.4            # DiMSum; brings its own R stack
+
+  - numpy
+  - pandas
+
+  # For the vendored UMIC-seq helper used by 03_DiMSum_population_dynamics.
+  - biopython
+  - tqdm
+  # Pinned: the helper imports StripedSmithWaterman from skbio.alignment, which
+  # later versions no longer expose.
+  - scikit-bio<=0.6.2
