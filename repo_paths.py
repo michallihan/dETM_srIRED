@@ -44,6 +44,12 @@ FITNESS_LOW_CONF_DIR = FITNESS_SCORE_DIR / "02b_low_confidence_fitness_scores"
 FITNESS_HIGH_CONF_CSV = FITNESS_HIGH_CONF_DIR / "final_fitness_scores_ETM.csv"
 FITNESS_LOW_CONF_CSV = FITNESS_LOW_CONF_DIR / "final_fitness_scores_ETM.csv"
 
+# Variants present in the input and absent from the output of every replicate. They carry no
+# fitness score and are not in the two tables above: fitness is a log ratio of output to input
+# counts, so a zero output has none. Counts only; see 02c_ for the criterion.
+INACTIVE_VARIANTS_DIR = FITNESS_SCORE_DIR / "02c_inactive_variants"
+INACTIVE_VARIANTS_CSV = INACTIVE_VARIANTS_DIR / "inactive_variants.csv"
+
 # --- 01_fitness_score_processing/03_deriving_kcatapp: the fitness-to-kcat conversion ---
 # The high-confidence table with the modelled apparent kcat joined on, and the fitted
 # parameters of the conversion behind it. Anything in the repo that speaks in kcat(app)
@@ -73,6 +79,14 @@ LRDMS_BARCODE_IDENTITY_TXT = LRDMS_PIPELINE_DIR / "VIF_all_rounds_upd.txt"
 DIMSUM_DMS_DIR = LRDMS_PIPELINE_DIR / "02_DiMSum_DMS"
 DIMSUM_DMS_LENIENT_CSV = DIMSUM_DMS_DIR / "lenient_gate" / "all_variants.csv"
 DIMSUM_DMS_STRINGENT_CSV = DIMSUM_DMS_DIR / "stringent_gate" / "all_variants.csv"
+
+# DiMSum's merged per-variant count tables, written before the fitness stage. These hold every
+# variant DiMSum counted, including those it could not score; all_variants.csv above holds only
+# the scored ones. 02c_ reads these because the variants it reports are exactly the unscorable
+# ones. Note the two gates number their samples differently (lenient input1/2/3, stringent
+# input4/2/6), so find the count columns by experiment number rather than by name.
+DIMSUM_DMS_LENIENT_MERGE_TSV = DIMSUM_DMS_DIR / "lenient_gate" / "variant_data_merge.tsv"
+DIMSUM_DMS_STRINGENT_MERGE_TSV = DIMSUM_DMS_DIR / "stringent_gate" / "variant_data_merge.tsv"
 
 # DiMSum of each selection round, counting every variant in that round's read pool.
 DIMSUM_POPULATION_DYNAMICS_DIR = LRDMS_PIPELINE_DIR / "03_DiMSum_population_dynamics"

@@ -12,6 +12,7 @@ Code and processed data for the figures in the Rike et al. paper.
     03_DiMSum_population_dynamics/  one run per selection round, gives per-round counts
   02a_high_confidence_fitness_scores/
   02b_low_confidence_fitness_scores/
+  02c_inactive_variants/
 02_long_read_processing/       backbone dataset: nanopore long-read processing
 03_analysis/                   one folder per figure panel
   Figure_1/  Figure_2/  Figure_3/  Figure_4/  SI_figures/
