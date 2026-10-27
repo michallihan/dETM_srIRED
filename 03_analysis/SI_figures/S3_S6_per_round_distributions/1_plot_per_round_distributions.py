@@ -1,36 +1,3 @@
-"""
-How the variant pool changed from round to round, in fitness and in mutation count.
-
-Two panels, both built from the per-round DiMSum tables in 01_lrDMS_pipeline/03_ and the
-fitness scores in 01_fitness_score_processing/02a_.
-
-The first is a swarm of every scored variant present in a round, against round number, with
-that round's mean and upper 85th percentile drawn across it. Only variants the lrDMS
-measured have a score, so each round contributes the part of its pool that overlaps the
-594-variant table: 64 of 130 in round 1, rising to 252 of 492 by round 5.
-
-The second counts variants by how many amino-acid substitutions they carry, coloured by the
-round each one is first seen in. A variant is counted once, in its first round, so the bars
-add up to the number of distinct variants across the campaign rather than to the sum of the
-round sizes.
-
-Rounds are treated the same way the population-dynamics analysis treats them: rows DiMSum
-flagged are dropped, and rows sharing an amino-acid sequence are summed so that synonymous
-nucleotide variants count once. Variants are named by their differences from each round
-table's own wild-type row, which is how the fitness table's mut_id is built, so the two
-sides join directly.
-
-The naive library, r0, is not used. The original script loaded it, but the first panel
-excludes it through the round ordering and the second skips it outright, so neither figure
-depends on it — which is just as well, since the DiMSum run that produced it has not been
-located and it is not in the repo.
-
-Outputs, written next to this script:
-    fitness_per_round.csv
-    fitness_score_by_round.svg / .png
-    mutation_number_by_round.svg / .png
-"""
-
 import sys
 from pathlib import Path
 

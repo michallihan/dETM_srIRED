@@ -1,22 +1,3 @@
-"""
-How surprising ESM2 finds each evolved variant.
-
-Scores every variant in the high-confidence table with a single forward pass of ESM2-650M and
-records PPL*, the pseudo-perplexity of the sequence under the model. A low PPL* means the
-model considers the sequence unremarkable for a protein of this family; a high one means it
-does not. Comparing that with the measured fitness asks whether a general protein language
-model, with no knowledge of this reaction, would have recognised what the campaign found.
-
-Needs torch and fair-esm, and downloads the ESM2-650M weights on first use. The other scripts
-in this folder run from its output, so it only has to be run once.
-
-Outputs, written next to this script:
-    esm2_single_pass_ppl.csv
-    esm2_ppl_correlations.csv
-    esm2_ppl_vs_fitness.pdf / .png
-    esm2_delta_ppl_vs_delta_fitness.pdf / .png
-"""
-
 import sys
 from pathlib import Path
 

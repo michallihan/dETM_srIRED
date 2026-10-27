@@ -1,30 +1,3 @@
-"""
-Splits the merged reads of each sequencing sample into the five selection rounds.
-
-Every round of the campaign carries its own 20 nt identifier in the amplicon, so one
-sequencing sample holds reads from all five rounds mixed together. UMIC-seq_helper aligns
-each read against the five identifiers in rcbc.fasta and writes it to the round it matches,
-with the alignment score thresholds the original run used (22 22, against a 20 nt barcode).
-
-Merging is not done here: the reads arrive already merged from 01_NGS. UMIC-seq_helper reads
-uncompressed fastq, so each merged file is decompressed to a scratch copy, split, and the
-per-round outputs compressed again into the fastq/ folder that 2_run_dimsum.py reads.
-
-UMIC-seq.py and UMIC-seq_helper.py are vendored next to this script (Paul Jannis Zurek,
-pjz26@cam.ac.uk, v1.1.1). The helper needs numpy, biopython, tqdm and scikit-bio, and it
-imports StripedSmithWaterman from skbio.alignment, which current scikit-bio no longer
-exposes — 0.6.2 is the newest version that works. The helper also prints the scores of the
-first 250 reads unconditionally, so it raises IndexError on an input smaller than that;
-harmless on real samples, worth knowing if you test it on a toy file.
-
-Reads the helper cannot assign to any round go to <sample>_none.fastq and are counted but
-not kept, since DiMSum only reads the round files. The count is the useful part: it says how
-much of a sample carried no recognisable round identifier.
-
-Outputs:
-    fastq/{Input,Sort}-<n>_round<1-5>.fastq.gz
-"""
-
 import argparse
 import gzip
 import shutil

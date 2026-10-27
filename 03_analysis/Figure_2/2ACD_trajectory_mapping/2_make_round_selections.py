@@ -1,14 +1,3 @@
-"""
-Per-round variant selections.
-
-Splits the collapsed unique-variant table by the round in which each variant is first
-observed, ordered within each round by that round's occurrence count.
-
-Outputs, written next to this script:
-    variants_round{1..5}.csv   the variants first seen in that round
-    round{1..5}.txt            their node names, for selection in Cytoscape
-"""
-
 import ast
 import sys
 from pathlib import Path

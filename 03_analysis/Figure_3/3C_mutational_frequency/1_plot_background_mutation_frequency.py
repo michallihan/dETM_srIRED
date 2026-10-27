@@ -1,14 +1,3 @@
-"""
-Frequency of four mutations across three nested founder backgrounds.
-
-Backgrounds are exclusive: each variant is counted in the background of the last founder
-it carries, so the three sets are disjoint. The WT background holds variants carrying
-neither T241A nor S68P.
-
-Output, written next to this script:
-    background_mutation_frequency.pdf / .png
-"""
-
 import csv
 import sys
 from pathlib import Path

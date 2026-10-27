@@ -1,35 +1,3 @@
-"""
-Fitness score against relative abundance in the variant pool, round by round.
-
-The two quantities come from opposite ends of the experiment and are compared here for the
-first time: the fitness score is what the sorted DMS measured for a variant in isolation,
-and the relative abundance is what fraction of a round's sequencing pool that variant
-actually made up. A variant can score well and stay rare, or dominate a round without being
-the fittest thing in it, and the panels are there to show which.
-
-Abundance is taken from the input samples of each round — the pool as it entered that
-round's selection, before sorting — following the same filtering the population-dynamics
-analysis uses: rows with a stop codon, a read-through stop, an indel or an invalid barcode
-are dropped, rows sharing an amino-acid sequence are summed so that synonymous nucleotide
-variants count once, each replicate column is turned into a fraction of its own total, and
-the replicates are averaged.
-
-Variants are named the way the fitness table names them — every position at which the
-sequence differs from the wild type, ordered along the chain and joined with hyphens — so the
-two sides join on identical identifiers. The wild type is taken from each round table's own
-WT row rather than written out here, so nothing has to be kept in step with it.
-
-PANEL_VARIANTS holds the three variants the panels show, the same three the published panels
-showed. ADDITIONAL_VARIANTS holds two more that are in the table but not the panels. Both
-lists are configuration: nothing in the data picks them out, so changing either changes what
-is reported without touching the calculation. A variant is drawn in a round only if it is
-present in that round at all, which is why round 3 has two bars and round 5 has three.
-
-Outputs, written next to this script:
-    fitness_abundance_comparison.csv
-    abundance_vs_fitness_round<n>.pdf / .png   for each round in PANEL_ROUNDS
-"""
-
 import sys
 from pathlib import Path
 

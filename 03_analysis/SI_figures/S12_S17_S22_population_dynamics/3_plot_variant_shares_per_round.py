@@ -1,23 +1,3 @@
-"""
-What fraction of each round's reads belonged to which variant.
-
-The five selection rounds plus the naive library were each counted by their own DiMSum run.
-Rows DiMSum flagged are dropped, rows sharing an amino-acid sequence are summed so that
-synonymous nucleotide variants count once, and each replicate column is turned into a
-fraction of that replicate's reads before the replicates are averaged. This is a share of
-reads, unlike the per-position shares in 1_ and 2_, which count each distinct variant once.
-
-The bar for each round carries the wild type, the five variants that make up the winning
-lineage, the two largest variants outside it, and everything else as "rest".
-
-Round 0 is the naive library. It sits in 01_lrDMS_pipeline as a workbook rather than a
-DiMSum table because the run that produced it has not been located.
-
-Outputs, written next to this script:
-    variant_share_per_round.csv
-    variant_share_per_round.svg / .png
-"""
-
 import sys
 from pathlib import Path
 

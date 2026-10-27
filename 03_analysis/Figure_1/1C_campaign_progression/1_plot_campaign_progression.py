@@ -1,27 +1,3 @@
-"""
-How the pool improved round by round.
-
-Bars give the share of each round's scored variants that beat the wild type, judged
-conservatively: a variant counts as improved only if the bottom of its fitness interval
-clears the top of the wild type's. The line over them is the median kcat(app) of that round's
-ten best variants, which is what turns a share into a magnitude -- the pool does not only
-become more often better, it becomes better by more.
-
-Below the axis sits the table the panel carries: how many variants were screened each round,
-how many distinct variants the nanopore sequencing recovered from the sorted pool, and the
-average number of substitutions the scored ones had come to hold. The screened and recovered
-counts describe the whole round; the bars and the line describe the part of it that has a
-fitness score, which is smaller.
-
-kcat(app) comes from the conversion fitted in 01_fitness_score_processing/03_deriving_kcatapp,
-read from its kcat_app_fit.json rather than restated here.
-
-Outputs, written next to this script:
-    campaign_progression.csv
-    top_variants_by_round.csv
-    campaign_progression.svg / .png
-"""
-
 import json
 import sys
 from pathlib import Path

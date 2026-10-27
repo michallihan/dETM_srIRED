@@ -1,38 +1,3 @@
-"""
-Whether the routes that were not taken would have worked, measured one enzyme at a time.
-
-T241A opens three routes: adding S68P, A72T or G37C. Each pair was purified and assayed, and
-so were the triples that add S68P on top of the A72T and G37C doubles. That makes it possible
-to ask of each one whether its substitutions combine as though they were independent.
-
-Independence means fold-changes over the wild type multiply, so for a variant built from two
-measured pieces
-
-    expected kcat = kcat(first piece) * kcat(second piece) / kcat(wild type)
-
-The error on that is propagated from all three measurements. Since the expectation is a
-product and a quotient, the relative errors add in quadrature:
-
-    expected_error / expected = sqrt( (dA/A)^2 + (dB/B)^2 + (dW/W)^2 )
-
-The original calculation carried only the wild type's error, which understated the expected
-bars - the pieces are measured no better than the variant itself, and on the triples the
-double contributes most of the uncertainty. Both are in the csv, the original as
-expected_kcat_error_wild_type_only, so the change is visible rather than silent.
-
-The doubles are built from their two singles. The triples are built from the double that
-already carries T241A plus S68P on its own - S68P added last, to the established background -
-which is the comparison the panel is making and not the only decomposition available.
-
-Measurements come from 04_biophysics/srired_chx_cpa_alternative_paths_kinetics.csv, which is
-its own assay series: the wild type turns over at 4.7 s-1 there. The larger biophysics table
-holds some of the same variants on a different scale, and the two must not be mixed.
-
-Outputs, written next to this script:
-    expected_against_observed_kcat.csv
-    expected_against_observed_kcat.pdf / .png
-"""
-
 import sys
 from pathlib import Path
 

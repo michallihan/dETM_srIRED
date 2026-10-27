@@ -1,27 +1,3 @@
-"""
-Node degree per round: which variants have the most descendants in the trajectory network.
-
-The network built by 1_build_trajectory_network.py joins two variants when one carries exactly
-one more amino-acid substitution than the other and the smaller variant's substitution set is
-contained in the larger. A variant's node degree in that network is the number of one-step
-neighbours it has - the immediate parents it could have come from plus the immediate
-descendants that extend it by one substitution. A high degree marks a variant at a branch
-point: many single-step moves pass through it.
-
-Degree alone favours variants that were simply around longer and so had more chances to spawn
-neighbours. Dividing by the number of rounds a variant was seen in corrects for that, giving
-descendants per round of presence, which is what the table ranks on.
-
-Degrees are read straight from the graph 1_build_trajectory_network.py writes, so this is the
-same network as Figure 2A/C. Run that script first. Round membership is not in the graph and
-is taken from the round_1..round_5 columns of the nanopore dictionary: a variant "occurs" in a
-round when its count there is greater than zero. Round 0, the naive library, is not a selection
-round and is not counted.
-
-Outputs, written next to this script:
-    node_degrees.xlsx   every variant, ranked by node degree per round, with a Legend sheet
-"""
-
 import ast
 import sys
 from pathlib import Path

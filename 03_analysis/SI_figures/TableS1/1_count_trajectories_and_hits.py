@@ -1,30 +1,3 @@
-"""
-How many mutational paths lead from the wild type to each variant, and which variants are hits.
-
-A variant carrying k substitutions could in principle be reached by k! orderings, adding one
-substitution at a time. A path only counts here if every intermediate along it was actually
-observed, so the count says how much of that variant's approach the campaign captured. It is
-computed against two reference sets:
-
-    n_trajectories           every intermediate is in the 594-variant fitness dataset, so the
-                             whole path is measured
-    n_trajectories_campaign  every intermediate is in the 1,342-variant nanopore dictionary,
-                             so the whole path was seen at some point, measured or not
-
-The second is the larger of the two except where a path runs through a variant the nanopore
-dictionary missed. The wild type is 1, the trivial empty path; 0 means no complete path exists.
-
-Hits are variants whose apparent kcat clears the wild type's by a margin that survives the
-error on both: kcat_app - kcat_app_error > FOLD_OVER_WILD_TYPE x (kcat_app + kcat_app_error)
-of the wild type. Taking the low end of the variant against the high end of the wild type is
-what makes the call robust to the noise in the modelled kcat.
-
-Outputs, written next to this script:
-    trajectory_counts.xlsx   every scored variant, once per round it appears in, with both counts
-    confident_hits.xlsx      the variants clearing the threshold, once each, earliest round kept
-Each has a second sheet defining its columns.
-"""
-
 import sys
 from functools import lru_cache
 from pathlib import Path

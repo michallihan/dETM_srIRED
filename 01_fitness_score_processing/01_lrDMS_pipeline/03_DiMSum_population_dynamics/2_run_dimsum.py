@@ -1,24 +1,3 @@
-"""
-One DiMSum run per selection round, counting every variant in that round's read pool.
-
-Each round is counted on its own so that a variant's read count can be followed across the
-campaign. The reads are the round files 1_demultiplex_reads.py wrote: already merged, so
-these runs are single-end (--paired F), unlike the DMS runs in 02_.
-
-The five experimental designs differ only in which round's files they name; the replicate
-structure is the same throughout, five experiment replicates from Input/Sort 1, 2, 3, 4
-and 6.
-
-DiMSum's fitness stage runs but nothing downstream uses its fitness output — what this
-pipeline hands on is the per-variant count table. The merge_variants.xlsx in each round
-folder is that table saved as Excel, which is the form the counts-per-round analysis reads.
-
-DiMSum must be installed separately and on PATH.
-
-Outputs, one folder per round:
-    round<1-5>/variant_data_merge.tsv, report.html, merge_variants.xlsx
-"""
-
 import argparse
 import sys
 from pathlib import Path

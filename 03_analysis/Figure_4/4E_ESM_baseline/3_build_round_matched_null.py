@@ -1,24 +1,3 @@
-"""
-The same question asked of variants the campaign never chose.
-
-A variant's ESM2 PPL* depends on how many substitutions it carries and where they sit, so a
-drift in PPL* across rounds could be nothing more than variants getting more mutated. The null
-controls for that: for each scored variant it builds several random variants carrying the same
-number of substitutions, drawn from the pool of substitutions seen in that same round, and
-scores them the same way. Whatever separates the observed curve from the null is what
-selection did beyond accumulating mutations.
-
-Five replicates from a fixed seed, so the null is reproducible. Needs torch and fair-esm, and
-2_ must have run first. Scoring is resumable: an existing null table is reused for rows it
-already covers.
-
-Outputs, written next to this script:
-    round_matched_null_ppl.csv
-    round_matched_null_summary.csv
-    esm2_ppl_observed_vs_null.pdf / .png
-    esm2_delta_ppl_observed_vs_null.pdf / .png
-"""
-
 import sys
 from pathlib import Path
 

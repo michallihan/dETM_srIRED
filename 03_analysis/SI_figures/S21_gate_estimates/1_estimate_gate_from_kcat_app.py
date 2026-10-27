@@ -1,30 +1,3 @@
-"""
-Where the sorting gate sat each round, read off the variants that got through it.
-
-The gate itself was never recorded as a number. What is recorded is which variants came back
-from each round's sort, and what kcat(app) the fitness scores say they had. Everything in that
-set cleared the gate, so the bottom of its distribution is an upper bound on where the gate
-was: the true threshold lies at or below the weakest survivor.
-
-Three readings of that lower tail, per round and as a fold-change over the wild type: the
-observed minimum, a lower edge; the 5th percentile, a conservative estimate; and the 10th
-percentile, which is the one to quote, being less at the mercy of a single odd survivor.
-
-The wild type is dropped - it is not a mutant - and only rounds 1 to 5 are used.
-
-This reads the recovered pool, not the library that went in. Variants that cleared the gate
-but were too rare to be recovered are missing, and each one missing pushes the apparent gate
-up, so these are upper bounds in two senses.
-
-Outputs, written next to this script:
-    gate_estimates_by_round.csv
-    survivors_by_round.csv
-    gate_estimates.txt
-    gate_position.svg / .png                      median and p10 by round, and the ECDFs
-    kcat_app_distributions_histogram.svg / .png
-    kcat_app_distributions_kde.svg / .png
-"""
-
 import sys
 from pathlib import Path
 

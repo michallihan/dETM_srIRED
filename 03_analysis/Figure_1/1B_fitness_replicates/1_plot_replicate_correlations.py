@@ -1,17 +1,3 @@
-"""
-Fitness replicate correlations.
-
-Plots the three sequencing replicates of the low-confidence fitness dataset against each
-other as a 3 x 3 grid: scatter plots below the diagonal, Pearson r, p and R-squared above
-it, replicate names on the diagonal.
-
-Each replicate's value is the mean of its lenient- and stringent-gate fitness for that
-variant. Where only one gate survived QC, that gate's value is used.
-
-Output, written next to this script:
-    replicate_plot.svg
-"""
-
 import sys
 from pathlib import Path
 

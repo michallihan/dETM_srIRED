@@ -1,16 +1,3 @@
-"""
-Build the mutational trajectory network.
-
-Reads the collapsed unique-variant table and writes the network the trajectory panels are
-drawn from. Two variants are connected when one carries exactly one more amino-acid
-mutation than the other and the smaller variant's mutation set is contained in the larger.
-
-Outputs, written next to this script:
-    all_unique_variants_CHXCPA_distance_matrix.csv   adjacency matrix
-    all_unique_variants_CHXCPA_nodes.csv             node names
-    all_unique_variants_CHXCPA_graph.gml             the graph, for import into Cytoscape
-"""
-
 import ast
 import sys
 from pathlib import Path

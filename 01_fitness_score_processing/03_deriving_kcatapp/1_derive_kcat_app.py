@@ -1,34 +1,3 @@
-"""
-Turning a droplet fitness score into an apparent kcat.
-
-Twenty-seven of the scored variants were also purified and assayed, so for those the droplet
-fitness score and a measured kcat sit side by side. Across that overlap kcat rises
-exponentially with fitness, and fitting
-
-    kcat = a * exp(b * fitness_final)
-
-gives a conversion that can be applied to every scored variant, whether or not it was ever
-purified. The result, kcat_app, is the number the rest of the repo means whenever it talks
-about apparent kcat: Figure 1C's campaign progression, Figure 3's epistasis expectations,
-Figure S21's gate estimates and Table S1's hit call all read it from here.
-
-The error carries the fitness uncertainty through the same mapping and nothing else:
-
-    kcat_app_error = |b| * kcat_app * sigma_final
-
-so it is the spread the droplet measurement implies, not a propagated error on the fit.
-
-The plot checks the conversion against the measurements it was fitted to - kcat_app against
-the purified kcat for the same 27 variants, with the identity line for reference. It is a
-consistency check rather than an independent validation, since those points are the fit.
-
-Outputs, written next to this script:
-    final_fitness_scores_ETM_with_kcat_app.csv   the high-confidence table plus the two columns
-    kcat_app_fit.json                            a and b, for the scripts that need them
-    kcat_app_fit_summary.txt                     the fit and check statistics, as reported
-    kcat_app_vs_measured_kcat.svg / .png
-"""
-
 import json
 import sys
 from pathlib import Path

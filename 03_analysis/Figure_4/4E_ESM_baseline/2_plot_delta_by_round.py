@@ -1,18 +1,3 @@
-"""
-Whether ESM2 saw the campaign's gains coming, round by round.
-
-Each scored variant is placed by how much its ESM2 PPL* moved away from the wild type against
-how much its measured fitness did, coloured by the round it was first seen in. If the model
-tracked the selection, improved variants would sit on one side; the correlation printed on the
-panel says how far that holds.
-
-Adds the first round each variant appeared in to the ESM2 scores, which the null in 3_ needs.
-
-Outputs, written next to this script:
-    esm2_single_pass_ppl_with_round.csv
-    esm2_delta_ppl_vs_delta_fitness_by_round.pdf / .png
-"""
-
 import sys
 from pathlib import Path
 

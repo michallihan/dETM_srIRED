@@ -1,27 +1,3 @@
-"""
-How each position's mutation share moved across the five rounds.
-
-One line per position, drawn from the summary 1_ writes, starting at zero for the naive
-library. Eight views of the same table: everything at once, the positions that reach the
-top ten in any round, those split by whether they peak in round 5 or earlier, and four
-hand-picked position sets - the second NADPH loop, the positions that at some point out-run
-68, and the neighbourhoods of 68 and 203.
-
-The four hand-picked views and the two peak-split views keep the 0-10 % window the original
-used. Any position that runs past it is clipped rather than rescaled, and the run prints
-which ones, so the choice is visible rather than silent.
-
-Outputs, written next to this script, as .svg and .png:
-    all_positions
-    leading_positions
-    leading_positions_peaking_in_round_5
-    leading_positions_peaking_earlier
-    nadph_loop_positions
-    positions_outrunning_68
-    positions_around_68
-    positions_around_203
-"""
-
 import sys
 from pathlib import Path
 

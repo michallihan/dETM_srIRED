@@ -1,25 +1,3 @@
-"""
-Which variants were present in which round of the campaign.
-
-The per-round DiMSum tables in 01_lrDMS_pipeline/03_ are the record of what was sequenced
-each round. Several analyses need the same thing from them - the set of distinct amino-acid
-variants in each round, named the way the fitness tables name them - so the derivation lives
-here rather than being repeated in each folder.
-
-Usage:
-
-    from variant_rounds import variants_per_round
-
-    rounds = variants_per_round()          # round, round_label, mut_id, aa_seq, Nham_aa
-
-Rows DiMSum flagged are dropped and rows sharing an amino-acid sequence are collapsed, so a
-variant appears once per round it was seen in. Read counts are not carried: nothing that uses
-this needs them, and 03_analysis/Figure_4/4G_counts_analysis reads the tables itself for those.
-
-Round 0, the naive library, is not included. It was never part of the selection series and
-the analyses that use round membership all start at round 1.
-"""
-
 import pandas as pd
 
 from repo_paths import DIMSUM_ROUND_COUNTS_TSV

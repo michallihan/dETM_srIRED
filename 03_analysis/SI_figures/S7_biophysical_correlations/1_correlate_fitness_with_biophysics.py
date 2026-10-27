@@ -1,28 +1,3 @@
-"""
-Droplet fitness score against what the purified enzymes actually do.
-
-The fitness score is a sorting readout on a variant inside a droplet; the parameters here
-were measured on protein expressed and purified one variant at a time. One panel per
-parameter, each an exponential fit of the parameter against fitness with a 95% confidence
-band, and R² and the fit's standard errors written in the corner.
-
-Twenty-seven variants have both a fitness score and Michaelis-Menten kinetics, which is what
-kcat, KM and kcat/KM are fitted on. The melting-temperature panel has 17: fewer variants were
-measured, and the fit drops any variant whose ΔTM is not positive, which costs it five more.
-That filter is the original's and is kept, but it means the ΔTM panel is fitted on the
-stabilising half of the measured set and its R² should be read with that in mind.
-
-Variants are keyed by mutation identifier. The biophysics table separates mutations with
-commas where the fitness table uses dashes, so both sides are normalised before the join.
-The join is a left join from the biophysics table, so a measured variant with no fitness
-score drops out of a panel rather than being silently matched to something else; 44 of the
-99 measured variants carry a score.
-
-Outputs, written next to this script:
-    biophysics_vs_fitness.csv
-    fitness_vs_<parameter>.pdf / .png   for each parameter
-"""
-
 import sys
 from pathlib import Path
 

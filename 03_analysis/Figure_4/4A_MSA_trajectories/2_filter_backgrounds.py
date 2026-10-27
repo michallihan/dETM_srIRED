@@ -1,15 +1,3 @@
-"""
-Narrows each mutation-called table to the nested backgrounds along its trajectory.
-
-Each background is filtered out of the one before it, so a table holds the sequences
-carrying every mutation up to that point of the trajectory: for the campaign,
-T241A, then S68P within T241A, then P203Q within both. The alignment branches in two
-after T241A. The chains are defined in path_dependency.py.
-
-Outputs, per branch:
-    <branch>/called_mutations_in_<mutation>.csv
-"""
-
 import csv
 
 import path_dependency as pd_

@@ -1,20 +1,3 @@
-"""
-Per-position mutation occurrence across a sequence set, stacked by amino acid.
-
-Each bar is one position of the IRED; its segments are the residues found there, as a
-percentage of the sequences in the set. Drawn for the campaign as a whole and for the
-alignment both as a whole and within each background, following OCCURRENCE_SETS in
-path_dependency.py.
-
-Residues are ordered alphabetically, so a segment sits in the same place in every bar and
-in the legend. Left to the order residues are first encountered, the stack would depend on
-the row order of the input and on the pandas version.
-
-Outputs, per branch:
-    <branch>/mutation_occurrence_all.pdf / .csv
-    <branch>/mutation_occurrence_in_<background>.pdf / .csv   (alignment only)
-"""
-
 import matplotlib
 
 matplotlib.use("Agg")

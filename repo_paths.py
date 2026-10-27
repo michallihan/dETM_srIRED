@@ -74,7 +74,7 @@ LRDMS_PIPELINE_DIR = FITNESS_SCORE_DIR / "01_lrDMS_pipeline"
 # reads. Copied from the original runs; to be produced by the nanopore pipeline in time.
 LRDMS_BARCODE_IDENTITY_TXT = LRDMS_PIPELINE_DIR / "VIF_all_rounds_upd.txt"
 
-# DiMSum of the sorted droplet libraries, one run per FACS gate. These two tables are the
+# DiMSum of the sorted droplet libraries, one run per droplet gate. These two tables are the
 # lrDMS_all_variants_lenient.csv and _stringent.csv that 02a_ and 02b_ read.
 DIMSUM_DMS_DIR = LRDMS_PIPELINE_DIR / "02_DiMSum_DMS"
 DIMSUM_DMS_LENIENT_CSV = DIMSUM_DMS_DIR / "lenient_gate" / "all_variants.csv"

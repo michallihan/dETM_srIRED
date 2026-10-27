@@ -1,32 +1,3 @@
-"""
-Shared definitions for the path-dependency comparison between the evolution campaign
-and a natural sequence alignment.
-
-Two sequence sets are analysed the same way:
-
-    dETM  the 1,342 unique amino-acid variants recovered by long-read sequencing of the
-          five CHX/CPA selection rounds (02_long_read_processing).
-    MSA   the 5,000 closest BLAST hits to the wild-type IRED, held as
-          blast_top5000.fasta next to this module. This set is not derived from 01_ or
-          02_; it is the natural sequence sample the campaign is compared against.
-
-Each sequence is reduced to mutation calls against the same wild-type sequence, then the
-set is narrowed step by step to the nested backgrounds along a trajectory, so that the
-amino-acid preference at one position can be read within the background of the mutations
-that preceded it.
-
-Mutation calling differs between the two sets, and the difference carries through to how
-the wild-type share of a position is obtained:
-
-    dETM  only positions that differ from the wild type are reported, so a sequence
-          carrying the wild-type residue contributes no call at that position. The
-          wild-type share is what is left after the two mutant bars and "other".
-    MSA   a call is emitted at each tracked position for every sequence, identity calls
-          such as T241T included, so the wild-type share is the count of those calls.
-
-Both rules are applied below through WILD_TYPE_SHARE; they are not interchangeable.
-"""
-
 import re
 import sys
 from pathlib import Path

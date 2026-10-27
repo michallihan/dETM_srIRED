@@ -1,15 +1,3 @@
-"""
-Amino-acid frequency at each position of the trajectory, within its background.
-
-One bar chart per panel: the wild-type residue, the two mutations of interest and
-everything else pooled as "Other", as a percentage of the sequences in that background.
-The wild-type share is the remainder for the campaign and a counted share for the
-alignment, because the two sets are called differently; see path_dependency.py.
-
-Outputs, per branch:
-    <branch>/<position>_in_<background>.pdf
-"""
-
 import matplotlib
 
 matplotlib.use("Agg")

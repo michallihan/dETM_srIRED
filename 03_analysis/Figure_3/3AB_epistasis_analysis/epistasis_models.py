@@ -1,26 +1,3 @@
-"""
-Expected kcat(app) for a multiple mutant, built from its parts.
-
-If two substitutions acted independently their fold-changes over the wild type would
-multiply, so the expected kcat(app) of a variant decomposed into pieces is
-
-    expected = product(kcat_app of each piece) / a^(number of pieces - 1)
-
-where a is the fitted kcat(app) of the wild type, the fold-change denominator. A variant sits
-on the diagonal when its measured kcat(app) matches that, above it when the substitutions help
-each other and below it when they get in each other's way.
-
-Most variants can be cut up more than one way. A triple splits into three singles, or into a
-double plus the remaining single three different ways; a quadruple has four kinds of
-decomposition and a five-mutation variant six. Variants with six or more substitutions are not
-modelled.
-Where several exist the expectations are averaged and the count is kept, so a point built from
-one surviving decomposition can be told from one built from four.
-
-A decomposition only counts if every piece has been measured. The single mutants are what make
-that possible at all, and most of them come from the lrDMS dataset rather than the campaign.
-"""
-
 import itertools
 
 import numpy as np

@@ -1,16 +1,3 @@
-"""
-Reduces both sequence sets to per-sequence mutation calls against the wild-type IRED.
-
-The campaign set is read from the collapsed unique-variant table in 02_long_read_processing
-and every differing position is reported. The alignment set is read from the FASTA of BLAST
-hits in this folder and is called only at the tracked positions, identity calls included;
-see path_dependency.py for why the two rules differ.
-
-Outputs:
-    dETM/called_mutations.csv
-    MSA/called_mutations.csv
-"""
-
 import csv
 
 import path_dependency as pd_

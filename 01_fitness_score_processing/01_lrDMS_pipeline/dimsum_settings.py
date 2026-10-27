@@ -1,20 +1,3 @@
-"""
-Settings shared by the two DiMSum runs of the lrDMS pipeline, and the command builder.
-
-Both runs read the same wild-type reference, the same adapters, the same barcode-identity
-map and the same set of DiMSum options; they differ only in the experimental design, in
-whether the reads are paired, and in where the output goes. Keeping the common part here
-means a change to a shared parameter cannot drift between the two.
-
-The options below are those of the original runs, recovered from the dimsumcommand notes
-that sit next to each run. One option was added: --outputPath, so that a scripted run
-writes into its own folder instead of the working directory. It changes where output lands,
-not what is computed.
-
-DiMSum is not vendored with this repo — install it separately (github.com/lehner-lab/DiMSum)
-and make the `DiMSum` executable available on PATH.
-"""
-
 import os
 import subprocess
 import sys

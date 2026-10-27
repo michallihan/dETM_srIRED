@@ -1,18 +1,3 @@
-"""
-The panel: what ESM2 made of the evolved variants against what it made of random ones.
-
-Two lines over the five rounds, both median PPL* -- the variants the campaign actually
-selected, and the round-matched random null from 3_. Where the observed line sits below the
-null, the selected variants look less surprising to the model than random variants carrying
-the same number of substitutions from the same pool.
-
-Runs from round_matched_null_summary.csv alone, so it redraws without torch or the ESM2
-weights. The summary committed here is the one behind the published panel.
-
-Outputs, written next to this script:
-    esm_baseline.svg / .png
-"""
-
 import sys
 from pathlib import Path
 

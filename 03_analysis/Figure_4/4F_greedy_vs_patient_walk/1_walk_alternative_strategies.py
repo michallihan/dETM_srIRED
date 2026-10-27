@@ -1,19 +1,3 @@
-"""
-Replays the campaign round by round as a single-lineage screen would have run it: a parent is
-fixed at round 2 and a winner is then fixed in each later round, alongside the route the
-campaign itself took. Branch choice is recorded in branch_selection.csv.
-
-Drawn in apparent kcat, with the error the fitness-to-kcat conversion carries through; the
-fitness scores and their enrichment equivalent are in the csv alongside. Branches are chosen
-on fitness, which ranks the variants the same way, the conversion being monotonic.
-
-Outputs, written next to this script:
-    trajectories.csv
-    branch_selection.csv
-    trajectories.svg / .png              every branch
-    campaign_and_best_hit.svg / .png     the campaign against the round-2 best hit alone
-"""
-
 import sys
 from pathlib import Path
 
