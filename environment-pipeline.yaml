@@ -32,3 +32,4 @@ dependencies:
   # Pinned: the helper imports StripedSmithWaterman from skbio.alignment, which
   # later versions no longer expose.
   - scikit-bio<=0.6.2
+  - scikit-allel            # UMIC-seq_helper's VCF reader

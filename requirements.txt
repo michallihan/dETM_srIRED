@@ -12,3 +12,22 @@ scikit-learn
 biopython
 tqdm
 scikit-bio<=0.6.2
+scikit-allel            # UMIC-seq_helper's VCF reader
+
+# --- 03_analysis/Figure_4/4D_model_comparisons: the model comparison ---
+# Heavy and only needed to re-score variants; 11_ and 12_ redraw the panels from the
+# committed tables in model_scores/ and need nothing here.
+torch
+fair-esm                  # ESM-2, used by 02_ and 04_ (and 4E_ESM_baseline)
+transformers              # Hugging Face fallback path in 03_, for ESMC-300M
+evcouplings               # EVmutation couplings, 08_
+
+# 03_ prefers EvolutionaryScale's `esm` package for ESMC, which claims the same `esm`
+# import name as fair-esm and cannot be installed alongside it. Run 03_ in its own
+# environment with `pip install esm`, or let it fall back to the transformers path above.
+
+# Not on PyPI; clone into third_party/ at the repo root, as each script's header says:
+#   third_party/multievolve_official   07_
+#   third_party/gemme_official         09_  (also needs GEMME_ENV set to a conda prefix
+#                                            holding its own R and Python dependencies)
+# 10_ only sums ThermoMPNN's committed saturation table and needs nothing extra.

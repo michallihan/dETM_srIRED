@@ -39,10 +39,21 @@ dependencies:
   - r-base>=4.2
   - r-data.table
 
-  # Optional, for Figure 4E only. Scoring variants with ESM2 needs these plus the
-  # model weights, which are downloaded on first run (~2.5 GB for 650M) and want a
-  # GPU. 4_plot_esm_baseline.py redraws the panel from the committed summary and
-  # needs none of it, so these are left out by default. To score from scratch:
+  - scikit-learn>=1.3        # EvolvePro random forests (4D), and 11_'s ROC metrics
+
+  # Optional, for the model scoring in Figure 4D and 4E. These are heavy and want a GPU,
+  # and the model weights download on first run (~2.5 GB for ESM-2 650M). The panels
+  # themselves redraw from the committed tables in 4D's model_scores/ and 4E's summary,
+  # so none of this is needed for a normal pass over the repo. To re-score from scratch:
   #
   #   conda install -c conda-forge pytorch
-  #   pip install fair-esm
+  #   pip install fair-esm transformers evcouplings
+  #
+  # Three methods are not pip-installable and are set up as each script's header
+  # describes: MULTI-evolve (07_) and GEMME (09_) are cloned into third_party/ at the
+  # repo root, GEMME also wanting GEMME_ENV pointed at a conda prefix with its own R and
+  # Python dependencies. ThermoMPNN (10_) only sums a committed table and needs nothing.
+  #
+  # ESMC (03_) prefers EvolutionaryScale's `esm` package, which claims the same `esm`
+  # import name as fair-esm and cannot share an environment with it. Either give 03_ its
+  # own environment with `pip install esm`, or let it use the transformers fallback.
