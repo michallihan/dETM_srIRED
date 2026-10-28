@@ -12,7 +12,7 @@ READS_DIR = THIS_DIR / "fastq"
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__.strip().split("\n")[0])
+    parser = argparse.ArgumentParser(description="Run DiMSum once per selection round to produce per-round variant counts")
     parser.add_argument("--dry-run", action="store_true",
                         help="print each command and check its inputs, without running DiMSum")
     parser.add_argument("--only", metavar="N", type=int, choices=ROUNDS,

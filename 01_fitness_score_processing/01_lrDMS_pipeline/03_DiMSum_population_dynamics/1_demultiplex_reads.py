@@ -77,7 +77,7 @@ def demultiplex(sample, source, dry_run):
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__.strip().split("\n")[0])
+    parser = argparse.ArgumentParser(description="Split the merged reads into one file per selection round")
     parser.add_argument("--dry-run", action="store_true",
                         help="print the commands and check the inputs, without splitting")
     args = parser.parse_args()
