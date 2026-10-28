@@ -66,6 +66,13 @@ PROBE_UMI_DOWN = {1: INPUTS_DIR / "probe_UMI_down_r1.fa",
 
 BARCODES_FASTA = INPUTS_DIR / "barcodes.fasta"
 
+# The mutation caller's own output per round, as it ran for the published dictionary:
+# rounds 1 and 2 from the December 2023 re-analysis, rounds 3-5 from August 2023. These are
+# what 10_ joins when work/9_mutations/ is empty, so 10_ and 11_ run from a clone.
+PER_ROUND_DIR = THIS_DIR / "per_round"
+PER_ROUND_TABLE = {r: PER_ROUND_DIR / f"round_{r}" / "full_table_barcodes_mutations.csv"
+                   for r in ROUNDS}
+
 # Third-party scripts. UMIC-seq is vendored in the repo already, under the lrDMS pipeline.
 UMIC_SEQ = (REPO_ROOT / "01_fitness_score_processing" / "01_lrDMS_pipeline"
             / "03_DiMSum_population_dynamics" / "UMIC-seq.py")

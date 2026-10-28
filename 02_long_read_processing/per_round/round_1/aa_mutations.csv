@@ -1,0 +1,661 @@
+name,aa_mutations
+cluster_109,"[['E', '143', 'G'], ['A', '202', 'V'], ['I', '209', 'F'], ['S', '290', 'C']]"
+cluster_48,"[['D', '236', 'E'], ['E', '284', 'G']]"
+cluster_537,[]
+cluster_272,[]
+cluster_368,[]
+cluster_78,"[['D', '78', 'E']]"
+cluster_108,"[['A', '57', 'V']]"
+cluster_542,"[['G', '37', 'S'], ['V', '216', 'I']]"
+cluster_556,"[['S', '97', 'T'], ['A', '108', 'V']]"
+cluster_325,"[['A', '188', 'V'], ['A', '211', 'V']]"
+cluster_496,"[['R', '110', 'H'], ['P', '203', 'A']]"
+cluster_52,frameshift
+cluster_621,[]
+cluster_597,"[['G', '187', 'R'], ['Y', '219', 'C']]"
+cluster_201,"[['A', '85', 'T'], ['Q', '99', 'H'], ['Q', '124', 'L'], ['A', '198', 'T'], ['T', '241', 'A'], ['E', '250', 'K']]"
+cluster_134,"[['P', '147', 'L'], ['S', '249', 'T']]"
+cluster_80,"[['A', '188', 'V'], ['A', '211', 'V']]"
+cluster_367,frameshift
+cluster_477,"[['D', '69', 'H'], ['R', '101', 'C'], ['S', '217', 'T']]"
+cluster_215,"[['E', '143', 'V']]"
+cluster_424,"[['S', '97', 'C']]"
+cluster_260,[]
+cluster_61,"[['E', '143', 'G'], ['A', '202', 'V'], ['I', '209', 'F'], ['S', '290', 'C']]"
+cluster_442,"[['R', '150', 'Q'], ['S', '217', 'C']]"
+cluster_390,frameshift
+cluster_26,frameshift
+cluster_362,"[['G', '37', 'C'], ['E', '105', 'K']]"
+cluster_249,"[['V', '8', 'I']]"
+cluster_216,"[['F', '215', 'Y'], ['G', '272', 'V']]"
+cluster_374,frameshift
+cluster_68,[]
+cluster_21,"[['T', '241', 'A']]"
+cluster_645,[]
+cluster_282,[]
+cluster_12,"[['F', '22', 'L'], ['T', '96', 'N']]"
+cluster_31,[]
+cluster_551,"[['G', '20', 'D']]"
+cluster_115,"[['D', '25', 'V'], ['D', '243', 'V']]"
+cluster_304,"[['A', '141', 'V'], ['T', '200', 'A']]"
+cluster_475,"[['T', '148', 'A'], ['L', '181', 'Q'], ['W', '208', '*'], ['Y', '228', 'N'], ['S', '290', 'I']]"
+cluster_532,"[['M', '120', 'L']]"
+cluster_533,"[['G', '221', 'V']]"
+cluster_293,"[['A', '121', 'V'], ['L', '134', 'M'], ['A', '172', 'V']]"
+cluster_192,[]
+cluster_32,[]
+cluster_633,"[['Q', '45', 'L'], ['I', '235', 'V']]"
+cluster_539,"[['T', '241', 'S'], ['F', '286', 'L']]"
+cluster_288,[]
+cluster_1,[]
+cluster_77,"[['A', '129', 'T']]"
+cluster_118,"[['S', '249', 'T'], ['E', '250', 'G'], ['N', '255', 'I']]"
+cluster_391,"[['V', '83', 'A']]"
+cluster_9,[]
+cluster_221,"[['L', '49', 'Q'], ['A', '218', 'V']]"
+cluster_350,[]
+cluster_456,"[['N', '206', 'I'], ['A', '227', 'V'], ['R', '268', 'C']]"
+cluster_594,"[['S', '249', 'T'], ['E', '250', 'G'], ['N', '255', 'I']]"
+cluster_236,[]
+cluster_547,"[['A', '43', 'V'], ['A', '240', 'T']]"
+cluster_471,[]
+cluster_464,"[['L', '133', 'F']]"
+cluster_328,"[['D', '236', 'E'], ['E', '284', 'G']]"
+cluster_239,"[['Y', '142', 'F'], ['P', '203', 'S']]"
+cluster_535,"[['P', '61', 'R'], ['S', '68', 'T'], ['E', '210', 'G'], ['T', '241', 'A']]"
+cluster_277,"[['R', '2', 'L'], ['V', '8', 'I'], ['T', '103', 'S'], ['G', '127', 'S'], ['W', '178', 'R'], ['L', '185', 'H']]"
+cluster_280,[]
+cluster_327,"[['L', '23', 'I'], ['A', '85', 'V'], ['A', '141', 'V'], ['L', '168', '*']]"
+cluster_459,"[['H', '70', 'Q'], ['M', '120', 'L']]"
+cluster_150,[]
+cluster_143,[]
+cluster_171,"[['S', '52', 'C']]"
+cluster_13,frameshift
+cluster_347,[]
+cluster_630,"[['L', '115', 'I']]"
+cluster_223,frameshift
+cluster_203,[]
+cluster_402,[]
+cluster_4,[]
+cluster_306,"[['N', '33', 'Y'], ['L', '168', '*']]"
+cluster_504,[]
+cluster_11,frameshift
+cluster_522,[]
+cluster_433,"[['T', '4', 'N'], ['N', '33', 'D'], ['R', '87', 'P'], ['L', '115', 'P'], ['L', '191', 'V']]"
+cluster_659,[]
+cluster_330,frameshift
+cluster_559,"[['L', '159', 'S'], ['G', '221', 'V']]"
+cluster_632,[]
+cluster_520,no_translation
+cluster_240,"[['E', '44', 'D'], ['A', '251', 'D']]"
+cluster_451,"[['A', '129', 'T']]"
+cluster_235,"[['T', '103', 'M']]"
+cluster_173,"[['V', '63', 'I'], ['A', '218', 'V'], ['V', '223', 'A'], ['L', '245', 'P'], ['I', '283', 'N']]"
+cluster_177,"[['V', '8', 'I']]"
+cluster_112,[]
+cluster_220,"[['A', '188', 'V'], ['A', '211', 'V']]"
+cluster_624,"[['Y', '114', 'F'], ['A', '227', 'G'], ['T', '241', 'A']]"
+cluster_76,"[['F', '22', 'L'], ['T', '96', 'N'], ['F', '184', 'D']]"
+cluster_439,frameshift
+cluster_191,"[['L', '191', 'V']]"
+cluster_363,frameshift
+cluster_428,[]
+cluster_165,"[['S', '52', 'C']]"
+cluster_34,frameshift
+cluster_412,[]
+cluster_608,[]
+cluster_161,[]
+cluster_183,"[['E', '98', 'V']]"
+cluster_314,frameshift
+cluster_33,frameshift
+cluster_534,"[['E', '36', 'V'], ['G', '37', 'D'], ['E', '143', 'V']]"
+cluster_169,[]
+cluster_142,[]
+cluster_217,[]
+cluster_611,[]
+cluster_635,"[['A', '59', 'S'], ['G', '221', 'S']]"
+cluster_332,[]
+cluster_302,"[['K', '24', 'E'], ['A', '154', 'V']]"
+cluster_337,[]
+cluster_242,frameshift
+cluster_336,"[['G', '221', 'V']]"
+cluster_258,"[['A', '39', 'T'], ['G', '127', 'S'], ['N', '255', 'S']]"
+cluster_72,"[['S', '97', 'C']]"
+cluster_438,[]
+cluster_622,frameshift
+cluster_311,"[['L', '11', 'M'], ['E', '197', 'K'], ['V', '216', 'I'], ['T', '241', 'A']]"
+cluster_571,"[['F', '215', 'Y'], ['G', '272', 'V']]"
+cluster_318,"[['K', '195', 'N']]"
+cluster_291,"[['A', '141', 'V']]"
+cluster_514,[]
+cluster_244,frameshift
+cluster_434,"[['T', '148', 'I']]"
+cluster_399,"[['T', '241', 'A']]"
+cluster_380,"[['I', '209', 'T']]"
+cluster_232,"[['T', '241', 'A']]"
+cluster_562,[]
+cluster_340,"[['A', '47', 'V'], ['T', '103', 'M']]"
+cluster_29,frameshift
+cluster_497,"[['T', '193', 'S']]"
+cluster_482,"[['T', '241', 'A'], ['H', '244', 'Y']]"
+cluster_480,[]
+cluster_231,[]
+cluster_432,[]
+cluster_159,[]
+cluster_226,frameshift
+cluster_641,"[['T', '7', 'S'], ['M', '120', 'L'], ['A', '211', 'V'], ['A', '230', 'V'], ['M', '282', 'T']]"
+cluster_40,no_translation
+cluster_196,"[['A', '141', 'V'], ['T', '200', 'A']]"
+cluster_88,[]
+cluster_334,"[['Q', '16', 'R'], ['G', '221', 'S']]"
+cluster_605,"[['A', '218', 'S']]"
+cluster_518,[]
+cluster_443,[]
+cluster_49,"[['G', '10', 'R'], ['K', '24', 'E'], ['A', '198', 'V']]"
+cluster_516,"[['V', '126', 'A'], ['L', '149', 'I'], ['T', '156', 'A'], ['L', '261', 'I'], ['S', '290', 'N']]"
+cluster_531,frameshift
+cluster_359,[]
+cluster_264,frameshift
+cluster_584,[]
+cluster_27,[]
+cluster_8,[]
+cluster_105,[]
+cluster_323,"[['S', '52', 'C']]"
+cluster_73,frameshift
+cluster_270,"[['H', '247', 'Y']]"
+cluster_492,"[['Q', '41', 'L']]"
+cluster_178,"[['T', '96', 'P'], ['V', '223', 'M']]"
+cluster_403,"[['L', '231', 'Q']]"
+cluster_24,"[['G', '15', 'S'], ['A', '59', 'V'], ['L', '185', 'F'], ['F', '201', 'L'], ['A', '271', 'V']]"
+cluster_623,"[['N', '91', 'D'], ['G', '175', 'S']]"
+cluster_418,"[['R', '287', 'Q']]"
+cluster_386,"[['K', '24', 'N'], ['T', '103', 'S'], ['I', '246', 'T']]"
+cluster_616,[]
+cluster_401,"[['P', '203', 'S'], ['E', '284', 'D']]"
+cluster_660,[]
+cluster_283,"[['L', '9', 'F'], ['H', '247', 'R']]"
+cluster_411,"[['A', '43', 'T'], ['S', '249', 'A']]"
+cluster_549,"[['T', '29', 'A'], ['I', '283', 'F']]"
+cluster_349,"[['S', '52', 'G'], ['G', '278', 'S']]"
+cluster_409,"[['Q', '41', 'P']]"
+cluster_128,[]
+cluster_322,frameshift
+cluster_631,"[['T', '93', 'A']]"
+cluster_602,[]
+cluster_352,"[['V', '73', 'I']]"
+cluster_167,[]
+cluster_237,"[['E', '143', 'V']]"
+cluster_398,[]
+cluster_86,"[['L', '115', 'I']]"
+cluster_138,[]
+cluster_65,frameshift
+cluster_62,[]
+cluster_441,[]
+cluster_184,[]
+cluster_54,[]
+cluster_405,[]
+cluster_530,"[['K', '24', 'R'], ['I', '246', 'F']]"
+cluster_57,"[['A', '188', 'V'], ['A', '211', 'V']]"
+cluster_251,"[['P', '61', 'R'], ['S', '68', 'T'], ['E', '210', 'G'], ['T', '241', 'A']]"
+cluster_116,[]
+cluster_107,"[['G', '37', 'S']]"
+cluster_91,"[['L', '191', 'V']]"
+cluster_50,[]
+cluster_59,"[['E', '143', 'G'], ['K', '195', 'R'], ['T', '241', 'A'], ['G', '272', 'R']]"
+cluster_365,[]
+cluster_620,"[['L', '80', 'Q'], ['T', '237', 'A']]"
+cluster_596,"[['T', '93', 'A']]"
+cluster_626,[]
+cluster_474,"[['L', '77', 'M']]"
+cluster_525,"[['N', '206', 'I'], ['A', '227', 'V'], ['R', '268', 'C']]"
+cluster_485,[]
+cluster_261,frameshift
+cluster_204,"[['A', '121', 'V'], ['R', '287', 'W']]"
+cluster_267,"[['S', '52', 'C']]"
+cluster_592,[]
+cluster_568,"[['Q', '16', 'R'], ['G', '221', 'S']]"
+cluster_219,[]
+cluster_276,[]
+cluster_208,[]
+cluster_243,"[['Y', '142', 'F']]"
+cluster_647,"[['A', '43', 'T'], ['S', '249', 'A']]"
+cluster_153,frameshift
+cluster_144,[]
+cluster_222,"[['A', '220', 'V']]"
+cluster_507,"[['S', '167', 'Y'], ['M', '177', 'I']]"
+cluster_139,[]
+cluster_348,"[['P', '61', 'S'], ['S', '217', 'T']]"
+cluster_176,"[['S', '249', 'T'], ['E', '250', 'G'], ['N', '255', 'I']]"
+cluster_652,"[['A', '118', 'V']]"
+cluster_425,"[['R', '110', 'H'], ['T', '157', 'S'], ['V', '216', 'I'], ['T', '241', 'A']]"
+cluster_501,[]
+cluster_36,[]
+cluster_508,"[['F', '201', 'L'], ['P', '203', 'S']]"
+cluster_393,[]
+cluster_373,frameshift
+cluster_104,no_translation
+cluster_473,"[['T', '4', 'N'], ['N', '33', 'D'], ['R', '87', 'P'], ['L', '115', 'P'], ['L', '191', 'V']]"
+cluster_395,"[['L', '191', 'V']]"
+cluster_135,[]
+cluster_60,"[['D', '78', 'G'], ['A', '141', 'V'], ['A', '202', 'V']]"
+cluster_345,[]
+cluster_615,"[['M', '120', 'K'], ['L', '159', 'W']]"
+cluster_324,"[['P', '138', 'S'], ['P', '203', 'A'], ['S', '217', 'Y']]"
+cluster_155,"[['S', '217', 'Y']]"
+cluster_255,[]
+cluster_420,"[['V', '216', 'A']]"
+cluster_63,[]
+cluster_387,"[['A', '188', 'V'], ['A', '211', 'V']]"
+cluster_444,"[['R', '34', 'H']]"
+cluster_163,"[['K', '24', 'R'], ['G', '155', 'D'], ['S', '290', 'N']]"
+cluster_481,"[['S', '52', 'C']]"
+cluster_654,[]
+cluster_271,"[['E', '143', 'V']]"
+cluster_381,[]
+cluster_275,[]
+cluster_612,[]
+cluster_111,"[['A', '188', 'V'], ['A', '211', 'V']]"
+cluster_582,frameshift
+cluster_333,"[['T', '241', 'A'], ['R', '287', 'Q']]"
+cluster_2,[]
+cluster_92,frameshift
+cluster_42,"[['A', '53', 'S']]"
+cluster_561,"[['M', '120', 'T'], ['A', '141', 'T'], ['I', '176', 'F'], ['A', '194', 'V']]"
+cluster_278,[]
+cluster_486,frameshift
+cluster_238,[]
+cluster_384,"[['P', '203', 'A']]"
+cluster_655,"[['G', '221', 'V']]"
+cluster_651,[]
+cluster_643,[]
+cluster_90,[]
+cluster_604,[]
+cluster_39,[]
+cluster_417,[]
+cluster_415,"[['Q', '41', '*'], ['L', '89', 'P'], ['E', '98', 'K'], ['L', '270', 'Q']]"
+cluster_137,"[['G', '221', 'V']]"
+cluster_263,no_translation
+cluster_476,"[['G', '15', 'D'], ['A', '17', 'T'], ['L', '18', 'F'], ['K', '24', 'N']]"
+cluster_618,"[['T', '148', 'I'], ['I', '283', 'V']]"
+cluster_436,"[['E', '36', 'V'], ['G', '37', 'D'], ['E', '143', 'V']]"
+cluster_303,"[['V', '223', 'A']]"
+cluster_99,no_translation
+cluster_465,"[['P', '203', 'A']]"
+cluster_358,"[['D', '236', 'E'], ['E', '284', 'G']]"
+cluster_519,"[['S', '68', 'T']]"
+cluster_458,[]
+cluster_213,"[['E', '44', 'G']]"
+cluster_553,"[['S', '52', 'C']]"
+cluster_95,"[['E', '139', 'G']]"
+cluster_20,"[['A', '121', 'S'], ['Q', '124', 'H'], ['T', '128', 'S'], ['T', '241', 'A']]"
+cluster_45,"[['G', '175', 'S'], ['A', '218', 'V'], ['A', '281', 'T']]"
+cluster_382,"[['A', '53', 'S']]"
+cluster_166,[]
+cluster_550,"[['S', '249', 'T'], ['E', '250', 'G'], ['N', '255', 'I']]"
+cluster_113,"[['E', '44', 'G'], ['A', '47', 'V'], ['V', '90', 'A']]"
+cluster_511,"[['V', '48', 'I'], ['A', '129', 'S']]"
+cluster_79,"[['V', '8', 'I']]"
+cluster_455,"[['L', '152', 'M']]"
+cluster_346,[]
+cluster_35,"[['A', '19', 'V'], ['Q', '99', 'L'], ['R', '207', 'H']]"
+cluster_259,"[['D', '236', 'E'], ['E', '284', 'G']]"
+cluster_106,"[['D', '5', 'G'], ['V', '171', 'I'], ['L', '185', 'R']]"
+cluster_470,"[['R', '150', 'Q'], ['S', '217', 'C']]"
+cluster_185,"[['R', '2', 'L'], ['P', '203', 'S']]"
+cluster_170,"[['D', '236', 'E'], ['E', '284', 'G']]"
+cluster_247,frameshift
+cluster_394,"[['Q', '99', 'H'], ['A', '161', 'T']]"
+cluster_172,"[['Q', '16', 'R'], ['G', '221', 'S']]"
+cluster_246,[]
+cluster_375,"[['T', '103', 'M'], ['T', '157', 'A'], ['L', '165', 'M'], ['G', '276', 'S']]"
+cluster_640,"[['P', '61', 'R'], ['S', '68', 'T'], ['E', '210', 'G'], ['T', '241', 'A']]"
+cluster_51,[]
+cluster_416,"[['F', '22', 'Y'], ['A', '57', 'D']]"
+cluster_529,"[['A', '53', 'S']]"
+cluster_126,frameshift
+cluster_469,"[['D', '69', 'N'], ['V', '88', 'A']]"
+cluster_16,frameshift
+cluster_205,[]
+cluster_335,[]
+cluster_81,frameshift
+cluster_577,"[['T', '180', 'M']]"
+cluster_131,"[['E', '143', 'V']]"
+cluster_423,"[['G', '81', 'C']]"
+cluster_430,"[['A', '50', 'T'], ['L', '149', '*'], ['S', '167', 'P'], ['A', '240', 'T']]"
+cluster_599,"[['Y', '279', 'N']]"
+cluster_140,[]
+cluster_447,"[['P', '203', 'A']]"
+cluster_89,"[['P', '289', 'H']]"
+cluster_383,frameshift
+cluster_580,"[['P', '138', 'L'], ['S', '167', 'P']]"
+cluster_180,"[['A', '43', 'T'], ['S', '249', 'A']]"
+cluster_53,"[['T', '156', 'I']]"
+cluster_564,"[['R', '150', 'Q'], ['S', '217', 'C']]"
+cluster_426,[]
+cluster_555,[]
+cluster_657,"[['K', '24', 'N'], ['T', '241', 'A']]"
+cluster_625,[]
+cluster_96,"[['L', '77', 'M']]"
+cluster_388,"[['A', '194', 'T'], ['T', '241', 'A']]"
+cluster_98,"[['A', '57', 'V']]"
+cluster_364,"[['A', '75', 'T'], ['G', '95', '*'], ['P', '229', 'L']]"
+cluster_593,"[['L', '18', 'M'], ['K', '24', '*'], ['S', '60', 'R'], ['Y', '135', 'H'], ['E', '210', 'G'], ['S', '217', 'P']]"
+cluster_379,[]
+cluster_141,[]
+cluster_124,[]
+cluster_371,[]
+cluster_168,"[['A', '121', 'S'], ['Q', '124', 'H'], ['T', '128', 'S'], ['T', '241', 'A']]"
+cluster_64,[]
+cluster_110,[]
+cluster_156,"[['S', '51', 'G'], ['H', '145', 'Q'], ['E', '197', 'V']]"
+cluster_463,"[['M', '14', 'K'], ['H', '27', 'Q'], ['V', '48', 'I'], ['A', '108', 'T']]"
+cluster_193,[]
+cluster_351,[]
+cluster_164,"[['H', '70', 'Q'], ['M', '120', 'L']]"
+cluster_245,[]
+cluster_491,"[['P', '203', 'S']]"
+cluster_56,frameshift
+cluster_637,[]
+cluster_3,frameshift
+cluster_461,frameshift
+cluster_329,"[['S', '60', 'N']]"
+cluster_6,"[['A', '43', 'T'], ['S', '249', 'A']]"
+cluster_478,[]
+cluster_133,"[['D', '78', 'E']]"
+cluster_642,[]
+cluster_524,"[['F', '22', 'L'], ['T', '96', 'N']]"
+cluster_151,"[['A', '129', 'G']]"
+cluster_93,"[['H', '247', 'Y']]"
+cluster_225,[]
+cluster_207,"[['S', '97', 'C']]"
+cluster_483,"[['D', '232', 'G']]"
+cluster_286,"[['M', '120', 'L'], ['T', '128', 'S'], ['E', '143', 'V']]"
+cluster_512,[]
+cluster_160,"[['D', '170', 'E'], ['G', '214', 'R'], ['S', '290', 'G']]"
+cluster_353,"[['A', '161', 'T'], ['T', '241', 'A']]"
+cluster_385,[]
+cluster_429,"[['S', '52', 'C']]"
+cluster_629,"[['A', '53', 'S']]"
+cluster_97,frameshift
+cluster_289,[]
+cluster_182,"[['V', '8', 'I']]"
+cluster_47,"[['L', '9', 'I'], ['T', '213', 'S'], ['A', '240', 'V']]"
+cluster_254,[]
+cluster_119,"[['V', '83', 'A']]"
+cluster_397,"[['E', '109', '*'], ['A', '230', 'E'], ['L', '261', 'P']]"
+cluster_269,frameshift
+cluster_544,[]
+cluster_75,"[['F', '22', 'L'], ['T', '96', 'N']]"
+cluster_431,"[['G', '12', 'S'], ['V', '125', 'A'], ['Y', '135', 'H'], ['G', '179', 'D']]"
+cluster_548,"[['G', '37', 'D'], ['L', '49', 'Q']]"
+cluster_344,"[['G', '12', 'S'], ['V', '125', 'A'], ['Y', '135', 'H'], ['G', '179', 'D']]"
+cluster_210,frameshift
+cluster_17,"[['A', '141', 'V'], ['T', '200', 'A']]"
+cluster_300,[]
+cluster_241,"[['H', '27', 'L'], ['E', '36', 'V'], ['T', '96', 'A'], ['D', '130', 'V']]"
+cluster_252,[]
+cluster_414,"[['V', '73', 'I']]"
+cluster_494,"[['E', '44', 'G']]"
+cluster_437,[]
+cluster_557,[]
+cluster_127,"[['E', '139', 'G']]"
+cluster_157,[]
+cluster_227,[]
+cluster_206,"[['L', '77', 'M']]"
+cluster_84,"[['K', '38', 'N']]"
+cluster_538,[]
+cluster_563,[]
+cluster_528,"[['T', '241', 'S'], ['F', '286', 'L']]"
+cluster_149,"[['G', '221', 'V']]"
+cluster_265,"[['A', '104', 'S']]"
+cluster_558,"[['P', '61', 'R'], ['S', '68', 'T'], ['E', '210', 'G'], ['T', '241', 'A']]"
+cluster_290,[]
+cluster_400,"[['T', '103', 'M'], ['T', '157', 'A'], ['L', '165', 'M'], ['G', '276', 'S']]"
+cluster_606,"[['T', '103', 'M'], ['T', '157', 'A'], ['L', '165', 'M'], ['G', '276', 'S']]"
+cluster_598,[]
+cluster_250,"[['G', '253', 'C']]"
+cluster_422,[]
+cluster_248,"[['L', '261', 'P']]"
+cluster_396,"[['E', '210', 'G']]"
+cluster_10,[]
+cluster_495,"[['E', '36', 'V']]"
+cluster_301,"[['S', '97', 'T'], ['A', '108', 'V']]"
+cluster_646,no_translation
+cluster_586,frameshift
+cluster_585,frameshift
+cluster_46,frameshift
+cluster_339,[]
+cluster_292,[]
+cluster_572,"[['A', '53', 'S']]"
+cluster_489,"[['S', '97', 'C']]"
+cluster_610,"[['A', '59', 'S'], ['G', '221', 'S']]"
+cluster_70,[]
+cluster_174,"[['G', '221', 'V']]"
+cluster_576,frameshift
+cluster_452,"[['Q', '225', 'L']]"
+cluster_197,[]
+cluster_648,[]
+cluster_136,"[['E', '98', 'D'], ['A', '107', 'T']]"
+cluster_181,"[['G', '111', 'W']]"
+cluster_274,frameshift
+cluster_636,"[['T', '241', 'A']]"
+cluster_421,"[['G', '192', 'A']]"
+cluster_152,"[['A', '59', 'V'], ['T', '96', 'I'], ['F', '215', 'L']]"
+cluster_233,"[['G', '221', 'V']]"
+cluster_613,[]
+cluster_268,"[['L', '261', 'F']]"
+cluster_273,frameshift
+cluster_341,"[['D', '25', 'V'], ['D', '243', 'V']]"
+cluster_650,[]
+cluster_294,"[['G', '26', 'E'], ['L', '84', 'M'], ['Q', '99', 'H'], ['E', '250', 'D'], ['I', '283', 'T']]"
+cluster_435,"[['R', '2', 'L'], ['V', '8', 'I'], ['T', '103', 'S'], ['G', '127', 'S'], ['W', '178', 'R'], ['L', '185', 'H']]"
+cluster_55,[]
+cluster_129,"[['L', '265', 'V']]"
+cluster_256,"[['F', '286', 'S']]"
+cluster_583,"[['F', '215', 'Y'], ['G', '272', 'V']]"
+cluster_579,"[['D', '82', 'E']]"
+cluster_462,"[['S', '68', 'T']]"
+cluster_484,frameshift
+cluster_67,"[['Q', '45', 'H'], ['S', '97', 'C']]"
+cluster_454,no_translation
+cluster_121,"[['S', '52', 'C']]"
+cluster_493,[]
+cluster_212,"[['E', '36', 'V'], ['G', '37', 'D'], ['E', '143', 'V']]"
+cluster_228,[]
+cluster_30,[]
+cluster_506,frameshift
+cluster_190,"[['P', '61', 'R'], ['S', '68', 'T'], ['E', '210', 'G'], ['T', '241', 'A']]"
+cluster_316,frameshift
+cluster_545,"[['D', '236', 'N']]"
+cluster_587,"[['Y', '142', 'F'], ['E', '197', 'D'], ['A', '202', 'V']]"
+cluster_194,[]
+cluster_515,"[['L', '89', 'P'], ['L', '149', 'F']]"
+cluster_573,[]
+cluster_122,"[['T', '241', 'A']]"
+cluster_658,"[['P', '61', 'R'], ['S', '68', 'T'], ['E', '210', 'G'], ['T', '241', 'A']]"
+cluster_266,"[['H', '70', 'Q'], ['M', '120', 'L']]"
+cluster_369,[]
+cluster_521,[]
+cluster_175,[]
+cluster_130,[]
+cluster_257,frameshift
+cluster_589,"[['A', '266', 'V']]"
+cluster_466,[]
+cluster_37,"[['F', '132', 'I'], ['F', '204', 'Y']]"
+cluster_578,"[['G', '221', 'V']]"
+cluster_120,frameshift
+cluster_526,[]
+cluster_614,no_translation
+cluster_356,[]
+cluster_199,"[['R', '2', 'L'], ['P', '203', 'S']]"
+cluster_43,[]
+cluster_23,[]
+cluster_503,"[['S', '52', 'C'], ['F', '132', 'L'], ['S', '151', 'C'], ['W', '208', 'C']]"
+cluster_287,"[['P', '289', 'S']]"
+cluster_361,"[['D', '25', 'E'], ['F', '132', 'L']]"
+cluster_546,[]
+cluster_357,"[['T', '29', 'A'], ['I', '283', 'F']]"
+cluster_342,"[['D', '25', 'V'], ['G', '46', 'C'], ['A', '50', 'V'], ['Y', '169', 'C'], ['F', '215', 'L']]"
+cluster_607,"[['Q', '41', 'L']]"
+cluster_125,"[['H', '70', 'Q'], ['M', '120', 'L']]"
+cluster_312,"[['R', '2', 'W'], ['H', '186', 'P'], ['V', '212', 'L'], ['A', '252', 'S']]"
+cluster_18,[]
+cluster_661,"[['P', '138', 'L'], ['S', '167', 'P']]"
+cluster_467,"[['L', '13', 'M'], ['G', '111', 'E'], ['A', '118', 'T'], ['L', '245', 'Q']]"
+cluster_296,"[['E', '58', 'K'], ['P', '147', 'T']]"
+cluster_570,"[['E', '98', 'G'], ['D', '162', 'V'], ['Q', '225', 'K']]"
+cluster_41,frameshift
+cluster_498,[]
+cluster_313,"[['T', '199', 'S']]"
+cluster_406,"[['G', '155', 'S']]"
+cluster_308,[]
+cluster_649,"[['L', '11', 'M'], ['E', '197', 'K'], ['V', '216', 'I'], ['T', '241', 'A']]"
+cluster_505,[]
+cluster_100,"[['I', '209', 'T']]"
+cluster_101,"[['L', '9', 'H'], ['V', '125', 'I'], ['E', '146', 'K'], ['R', '150', 'W'], ['T', '237', 'I']]"
+cluster_543,[]
+cluster_188,frameshift
+cluster_472,[]
+cluster_158,"[['G', '37', 'S']]"
+cluster_285,"[['D', '5', 'E'], ['T', '93', 'S']]"
+cluster_378,"[['D', '82', 'E']]"
+cluster_82,"[['L', '191', 'V']]"
+cluster_5,[]
+cluster_7,[]
+cluster_419,frameshift
+cluster_28,"[['D', '236', 'E'], ['E', '284', 'G']]"
+cluster_209,[]
+cluster_154,"[['V', '8', 'I']]"
+cluster_179,"[['P', '203', 'Q'], ['T', '241', 'A']]"
+cluster_408,[]
+cluster_453,"[['E', '143', 'G'], ['A', '202', 'V'], ['I', '209', 'F'], ['S', '290', 'C']]"
+cluster_94,"[['T', '199', 'M']]"
+cluster_315,[]
+cluster_58,"[['A', '59', 'S'], ['G', '221', 'S']]"
+cluster_218,[]
+cluster_366,"[['A', '53', 'T'], ['G', '253', 'S']]"
+cluster_581,frameshift
+cluster_295,frameshift
+cluster_617,[]
+cluster_262,[]
+cluster_588,"[['Q', '41', 'P']]"
+cluster_234,"[['G', '37', 'S']]"
+cluster_560,[]
+cluster_450,"[['D', '5', 'G'], ['L', '13', 'M']]"
+cluster_229,[]
+cluster_19,[]
+cluster_319,"[['A', '43', 'T'], ['S', '249', 'A']]"
+cluster_279,frameshift
+cluster_628,frameshift
+cluster_392,"[['R', '263', 'P']]"
+cluster_603,[]
+cluster_499,"[['I', '122', 'T']]"
+cluster_38,[]
+cluster_591,[]
+cluster_445,"[['H', '27', 'Y'], ['Q', '45', 'R'], ['D', '78', 'V']]"
+cluster_487,"[['P', '203', 'S'], ['E', '284', 'D']]"
+cluster_601,"[['D', '236', 'E'], ['E', '284', 'G']]"
+cluster_44,"[['E', '284', 'D']]"
+cluster_389,frameshift
+cluster_554,"[['V', '90', 'A'], ['A', '240', 'T']]"
+cluster_297,"[['A', '50', 'V'], ['S', '52', 'G'], ['D', '55', 'V'], ['N', '182', 'I'], ['A', '230', 'T']]"
+cluster_214,"[['A', '47', 'V'], ['G', '175', 'C'], ['M', '282', 'R']]"
+cluster_639,[]
+cluster_14,frameshift
+cluster_407,"[['E', '197', 'D']]"
+cluster_307,frameshift
+cluster_440,[]
+cluster_102,"[['A', '281', 'V']]"
+cluster_510,"[['E', '36', 'V'], ['P', '147', 'S']]"
+cluster_343,[]
+cluster_189,"[['T', '241', 'A'], ['M', '282', 'I']]"
+cluster_103,"[['G', '40', 'D'], ['A', '75', 'V']]"
+cluster_321,"[['Y', '142', 'F'], ['E', '197', 'D'], ['A', '202', 'V']]"
+cluster_413,[]
+cluster_427,"[['D', '5', 'N'], ['V', '254', 'A']]"
+cluster_202,"[['P', '138', 'L'], ['S', '167', 'P']]"
+cluster_117,[]
+cluster_0,"[['E', '139', 'G']]"
+cluster_317,[]
+cluster_83,"[['F', '215', 'Y'], ['G', '272', 'V']]"
+cluster_600,"[['D', '78', 'E']]"
+cluster_619,[]
+cluster_457,"[['R', '34', 'H'], ['E', '98', 'V'], ['L', '115', 'H'], ['M', '177', 'V']]"
+cluster_162,"[['E', '44', 'G']]"
+cluster_310,frameshift
+cluster_198,frameshift
+cluster_372,frameshift
+cluster_634,"[['W', '208', 'R'], ['Q', '285', '*']]"
+cluster_449,"[['S', '94', 'T'], ['E', '146', '*']]"
+cluster_540,[]
+cluster_370,[]
+cluster_410,"[['Q', '45', 'L'], ['E', '210', 'G'], ['N', '255', 'S']]"
+cluster_536,[]
+cluster_509,"[['G', '40', 'S']]"
+cluster_377,"[['D', '78', 'G'], ['A', '141', 'V'], ['A', '202', 'V']]"
+cluster_320,"[['A', '47', 'S'], ['G', '81', 'D'], ['I', '235', 'F']]"
+cluster_541,[]
+cluster_66,[]
+cluster_523,"[['A', '75', 'T']]"
+cluster_574,"[['A', '271', 'E']]"
+cluster_147,"[['A', '57', 'V']]"
+cluster_567,"[['A', '141', 'V']]"
+cluster_186,"[['A', '19', 'V'], ['V', '239', 'M']]"
+cluster_460,[]
+cluster_200,frameshift
+cluster_490,"[['P', '203', 'S'], ['E', '284', 'D']]"
+cluster_132,"[['F', '215', 'L'], ['G', '226', 'E']]"
+cluster_360,[]
+cluster_500,"[['D', '5', 'N'], ['V', '8', 'L'], ['A', '59', 'S']]"
+cluster_552,"[['V', '126', 'D'], ['F', '132', 'L']]"
+cluster_326,"[['F', '22', 'L'], ['T', '96', 'N']]"
+cluster_479,[]
+cluster_595,frameshift
+cluster_566,"[['F', '184', 'L'], ['T', '241', 'A']]"
+cluster_446,[]
+cluster_22,"[['A', '211', 'V'], ['V', '239', 'A']]"
+cluster_87,frameshift
+cluster_644,[]
+cluster_253,"[['N', '206', 'I'], ['A', '227', 'V'], ['R', '268', 'C']]"
+cluster_488,[]
+cluster_355,[]
+cluster_448,[]
+cluster_338,"[['Q', '41', 'P']]"
+cluster_638,[]
+cluster_527,frameshift
+cluster_298,[]
+cluster_517,[]
+cluster_575,[]
+cluster_309,"[['P', '289', 'S']]"
+cluster_656,"[['P', '203', 'Q'], ['T', '241', 'A']]"
+cluster_305,"[['L', '62', 'P'], ['E', '210', 'G'], ['D', '224', 'G']]"
+cluster_354,"[['A', '75', 'T'], ['Q', '225', 'H']]"
+cluster_71,"[['V', '8', 'I']]"
+cluster_404,"[['D', '78', 'E']]"
+cluster_502,"[['T', '4', 'N'], ['N', '33', 'D'], ['R', '87', 'P'], ['L', '115', 'P'], ['L', '191', 'V']]"
+cluster_281,[]
+cluster_145,[]
+cluster_468,"[['D', '224', 'N']]"
+cluster_627,[]
+cluster_284,"[['G', '117', 'V'], ['T', '241', 'A'], ['D', '267', 'E']]"
+cluster_331,"[['T', '93', 'A']]"
+cluster_195,[]
+cluster_123,"[['Y', '158', 'H']]"
+cluster_590,"[['M', '14', 'K'], ['H', '27', 'Q'], ['V', '48', 'I'], ['A', '108', 'T']]"
+cluster_569,"[['P', '61', 'S'], ['S', '217', 'T']]"
+cluster_230,"[['G', '10', 'D'], ['W', '32', 'R']]"
+cluster_609,"[['D', '78', 'N'], ['A', '140', 'V'], ['A', '189', 'T']]"
+cluster_224,"[['S', '97', 'C']]"
+cluster_146,"[['E', '36', 'V'], ['G', '37', 'D'], ['E', '143', 'V']]"
+cluster_25,[]
+cluster_114,[]
+cluster_15,frameshift
+cluster_74,[]
+cluster_69,"[['A', '50', 'V'], ['S', '52', 'G'], ['D', '55', 'V'], ['N', '182', 'I'], ['A', '230', 'T']]"
+cluster_85,frameshift
+cluster_565,[]
+cluster_513,"[['L', '80', 'M']]"
+cluster_299,"[['D', '243', 'Y']]"
+cluster_187,"[['L', '18', 'M'], ['K', '24', '*'], ['S', '60', 'R'], ['Y', '135', 'H'], ['E', '210', 'G'], ['S', '217', 'P']]"
+cluster_653,"[['V', '73', 'I']]"
+cluster_148,"[['E', '98', 'V']]"

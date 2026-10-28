@@ -36,8 +36,10 @@ def main():
     if args.table:
         tables = {int(t.split("=", 1)[0]): t.split("=", 1)[1] for t in args.table}
     else:
-        tables = {r: s.WORK_DIR / f"9_mutations/round_{r}/full_table_barcodes_mutations.csv"
-                  for r in s.ROUNDS}
+        tables = {}
+        for r in s.ROUNDS:
+            fresh = s.WORK_DIR / f"9_mutations/round_{r}/full_table_barcodes_mutations.csv"
+            tables[r] = fresh if fresh.exists() else s.PER_ROUND_TABLE[r]
 
     missing = sorted(set(s.ROUNDS) - set(tables))
     if missing:
